@@ -2,14 +2,6 @@ import sys
 from PyQt5 import QtWidgets, QtSql
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-class connect_db(QtSqlDatabase):
-    def connection(self):
-        super(connect_db, self).connection()
-        self.addDatabase("QMYSQL")
-        self.setHostName("192.168.1.8")
-        self.setDatabaseName("db_poliur_sm")
-        self.setUserName("root");
-        self.setPassword("86iYr@mn25*%ass")
 class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
@@ -37,8 +29,13 @@ class Window(QMainWindow):
         self.main_text.adjustSize
 def testapp():
     app = QApplication(sys.argv)
-    cd1=connect_db()
-    cd1.show()
+    con = QtSql.QSqlDatabase.addDatabase("QMYSQL")
+    con.setHostName("192.168.1.8")
+    con.setDatabaseName("db_poliur_sm")
+    con.setUserName("root")
+    con.setPassword("86iYr@mn25*%ass")
+    con.open()
+
     w1 = Window() 
     w1.show()
     sys.exit(app.exec_())
