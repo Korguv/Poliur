@@ -1,0 +1,12 @@
+ root@localhost 86iYr@mn25*%ass
+
+mysql -uroot -p86iYr@mn25*%ass
+
+
+SET fireign_key_cheks = 0;  --команда для проверки связе при востановлениии базы
+SOURCE dump_file_name;
+SET fireign_key_cheks = 0;
+  
+
+  with rollup
+  
