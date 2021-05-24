@@ -4,7 +4,7 @@ import sys
 def on_clicked():
     ind = view.currentIndex()
     if ind.isValid():
-        print("Данные:", ind.data())
+        print("Данн:", ind.data())
         print("row:", ind.row(), "column:", ind.column())
         ind_parent = ind.parent()
         if ind_parent.isValid():
