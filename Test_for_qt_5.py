@@ -1,39 +1,36 @@
 import sys
-from PyQt5.QtWidgets import *
-from PyQt5 import uic
-from PyQt5.QtCore import pyqtSignal
- 
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi("main_window.ui", self)
-        self.sec = SecondWindow()
-        self.pushButton.clicked.connect(self.on_click)
-        self.sec.login_data[str,str].connect(self.handle_input)
- 
-    def on_click(self):
-        self.sec.show()
- 
-    def handle_input(self, name, login):
-        self.label.setText(name)
-        self.label_2.setText(login)
+import first_window
+import double_window
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class TwoWindow(QtWidgets.QMainWindow, double_window.Ui_MainWindow):
+        def __init__(self):
+            super().__init__()
+            self.setupUi(self)
+            #self.pushButton.clicked.connect(self.check2)
+
         
- 
-class SecondWindow(QMainWindow):
-    login_data = pyqtSignal(str, str)
- 
-    def __init__(self):
-        super().__init__()
-        uic.loadUi("second_window.ui", self)
-        self.pushButton.clicked.connect(self.send_data)
- 
-    def send_data(self):
-        self.login_data.emit(self.lineEdit.text(), self.lineEdit_2.text())
+
+class OneWindow(QtWidgets.QMainWindow, first_window.Ui_MainWindow):
+    def __init__(self, parent = None):
+        super().__init__(parent)
+        self.setupUi(self)
+        self.twoWindow = None
+        self.pushButton.clicked.connect(self.check)
+
+    def check(self):
+        #print (5)
         self.close()
-    
- 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = MainWindow()
-    ex.show()
+        self.twoWindow = TwoWindow()
+        self.twoWindow.show()
+        
+
+def main():
+    app = QtWidgets.QApplication(sys.argv)
+    window = OneWindow()
+    window.show()
     sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()
