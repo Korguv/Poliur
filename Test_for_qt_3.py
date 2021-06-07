@@ -40,6 +40,8 @@ class ClssDialog(QtWidgets.QDialog):
         self.pushButton.setText("Close Dialog")
 
     def btnClosed(self):
+        main = MyWin(self)
+        main.exec_()
         self.close()
 
 
@@ -54,6 +56,7 @@ class MyWin(QtWidgets.QMainWindow):
 
     def openDialog(self):
 #       pass
+        self.close()
         dialog = ClssDialog(self)
         dialog.exec_()
 
