@@ -1,36 +1,40 @@
 import sys
-import first_window
-import double_window
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+class Window1(QWidget):
+    def __init__(self):
+        super(Window1, self).__init__()
+        self.setWindowTitle('Window1')
+        self.setMinimumWidth(200)
+        self.setMinimumHeight(50)
+        self.button = QPushButton(self)
+        self.button.setText('Ok')
+        self.button.show()
 
-class TwoWindow(QtWidgets.QMainWindow, double_window.Ui_MainWindow):
-        def __init__(self):
-            super().__init__()
-            self.setupUi(self)
-            #self.pushButton.clicked.connect(self.check2)
+class Window2(QWidget):
+    def __init__(self):
+        super(Window2, self).__init__()
+        self.setWindowTitle('Window2')
 
-        
 
-class OneWindow(QtWidgets.QMainWindow, first_window.Ui_MainWindow):
-    def __init__(self, parent = None):
-        super().__init__(parent)
-        self.setupUi(self)
-        self.twoWindow = None
-        self.pushButton.clicked.connect(self.check)
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        self.setWindowTitle('MainWindow')
 
-    def check(self):
-        #print (5)
-        self.close()
-        self.twoWindow = TwoWindow()
-        self.twoWindow.show()
-        
+    def show_window_1(self):
+        self.w1 = Window1()
+        self.w1.button.clicked.connect(self.show_window_2)
+        self.w1.button.clicked.connect(self.w1.close)
+        self.w1.show()
 
-def main():
-    app = QtWidgets.QApplication(sys.argv)
-    window = OneWindow()
-    window.show()
+    def show_window_2(self):
+        self.w2 = Window2()
+        self.w2.show()
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    w = MainWindow()
+    #w.show()
+    w.show_window_1()
     sys.exit(app.exec_())
-
-if __name__ == "__main__":
-    main()
