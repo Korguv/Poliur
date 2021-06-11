@@ -23,6 +23,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('MainWindow')
 
     def show_window_1(self):
+        
         self.w1 = Window1()
         self.w1.button.clicked.connect(self.show_window_2)
         self.w1.button.clicked.connect(self.w1.close)
