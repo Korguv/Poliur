@@ -15,22 +15,30 @@ class Window2(QWidget):
     def __init__(self):
         super(Window2, self).__init__()
         self.setWindowTitle('Window2')
+        self.setMinimumWidth(200)
+        self.setMinimumHeight(50)
+        self.button = QPushButton(self)
+        self.button.setText('Ok')
+        self.button.show()
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setWindowTitle('MainWindow')
+        
 
     def show_window_1(self):
-        
+
         self.w1 = Window1()
         self.w1.button.clicked.connect(self.show_window_2)
-        self.w1.button.clicked.connect(self.w1.close)
+        self.w1.button.clicked.connect(self.w1.hide)
         self.w1.show()
 
     def show_window_2(self):
         self.w2 = Window2()
+        self.w2.button.clicked.connect(self.show_window_1)
+        self.w2.button.clicked.connect(self.w1.hide)
         self.w2.show()
 
 if __name__ == '__main__':
