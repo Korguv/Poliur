@@ -72,11 +72,12 @@ DESC hollyday;
 DROP  TABLE IF EXISTS works_hours;
 CREATE TABLE work_hours(  #рабочие часы
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, #первичный ключ
-  date DATE NOT NULL,  #дата
+  date_work DATE NOT NULL,  #дата
   hours TINYINT NOT NULL DEFAULT '0', #часы поле коофициента
   id_workers SMALLINT UNSIGNED, #ключ работника
   INDEX id_wo(id_workers), #индексация столбца id_agent
-  CONSTRAINT hou_id_wor FOREIGN KEY (id_workers) REFERENCES workers(id) ON DELETE RESTRICT 
+  CONSTRAINT hou_id_wor FOREIGN KEY (id_workers) REFERENCES workers(id) ON DELETE RESTRICT,
+  CONSTRAINT id_w_h FOREIGN KEY (date_work) REFERENCES hollyday(id_date) ON DELETE RESTRICT 
 );
 DESC work_hours;
 
