@@ -29,7 +29,7 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -57,7 +57,7 @@
      <widget class="QTableWidget" name="tableWidget">
       <column>
        <property name="text">
-        <string>Ссотрудник</string>
+        <string>Сотрудник</string>
        </property>
       </column>
       <column>
