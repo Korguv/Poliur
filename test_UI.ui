@@ -40,7 +40,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="product_tab">
        <attribute name="title">
@@ -56,22 +56,52 @@
          </rect>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
           <string>Tab 1</string>
          </attribute>
+         <widget class="QTableWidget" name="tableWidget_12">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>210</y>
+            <width>256</width>
+            <height>192</height>
+           </rect>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="tab_3">
          <attribute name="title">
           <string>Page</string>
          </attribute>
+         <widget class="QTableWidget" name="tableWidget_11">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>180</y>
+            <width>256</width>
+            <height>192</height>
+           </rect>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="tab_2">
          <attribute name="title">
           <string>Tab 2</string>
          </attribute>
+         <widget class="QTableWidget" name="tableWidget_10">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>140</y>
+            <width>256</width>
+            <height>192</height>
+           </rect>
+          </property>
+         </widget>
         </widget>
        </widget>
       </widget>
@@ -79,16 +109,46 @@
        <attribute name="title">
         <string>Финансы</string>
        </attribute>
+       <widget class="QTableWidget" name="tableWidget_13">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>330</y>
+          <width>256</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="other_tab">
        <attribute name="title">
         <string>Прочее</string>
        </attribute>
+       <widget class="QTableWidget" name="tableWidget_14">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>160</y>
+          <width>256</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="all_tab">
        <attribute name="title">
         <string>Общее</string>
        </attribute>
+       <widget class="QTableWidget" name="tableWidget_15">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>140</y>
+          <width>256</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -106,7 +166,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="hour_tab">
        <attribute name="title">
