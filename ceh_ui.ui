@@ -411,7 +411,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -430,7 +430,7 @@
          <item>
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>TextLabel</string>
+            <string>Высота</string>
            </property>
           </widget>
          </item>
@@ -452,7 +452,7 @@
          <item>
           <widget class="QLabel" name="label_4">
            <property name="text">
-            <string>TextLabel</string>
+            <string>Ширина</string>
            </property>
           </widget>
          </item>
@@ -474,7 +474,7 @@
          <item>
           <widget class="QLabel" name="label_3">
            <property name="text">
-            <string>TextLabel</string>
+            <string>Длина</string>
            </property>
           </widget>
          </item>
@@ -516,21 +516,21 @@
            <item>
             <widget class="QLabel" name="label_16">
              <property name="text">
-              <string>TextLabel</string>
+              <string>Внешний радиус</string>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_17">
              <property name="text">
-              <string>TextLabel</string>
+              <string>Внутренний радиус</string>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_18">
              <property name="text">
-              <string>TextLabel</string>
+              <string>Высота</string>
              </property>
             </widget>
            </item>
@@ -766,6 +766,65 @@
         </layout>
        </widget>
       </widget>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_10">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>40</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_11">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>80</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>40</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>80</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>60</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
      </widget>
     </widget>
    </widget>
