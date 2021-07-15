@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="balance">
      <attribute name="title">
@@ -40,7 +40,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="product_tab">
        <attribute name="title">
@@ -56,7 +56,7 @@
          </rect>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
@@ -182,12 +182,37 @@
        <widget class="QTableWidget" name="tableWidget_13">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>330</y>
-          <width>256</width>
-          <height>192</height>
+          <x>10</x>
+          <y>10</y>
+          <width>521</width>
+          <height>521</height>
          </rect>
         </property>
+        <column>
+         <property name="text">
+          <string>Номер</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Дата</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Контрагент</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Размер</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Номер заказа</string>
+         </property>
+        </column>
        </widget>
       </widget>
       <widget class="QWidget" name="other_tab">
@@ -197,8 +222,8 @@
        <widget class="QTableWidget" name="tableWidget_14">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>160</y>
+          <x>10</x>
+          <y>10</y>
           <width>256</width>
           <height>192</height>
          </rect>
@@ -212,8 +237,8 @@
        <widget class="QTableWidget" name="tableWidget_15">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>10</x>
+          <y>10</y>
           <width>256</width>
           <height>192</height>
          </rect>
@@ -236,7 +261,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="hour_tab">
        <attribute name="title">
@@ -245,12 +270,62 @@
        <widget class="QTableWidget" name="tableWidget_6">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>180</y>
-          <width>256</width>
-          <height>192</height>
+          <x>0</x>
+          <y>0</y>
+          <width>501</width>
+          <height>271</height>
          </rect>
         </property>
+        <column>
+         <property name="text">
+          <string>Месяц</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ФИО</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Часы</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Оклад</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Премия</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_11">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>0</y>
+          <width>301</width>
+          <height>701</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Дата</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ФИО</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Часы</string>
+         </property>
+        </column>
        </widget>
       </widget>
       <widget class="QWidget" name="salary_tab">
@@ -314,7 +389,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="agents_tab">
        <attribute name="title">
