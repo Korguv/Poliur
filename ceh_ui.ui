@@ -40,7 +40,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
@@ -161,6 +161,16 @@
          </property>
         </column>
        </widget>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
       </widget>
      </widget>
     </widget>
