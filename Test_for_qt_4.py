@@ -200,5 +200,6 @@ if __name__ == "__main__":
 #    AuthWindow.show()
     w = MainWindow()
     
+    
     w.show()
     sys.exit(app.exec_())
