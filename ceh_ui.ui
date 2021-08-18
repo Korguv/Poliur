@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_plan">
      <attribute name="title">
@@ -40,11 +40,11 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
-      <widget class="QWidget" name="tab_5">
+      <widget class="QWidget" name="tab_hard_60_65">
        <attribute name="title">
-        <string>Tab 1</string>
+        <string>60-65</string>
        </attribute>
        <widget class="QTableWidget" name="tableWidget">
         <property name="geometry">
@@ -102,9 +102,9 @@
         </column>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_6">
+      <widget class="QWidget" name="tab_hard_70_75">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>70-75</string>
        </attribute>
        <widget class="QTableWidget" name="tableWidget_3">
         <property name="geometry">
@@ -144,8 +144,8 @@
        <widget class="QTableWidget" name="tableWidget_5">
         <property name="geometry">
          <rect>
-          <x>550</x>
-          <y>40</y>
+          <x>540</x>
+          <y>30</y>
           <width>201</width>
           <height>431</height>
          </rect>
@@ -162,15 +162,245 @@
         </column>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_7">
+      <widget class="QWidget" name="tab_hard_80_85">
        <attribute name="title">
-        <string>Page</string>
+        <string>80-85</string>
        </attribute>
+       <widget class="QTableWidget" name="tableWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>501</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Масса</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Цвет</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Текст</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_16">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>20</y>
+          <width>201</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </column>
+       </widget>
       </widget>
-      <widget class="QWidget" name="tab_8">
+      <widget class="QWidget" name="tab_hard_90_95">
        <attribute name="title">
-        <string>Page</string>
+        <string>90-95</string>
        </attribute>
+       <widget class="QTableWidget" name="tableWidget_13">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>501</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Масса</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Цвет</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Текст</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_17">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>10</y>
+          <width>201</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_hard_plast">
+       <attribute name="title">
+        <string>Пластик</string>
+       </attribute>
+       <widget class="QTableWidget" name="tableWidget_14">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>501</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Масса</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Цвет</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Текст</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_18">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>10</y>
+          <width>201</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_hard_other">
+       <attribute name="title">
+        <string>Другое</string>
+       </attribute>
+       <widget class="QTableWidget" name="tableWidget_15">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>501</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Масса</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Цвет</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Текст</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_19">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>10</y>
+          <width>201</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Количество</string>
+         </property>
+        </column>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -183,18 +413,18 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>201</width>
-        <height>311</height>
+        <width>461</width>
+        <height>461</height>
        </rect>
       </property>
       <column>
        <property name="text">
-        <string>Текст</string>
+        <string>Дата</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Дата</string>
+        <string>Текст</string>
        </property>
       </column>
      </widget>
@@ -203,12 +433,12 @@
        <rect>
         <x>490</x>
         <y>20</y>
-        <width>75</width>
+        <width>91</width>
         <height>23</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Новая запись</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_2">
@@ -216,7 +446,7 @@
        <rect>
         <x>490</x>
         <y>50</y>
-        <width>75</width>
+        <width>91</width>
         <height>23</height>
        </rect>
       </property>
@@ -229,7 +459,7 @@
      <attribute name="title">
       <string>Калькулятор</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_9">
+     <widget class="QTableWidget" name="tableWidget_calkul">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -474,7 +704,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QTabWidget" name="tabWidget_2">
+     <widget class="QTabWidget" name="tabWidget_calkul_data">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -484,7 +714,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -840,7 +1070,7 @@
        </widget>
       </widget>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_10">
+     <widget class="QLineEdit" name="lineEdit_volume">
       <property name="geometry">
        <rect>
         <x>540</x>
@@ -850,7 +1080,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_11">
+     <widget class="QLineEdit" name="lineEdit_mass">
       <property name="geometry">
        <rect>
         <x>540</x>
@@ -860,7 +1090,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_13">
+     <widget class="QLabel" name="label_volume">
       <property name="geometry">
        <rect>
         <x>480</x>
@@ -870,10 +1100,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Объём</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14">
+     <widget class="QLabel" name="label_mass">
       <property name="geometry">
        <rect>
         <x>480</x>
@@ -883,20 +1113,20 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Масса</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_6">
+     <widget class="QPushButton" name="pushButton_component">
       <property name="geometry">
        <rect>
-        <x>510</x>
+        <x>470</x>
         <y>110</y>
-        <width>75</width>
+        <width>141</width>
         <height>23</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Расчитать компоненты</string>
       </property>
      </widget>
     </widget>
