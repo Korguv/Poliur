@@ -112,6 +112,7 @@ CREATE TABLE nomenclature (  #таблица номенклатуры
   path VARCHAR(100), #к чертежу/фото
   volume DECIMAL(8,3),  #объём для изделий
   id_form INT UNSIGNED, #номер формы для изделий
+  
   INDEX id_sub(id_subgroup), #индексация столбца id_agent
   CONSTRAINT nom_id_sub FOREIGN KEY (id_subgroup) REFERENCES subgroup(id) ON DELETE RESTRICT 
 );
