@@ -34,13 +34,13 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-10</y>
-        <width>1511</width>
-        <height>831</height>
+        <y>0</y>
+        <width>1881</width>
+        <height>811</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="hour_tab">
        <attribute name="title">
@@ -110,7 +110,7 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>10</y>
           <width>531</width>
           <height>221</height>
          </rect>
