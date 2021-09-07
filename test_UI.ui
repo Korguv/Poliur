@@ -26,229 +26,6 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="work_hours">
-     <attribute name="title">
-      <string>Рабочие часы</string>
-     </attribute>
-     <widget class="QTabWidget" name="tabWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>1881</width>
-        <height>811</height>
-       </rect>
-      </property>
-      <property name="currentIndex">
-       <number>2</number>
-      </property>
-      <widget class="QWidget" name="hour_tab">
-       <attribute name="title">
-        <string>Часы</string>
-       </attribute>
-       <widget class="QTableWidget" name="tableWidget_6">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>310</y>
-          <width>501</width>
-          <height>271</height>
-         </rect>
-        </property>
-        <column>
-         <property name="text">
-          <string>Месяц</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>ФИО</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Часы</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Оклад</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Премия</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QTableWidget" name="tableWidget_11">
-        <property name="geometry">
-         <rect>
-          <x>570</x>
-          <y>0</y>
-          <width>301</width>
-          <height>701</height>
-         </rect>
-        </property>
-        <column>
-         <property name="text">
-          <string>Дата</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>ФИО</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Часы</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QTableWidget" name="tableWidget_17">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>10</y>
-          <width>531</width>
-          <height>221</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="geometry">
-         <rect>
-          <x>420</x>
-          <y>240</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="workers_tab">
-       <attribute name="title">
-        <string>Работник</string>
-       </attribute>
-       <widget class="QTableWidget" name="tableWidget_8">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>511</width>
-          <height>281</height>
-         </rect>
-        </property>
-        <column>
-         <property name="text">
-          <string>ФИО</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Должность</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Телефон</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Почта</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Пометки</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>600</x>
-          <y>20</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>600</x>
-          <y>100</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="hollyday_tab">
-       <attribute name="title">
-        <string>Праздники</string>
-       </attribute>
-       <widget class="QTableWidget" name="tableWidget_9">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>10</y>
-          <width>551</width>
-          <height>761</height>
-         </rect>
-        </property>
-        <column>
-         <property name="text">
-          <string>Дата</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Наименование</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>740</x>
-          <y>70</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_5">
-        <property name="geometry">
-         <rect>
-          <x>750</x>
-          <y>120</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </widget>
-     </widget>
-    </widget>
     <widget class="QWidget" name="tab_11">
      <attribute name="title">
       <string>материалка</string>
@@ -263,7 +40,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_12">
        <attribute name="title">
@@ -272,10 +49,10 @@
        <widget class="QTreeWidget" name="treeWidget_9">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>70</y>
+          <x>11</x>
+          <y>71</y>
           <width>271</width>
-          <height>721</height>
+          <height>671</height>
          </rect>
         </property>
         <column>
@@ -312,10 +89,10 @@
        <widget class="QTableWidget" name="tableWidget_28">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>70</y>
+          <x>344</x>
+          <y>71</y>
           <width>701</width>
-          <height>721</height>
+          <height>661</height>
          </rect>
         </property>
         <column>
@@ -380,10 +157,10 @@
        <widget class="QTableWidget" name="tableWidget_29">
         <property name="geometry">
          <rect>
-          <x>1140</x>
+          <x>1090</x>
           <y>70</y>
-          <width>701</width>
-          <height>711</height>
+          <width>581</width>
+          <height>661</height>
          </rect>
         </property>
         <column>
@@ -1229,6 +1006,94 @@
         <string>New Item</string>
        </property>
       </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="work_hours">
+     <attribute name="title">
+      <string>Рабочие часы</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_17">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>501</width>
+        <height>221</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>250</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_11">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>10</y>
+        <width>301</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>Дата</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ФИО</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Часы</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>501</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>Месяц</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ФИО</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Часы</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Оклад</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Премия</string>
+       </property>
+      </column>
      </widget>
     </widget>
    </widget>
