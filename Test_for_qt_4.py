@@ -198,8 +198,6 @@ if __name__ == "__main__":
 #    ui = Ui_AuthWindow()
 #    ui.setupUi(AuthWindow)
 #    AuthWindow.show()
-    w = MainWindow()
-    
-    
+    w = MainWindow()  
     w.show()
     sys.exit(app.exec_())
