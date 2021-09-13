@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_7">
      <attribute name="title">
@@ -35,7 +35,7 @@
        <rect>
         <x>1089</x>
         <y>50</y>
-        <width>581</width>
+        <width>601</width>
         <height>661</height>
        </rect>
       </property>
@@ -190,7 +190,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Ок</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_11">
@@ -213,7 +213,20 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Поиск</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_19">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>10</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сброс</string>
       </property>
      </widget>
     </widget>
@@ -351,7 +364,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Поиск</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_17">
@@ -364,7 +377,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Ок</string>
       </property>
      </widget>
      <widget class="QTreeWidget" name="treeWidget_13">
@@ -406,6 +419,19 @@
         <string>New Item</string>
        </property>
       </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_20">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>10</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сброс</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -472,7 +498,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Ок</string>
       </property>
      </widget>
      <widget class="QTreeWidget" name="treeWidget_14">
@@ -519,13 +545,13 @@
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>20</y>
+        <y>10</y>
         <width>47</width>
         <height>13</height>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Поиск</string>
       </property>
      </widget>
      <widget class="QComboBox" name="comboBox_21">
@@ -538,6 +564,19 @@
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_21">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>10</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сброс</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_15">
      <attribute name="title">
@@ -547,7 +586,7 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>20</y>
+        <y>80</y>
         <width>521</width>
         <height>521</height>
        </rect>
@@ -582,7 +621,7 @@
       <property name="geometry">
        <rect>
         <x>570</x>
-        <y>20</y>
+        <y>80</y>
         <width>521</width>
         <height>521</height>
        </rect>
@@ -613,6 +652,65 @@
        </property>
       </column>
      </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Поиск</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_22">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сброс</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_22">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>30</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_14">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>30</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_23">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ок</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -622,9 +720,9 @@
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>20</y>
+        <y>60</y>
         <width>951</width>
-        <height>351</height>
+        <height>311</height>
        </rect>
       </property>
      </widget>
@@ -632,9 +730,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>10</y>
+        <y>50</y>
         <width>501</width>
-        <height>781</height>
+        <height>741</height>
        </rect>
       </property>
       <column>
@@ -666,8 +764,8 @@
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>550</x>
-        <y>0</y>
+        <x>560</x>
+        <y>40</y>
         <width>47</width>
         <height>13</height>
        </rect>
@@ -699,6 +797,65 @@
        </rect>
       </property>
      </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>10</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Поиск</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_24">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>10</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сброс</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_23">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>10</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_15">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>10</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_25">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>10</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ок</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
@@ -708,9 +865,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>60</y>
         <width>601</width>
-        <height>801</height>
+        <height>741</height>
        </rect>
       </property>
       <column>
@@ -789,6 +946,65 @@
        </property>
       </column>
      </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>20</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Поиск</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_26">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>20</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сброс</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_24">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>20</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_16">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>20</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_27">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>20</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ок</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
@@ -797,7 +1013,7 @@
      <widget class="QTableWidget" name="tableWidget_42">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>500</x>
         <y>10</y>
         <width>601</width>
         <height>781</height>
@@ -839,8 +1055,8 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>331</width>
-        <height>301</height>
+        <width>421</width>
+        <height>341</height>
        </rect>
       </property>
       <row>
@@ -918,9 +1134,9 @@
       <property name="geometry">
        <rect>
         <x>310</x>
-        <y>10</y>
+        <y>70</y>
         <width>791</width>
-        <height>511</height>
+        <height>451</height>
        </rect>
       </property>
       <column>
@@ -989,6 +1205,65 @@
        </property>
       </item>
      </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>20</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Поиск</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_28">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>20</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сброс</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_25">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>20</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_17">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>20</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_29">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>20</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ок</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="work_hours">
      <attribute name="title">
@@ -1046,9 +1321,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>290</y>
+        <y>360</y>
         <width>501</width>
-        <height>271</height>
+        <height>331</height>
        </rect>
       </property>
       <column>
@@ -1076,6 +1351,65 @@
         <string>Премия</string>
        </property>
       </column>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>300</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Поиск</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_30">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>300</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сброс</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_26">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>300</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_18">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>300</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_31">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>300</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ок</string>
+      </property>
      </widget>
     </widget>
    </widget>
