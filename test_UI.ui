@@ -230,7 +230,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_4">
+    <widget class="QWidget" name="moove_tab">
      <attribute name="title">
       <string>Движение</string>
      </attribute>
@@ -434,7 +434,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="storage_tab">
      <attribute name="title">
       <string>Склад</string>
      </attribute>
@@ -578,7 +578,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_15">
+    <widget class="QWidget" name="finance_tab">
      <attribute name="title">
       <string>Финанс</string>
      </attribute>
@@ -712,7 +712,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="agent_tab">
      <attribute name="title">
       <string>Контрагенты</string>
      </attribute>
@@ -857,7 +857,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_5">
+    <widget class="QWidget" name="ord_tab">
      <attribute name="title">
       <string>Заказы</string>
      </attribute>
@@ -1006,7 +1006,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_6">
+    <widget class="QWidget" name="plan_tab">
      <attribute name="title">
       <string>План производства</string>
      </attribute>
@@ -1126,7 +1126,7 @@
       </column>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_3">
+    <widget class="QWidget" name="nomen_tab">
      <attribute name="title">
       <string>Номенклатура</string>
      </attribute>
@@ -1265,7 +1265,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="work_hours">
+    <widget class="QWidget" name="work_hours_tab">
      <attribute name="title">
       <string>Рабочие часы</string>
      </attribute>
