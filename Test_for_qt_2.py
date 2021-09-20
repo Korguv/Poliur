@@ -16,9 +16,9 @@ window.resize(500, 200)
 view = QtWidgets.QTableView()
 
 model = QtGui.QStandardItemModel(4, 4)
-for row in range(0, 4):
-    for column in range(0, 4):
-        item = QtGui.QStandardItem("({0}, {1})".format(row, column))
+for row in range(0, 5):
+    for column in range(0, 5):
+        item = QtGui.QStandardItem("({0}, {0})".format(row, column))
         model.setItem(row, column, item)
 view.setModel(model)
 
