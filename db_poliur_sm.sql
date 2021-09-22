@@ -4,8 +4,6 @@ CREATE DATABASE db_poliur_sm;   # Создание базы
 SHOW DATABASES; # показать базы находящиеся на сервере
 USE db_poliur_sm; # Переход в базу
 DROP TABLE IF EXISTS test1; # удаление таблицы если она существует
-
-DROP  TABLE IF EXISTS test1;
 CREATE TABLE IF NOT EXISTS test1 ( #создаие таблицы с заданными столбцами и параметрами
   id INT UNSIGNED PRIMARY KEY  AUTO_INCREMENT,
   txt VARCHAR(100) DEFAULT 'TEXT' # тип данных VARCHAR (количество знаков 100) и автозаполнением TEXT
@@ -41,6 +39,7 @@ CREATE TABLE order_sm (
 DESC  order_sm;
 
 
+
 DROP  TABLE IF EXISTS workers;
 CREATE TABLE workers (  # таблица сотрудников
   id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,  #первичный ключ
@@ -58,6 +57,7 @@ CREATE TABLE workers (  # таблица сотрудников
   data_out DATE 
 );
 DESC workers;
+
 
 
 DROP  TABLE IF EXISTS hollyday;
@@ -82,6 +82,7 @@ CREATE TABLE work_hours(  #рабочие часы
 DESC work_hours;
 
 
+
 DROP  TABLE IF EXISTS group_sm;
 CREATE TABLE group_sm(  #таблица групп
   id SMALLINT  PRIMARY KEY AUTO_INCREMENT, #первичный ключ группы
@@ -100,6 +101,7 @@ CREATE TABLE subgroup (  #таблица подгрупп
   CONSTRAINT sub_id_gro FOREIGN KEY (id_group) REFERENCES group_sm(id) ON DELETE RESTRICT 
 );
 DESC subgroup;
+
 
 
 DROP  TABLE IF EXISTS nomenclature;
@@ -157,7 +159,6 @@ CREATE TABLE balance(  #таблица сальдо
   CONSTRAINT bal_id_ord FOREIGN KEY (id_order) REFERENCES order_sm(id) ON DELETE RESTRICT
 );
 DESC balance;
-
 
 
 
