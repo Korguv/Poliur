@@ -19,7 +19,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1881</width>
+      <width>1901</width>
       <height>861</height>
      </rect>
     </property>
@@ -28,17 +28,43 @@
     </property>
     <widget class="QWidget" name="tab_7">
      <attribute name="title">
-      <string>План</string>
+      <string>Отгрузка</string>
      </attribute>
      <widget class="QTableWidget" name="tableWidget_31">
       <property name="geometry">
        <rect>
-        <x>1089</x>
-        <y>50</y>
-        <width>601</width>
-        <height>661</height>
+        <x>1109</x>
+        <y>110</y>
+        <width>701</width>
+        <height>721</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="rowCount">
+       <number>15</number>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
       <column>
        <property name="text">
         <string>№</string>
@@ -78,12 +104,41 @@
      <widget class="QTableWidget" name="tableWidget_32">
       <property name="geometry">
        <rect>
-        <x>343</x>
-        <y>51</y>
-        <width>701</width>
-        <height>661</height>
+        <x>353</x>
+        <y>110</y>
+        <width>721</width>
+        <height>721</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="rowCount">
+       <number>15</number>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>47</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
       <column>
        <property name="text">
         <string>№</string>
@@ -96,7 +151,7 @@
       </column>
       <column>
        <property name="text">
-        <string>Наименование</string>
+        <string>Имя</string>
        </property>
       </column>
       <column>
@@ -123,9 +178,9 @@
      <widget class="QComboBox" name="comboBox_17">
       <property name="geometry">
        <rect>
-        <x>399</x>
+        <x>377</x>
         <y>10</y>
-        <width>69</width>
+        <width>91</width>
         <height>22</height>
        </rect>
       </property>
@@ -140,46 +195,6 @@
        </rect>
       </property>
      </widget>
-     <widget class="QTreeWidget" name="treeWidget_12">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>51</y>
-        <width>271</width>
-        <height>671</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string notr="true">Классификация</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Количество наименований</string>
-       </property>
-      </column>
-      <item>
-       <property name="text">
-        <string>lv1</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>lv2</string>
-        </property>
-       </item>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-     </widget>
      <widget class="QPushButton" name="pushButton_16">
       <property name="geometry">
        <rect>
@@ -188,6 +203,13 @@
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Ок</string>
@@ -206,11 +228,16 @@
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
-        <x>339</x>
+        <x>325</x>
         <y>10</y>
-        <width>47</width>
-        <height>13</height>
+        <width>51</width>
+        <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Поиск</string>
@@ -225,6 +252,13 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Сброс</string>
       </property>
@@ -232,7 +266,7 @@
     </widget>
     <widget class="QWidget" name="moove_tab">
      <attribute name="title">
-      <string>Движение</string>
+      <string>Платежи</string>
      </attribute>
      <widget class="QComboBox" name="comboBox_19">
       <property name="geometry">
@@ -302,9 +336,9 @@
      <widget class="QComboBox" name="comboBox_20">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>378</x>
         <y>10</y>
-        <width>69</width>
+        <width>91</width>
         <height>22</height>
        </rect>
       </property>
@@ -357,11 +391,18 @@
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>325</x>
         <y>10</y>
-        <width>47</width>
-        <height>13</height>
+        <width>51</width>
+        <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
       </property>
       <property name="text">
        <string>Поиск</string>
@@ -375,6 +416,13 @@
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Ок</string>
@@ -429,6 +477,13 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Сброс</string>
       </property>
@@ -452,7 +507,7 @@
       <property name="geometry">
        <rect>
         <x>290</x>
-        <y>40</y>
+        <y>50</y>
         <width>781</width>
         <height>711</height>
        </rect>
@@ -497,6 +552,13 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Ок</string>
       </property>
@@ -505,7 +567,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
+        <y>50</y>
         <width>271</width>
         <height>721</height>
        </rect>
@@ -547,8 +609,13 @@
         <x>300</x>
         <y>10</y>
         <width>47</width>
-        <height>13</height>
+        <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Поиск</string>
@@ -573,6 +640,13 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Сброс</string>
       </property>
@@ -585,8 +659,8 @@
      <widget class="QTableWidget" name="tableWidget_36">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>80</y>
+        <x>10</x>
+        <y>50</y>
         <width>521</width>
         <height>521</height>
        </rect>
@@ -621,7 +695,7 @@
       <property name="geometry">
        <rect>
         <x>570</x>
-        <y>80</y>
+        <y>50</y>
         <width>521</width>
         <height>521</height>
        </rect>
@@ -655,11 +729,16 @@
      <widget class="QLabel" name="label_16">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>30</y>
+        <x>325</x>
+        <y>10</y>
         <width>47</width>
-        <height>13</height>
+        <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Поиск</string>
@@ -669,10 +748,17 @@
       <property name="geometry">
        <rect>
         <x>690</x>
-        <y>30</y>
+        <y>10</y>
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Сброс</string>
@@ -682,7 +768,7 @@
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>30</y>
+        <y>10</y>
         <width>69</width>
         <height>22</height>
        </rect>
@@ -692,7 +778,7 @@
       <property name="geometry">
        <rect>
         <x>390</x>
-        <y>30</y>
+        <y>10</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -702,10 +788,17 @@
       <property name="geometry">
        <rect>
         <x>600</x>
-        <y>30</y>
+        <y>10</y>
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Ок</string>
@@ -720,7 +813,7 @@
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>60</y>
+        <y>50</y>
         <width>951</width>
         <height>311</height>
        </rect>
@@ -729,7 +822,7 @@
      <widget class="QTableWidget" name="tableWidget_40">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>10</x>
         <y>50</y>
         <width>501</width>
         <height>741</height>
@@ -765,9 +858,9 @@
       <property name="geometry">
        <rect>
         <x>560</x>
-        <y>40</y>
+        <y>32</y>
         <width>47</width>
-        <height>13</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="text">
@@ -778,9 +871,9 @@
       <property name="geometry">
        <rect>
         <x>560</x>
-        <y>390</y>
+        <y>372</y>
         <width>47</width>
-        <height>13</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="text">
@@ -800,11 +893,16 @@
      <widget class="QLabel" name="label_17">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>325</x>
         <y>10</y>
         <width>47</width>
-        <height>13</height>
+        <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Поиск</string>
@@ -819,6 +917,13 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Сброс</string>
       </property>
@@ -826,9 +931,9 @@
      <widget class="QComboBox" name="comboBox_23">
       <property name="geometry">
        <rect>
-        <x>580</x>
+        <x>548</x>
         <y>10</y>
-        <width>69</width>
+        <width>101</width>
         <height>22</height>
        </rect>
       </property>
@@ -836,9 +941,9 @@
      <widget class="QLineEdit" name="lineEdit_15">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>382</x>
         <y>10</y>
-        <width>113</width>
+        <width>161</width>
         <height>20</height>
        </rect>
       </property>
@@ -852,6 +957,13 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Ок</string>
       </property>
@@ -864,8 +976,8 @@
      <widget class="QTableWidget" name="tableWidget_3">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>60</y>
+        <x>10</x>
+        <y>50</y>
         <width>601</width>
         <height>741</height>
        </rect>
@@ -964,11 +1076,18 @@
      <widget class="QLabel" name="label_18">
       <property name="geometry">
        <rect>
-        <x>430</x>
-        <y>20</y>
+        <x>325</x>
+        <y>10</y>
         <width>47</width>
-        <height>13</height>
+        <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
       </property>
       <property name="text">
        <string>Поиск</string>
@@ -978,10 +1097,17 @@
       <property name="geometry">
        <rect>
         <x>780</x>
-        <y>20</y>
+        <y>10</y>
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Сброс</string>
@@ -990,9 +1116,9 @@
      <widget class="QComboBox" name="comboBox_24">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>20</y>
-        <width>69</width>
+        <x>568</x>
+        <y>10</y>
+        <width>111</width>
         <height>22</height>
        </rect>
       </property>
@@ -1000,9 +1126,9 @@
      <widget class="QLineEdit" name="lineEdit_16">
       <property name="geometry">
        <rect>
-        <x>480</x>
-        <y>20</y>
-        <width>113</width>
+        <x>382</x>
+        <y>10</y>
+        <width>171</width>
         <height>20</height>
        </rect>
       </property>
@@ -1011,10 +1137,17 @@
       <property name="geometry">
        <rect>
         <x>690</x>
-        <y>20</y>
+        <y>10</y>
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Ок</string>
@@ -1029,7 +1162,7 @@
       <property name="geometry">
        <rect>
         <x>450</x>
-        <y>10</y>
+        <y>50</y>
         <width>901</width>
         <height>781</height>
        </rect>
@@ -1090,9 +1223,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>10</y>
-        <width>421</width>
-        <height>341</height>
+        <y>50</y>
+        <width>431</width>
+        <height>301</height>
        </rect>
       </property>
       <row>
@@ -1170,7 +1303,7 @@
       <property name="geometry">
        <rect>
         <x>310</x>
-        <y>70</y>
+        <y>50</y>
         <width>791</width>
         <height>451</height>
        </rect>
@@ -1205,7 +1338,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>10</y>
+        <y>50</y>
         <width>271</width>
         <height>721</height>
        </rect>
@@ -1244,11 +1377,16 @@
      <widget class="QLabel" name="label_19">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>20</y>
+        <x>325</x>
+        <y>10</y>
         <width>47</width>
-        <height>13</height>
+        <height>20</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Поиск</string>
@@ -1258,10 +1396,17 @@
       <property name="geometry">
        <rect>
         <x>670</x>
-        <y>20</y>
+        <y>10</y>
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Сброс</string>
@@ -1271,7 +1416,7 @@
       <property name="geometry">
        <rect>
         <x>500</x>
-        <y>20</y>
+        <y>10</y>
         <width>69</width>
         <height>22</height>
        </rect>
@@ -1280,9 +1425,9 @@
      <widget class="QLineEdit" name="lineEdit_17">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>20</y>
-        <width>113</width>
+        <x>382</x>
+        <y>10</y>
+        <width>101</width>
         <height>20</height>
        </rect>
       </property>
@@ -1291,10 +1436,17 @@
       <property name="geometry">
        <rect>
         <x>580</x>
-        <y>20</y>
+        <y>10</y>
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Ок</string>
@@ -1309,7 +1461,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>10</y>
+        <y>50</y>
         <width>501</width>
         <height>221</height>
        </rect>
@@ -1318,8 +1470,8 @@
      <widget class="QPushButton" name="pushButton_3">
       <property name="geometry">
        <rect>
-        <x>430</x>
-        <y>250</y>
+        <x>460</x>
+        <y>290</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1332,7 +1484,7 @@
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>10</y>
+        <y>50</y>
         <width>301</width>
         <height>701</height>
        </rect>
@@ -1357,9 +1509,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>360</y>
+        <y>330</y>
         <width>501</width>
-        <height>331</height>
+        <height>361</height>
        </rect>
       </property>
       <column>
@@ -1392,9 +1544,9 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>300</y>
+        <y>290</y>
         <width>47</width>
-        <height>13</height>
+        <height>20</height>
        </rect>
       </property>
       <property name="text">
@@ -1405,7 +1557,7 @@
       <property name="geometry">
        <rect>
         <x>380</x>
-        <y>300</y>
+        <y>290</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1418,7 +1570,7 @@
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>300</y>
+        <y>290</y>
         <width>69</width>
         <height>22</height>
        </rect>
@@ -1428,7 +1580,7 @@
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>300</y>
+        <y>290</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -1438,7 +1590,7 @@
       <property name="geometry">
        <rect>
         <x>290</x>
-        <y>300</y>
+        <y>290</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1448,6 +1600,54 @@
       </property>
      </widget>
     </widget>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget_15">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>331</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <attribute name="headerDefaultSectionSize">
+     <number>120</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string notr="true">Классификация</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Количество наименований</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>lv1</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>lv2</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Item</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Item</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
