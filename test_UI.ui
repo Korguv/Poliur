@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1897</width>
-    <height>898</height>
+    <height>994</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1901</width>
-      <height>861</height>
+      <width>1891</width>
+      <height>971</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -30,238 +30,289 @@
      <attribute name="title">
       <string>Отгрузка</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_31">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>1109</x>
-        <y>110</y>
-        <width>701</width>
-        <height>721</height>
+        <x>10</x>
+        <y>200</y>
+        <width>520</width>
+        <height>194</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>15</number>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>100</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column>
-       <property name="text">
-        <string>№</string>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
        </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Дата</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Наименование</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Твердость</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Заказ</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Количество</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Текст</string>
-       </property>
-      </column>
+       <item>
+        <widget class="QTableWidget" name="tableWidget_32">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="rowCount">
+          <number>15</number>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>100</number>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>47</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>№</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Дата</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Имя</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Твердость</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Заказ</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Количество</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Текст</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableWidget_31">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="rowCount">
+          <number>15</number>
+         </property>
+         <attribute name="horizontalHeaderVisible">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>100</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderHighlightSections">
+          <bool>true</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>№</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Дата</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Название</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Твердость</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Заказ</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Количество</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Текст</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QTableWidget" name="tableWidget_32">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>353</x>
-        <y>110</y>
-        <width>721</width>
-        <height>721</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="rowCount">
-       <number>15</number>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>100</number>
-      </attribute>
-      <attribute name="horizontalHeaderMinimumSectionSize">
-       <number>47</number>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column>
-       <property name="text">
-        <string>№</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Дата</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Имя</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Твердость</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Заказ</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Количество</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Текст</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QComboBox" name="comboBox_17">
-      <property name="geometry">
-       <rect>
-        <x>377</x>
+        <x>10</x>
         <y>10</y>
-        <width>91</width>
-        <height>22</height>
+        <width>763</width>
+        <height>194</height>
        </rect>
       </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_18">
-      <property name="geometry">
-       <rect>
-        <x>609</x>
-        <y>10</y>
-        <width>69</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_16">
-      <property name="geometry">
-       <rect>
-        <x>689</x>
-        <y>10</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Ок</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_11">
-      <property name="geometry">
-       <rect>
-        <x>479</x>
-        <y>10</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_13">
-      <property name="geometry">
-       <rect>
-        <x>325</x>
-        <y>10</y>
-        <width>51</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Поиск</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_19">
-      <property name="geometry">
-       <rect>
-        <x>780</x>
-        <y>10</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Сброс</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <widget class="QTreeWidget" name="treeWidget_15">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <attribute name="headerDefaultSectionSize">
+          <number>120</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string notr="true">Классификация</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Количество наименований</string>
+          </property>
+         </column>
+         <item>
+          <property name="text">
+           <string>lv1</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>lv2</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Поиск</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_17"/>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_11"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_18"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_16">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Ок</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_19">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Сброс</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="moove_tab">
@@ -293,7 +344,7 @@
        <rect>
         <x>330</x>
         <y>50</y>
-        <width>701</width>
+        <width>601</width>
         <height>721</height>
        </rect>
       </property>
@@ -314,17 +365,12 @@
       </column>
       <column>
        <property name="text">
-        <string>Твердость</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
         <string>Заказ</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Количество</string>
+        <string>Сумма</string>
        </property>
       </column>
       <column>
@@ -346,7 +392,7 @@
      <widget class="QTableWidget" name="tableWidget_18">
       <property name="geometry">
        <rect>
-        <x>1140</x>
+        <x>960</x>
         <y>50</y>
         <width>701</width>
         <height>711</height>
@@ -809,87 +855,6 @@
      <attribute name="title">
       <string>Контрагенты</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_35">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>50</y>
-        <width>951</width>
-        <height>311</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_40">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>501</width>
-        <height>741</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string>Статус</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Наименование</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Условное наименование</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Телефон</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>e-mail</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>560</x>
-        <y>32</y>
-        <width>47</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>560</x>
-        <y>372</y>
-        <width>47</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QTableView" name="tableView_3">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>410</y>
-        <width>951</width>
-        <height>381</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_17">
       <property name="geometry">
        <rect>
@@ -968,111 +933,207 @@
        <string>Ок</string>
       </property>
      </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>1111</width>
+        <height>761</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QTableWidget" name="tableWidget_40">
+         <attribute name="horizontalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>110</number>
+         </attribute>
+         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Статус</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Наименование</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Условное наименование</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Телефон</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>e-mail</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidget_5">
+           <column>
+            <property name="text">
+             <string>Номер</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Заказчик</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Дата поступления</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Дата окончания</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Сумма</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Информация</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidget_44">
+           <column>
+            <property name="text">
+             <string>Наименование</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Форма</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Колво план</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Колво факт</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Масса единицы</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Масса остаток</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Фин план</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Фин факт</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Твердость</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Описание</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="ord_tab">
      <attribute name="title">
       <string>Заказы</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>601</width>
-        <height>741</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string>Номер</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Заказчик</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Дата поступления</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Дата окончания</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Сумма</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Информация</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_41">
-      <property name="geometry">
-       <rect>
-        <x>610</x>
-        <y>400</y>
-        <width>1251</width>
-        <height>401</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string>Наименование</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Форма</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Колво план</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Колво факт</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Масса единицы</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Масса остаток</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Фин план</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Фин факт</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Твердость</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Описание</string>
-       </property>
-      </column>
-     </widget>
      <widget class="QLabel" name="label_18">
       <property name="geometry">
        <rect>
@@ -1152,6 +1213,106 @@
       <property name="text">
        <string>Ок</string>
       </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>1211</width>
+        <height>751</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QTableWidget" name="tableWidget_3">
+         <column>
+          <property name="text">
+           <string>Номер</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Заказчик</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Дата поступления</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Дата окончания</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Сумма</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Информация</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableWidget_41">
+         <column>
+          <property name="text">
+           <string>Наименование</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Форма</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Колво план</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Колво факт</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Масса единицы</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Масса остаток</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Фин план</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Фин факт</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Твердость</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Описание</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="plan_tab">
@@ -1299,355 +1460,250 @@
      <attribute name="title">
       <string>Номенклатура</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_4">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>50</y>
-        <width>791</width>
-        <height>451</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string>Группа</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Подгруппа</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Номер</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Наименование</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Условное наименование</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QTreeWidget" name="treeWidget_5">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>271</width>
-        <height>721</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string notr="true">Классификация</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Количество наименований</string>
-       </property>
-      </column>
-      <item>
-       <property name="text">
-        <string>lv1</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>lv2</string>
-        </property>
-       </item>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_19">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>325</x>
         <y>10</y>
-        <width>47</width>
-        <height>20</height>
+        <width>422</width>
+        <height>25</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Поиск</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_19">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Поиск</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_17"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_25"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_29">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ок</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_28">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Сброс</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QPushButton" name="pushButton_28">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>670</x>
-        <y>10</y>
-        <width>75</width>
-        <height>23</height>
+        <x>10</x>
+        <y>50</y>
+        <width>1051</width>
+        <height>541</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Сброс</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_25">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>10</y>
-        <width>69</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_17">
-      <property name="geometry">
-       <rect>
-        <x>382</x>
-        <y>10</y>
-        <width>101</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_29">
-      <property name="geometry">
-       <rect>
-        <x>580</x>
-        <y>10</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Ок</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QTreeWidget" name="treeWidget_5">
+         <column>
+          <property name="text">
+           <string notr="true">Классификация</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Количество наименований</string>
+          </property>
+         </column>
+         <item>
+          <property name="text">
+           <string>lv1</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>lv2</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New Item</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableWidget_4">
+         <column>
+          <property name="text">
+           <string>Группа</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Подгруппа</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Номер</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Наименование</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Условное наименование</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="work_hours_tab">
      <attribute name="title">
       <string>Рабочие часы</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_17">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>50</y>
-        <width>501</width>
-        <height>221</height>
+        <width>1051</width>
+        <height>771</height>
        </rect>
       </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>460</x>
-        <y>290</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
-      </property>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_11">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>50</y>
-        <width>301</width>
-        <height>701</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string>Дата</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>ФИО</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Часы</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_6">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>330</y>
-        <width>501</width>
-        <height>361</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string>Месяц</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>ФИО</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Часы</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Оклад</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Премия</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QLabel" name="label_20">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>290</y>
-        <width>47</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Поиск</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_30">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>290</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Сброс</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_26">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>290</y>
-        <width>69</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_18">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>290</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_31">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>290</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Ок</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QTableWidget" name="tableWidget_17"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Поиск</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_18"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_26"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_31">
+             <property name="text">
+              <string>Ок</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_30">
+             <property name="text">
+              <string>Сброс</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidget_6">
+           <column>
+            <property name="text">
+             <string>Месяц</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>ФИО</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Часы</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Оклад</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Премия</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableWidget_11">
+         <column>
+          <property name="text">
+           <string>Дата</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ФИО</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Часы</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
-   </widget>
-   <widget class="QTreeWidget" name="treeWidget_15">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>130</y>
-      <width>331</width>
-      <height>721</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <attribute name="headerDefaultSectionSize">
-     <number>120</number>
-    </attribute>
-    <column>
-     <property name="text">
-      <string notr="true">Классификация</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Количество наименований</string>
-     </property>
-    </column>
-    <item>
-     <property name="text">
-      <string>lv1</string>
-     </property>
-     <item>
-      <property name="text">
-       <string>lv2</string>
-      </property>
-     </item>
-    </item>
-    <item>
-     <property name="text">
-      <string>New Item</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>New Item</string>
-     </property>
-    </item>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
