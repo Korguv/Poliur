@@ -42,4 +42,5 @@ if not createConnection():
     sys.exit(1)
 win = Contacts()
 win.show()
+
 sys.exit(app.exec_())
