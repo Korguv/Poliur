@@ -305,7 +305,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>348</x>
@@ -1075,153 +1075,289 @@
      <attribute name="title">
       <string>Финанс</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_36">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>50</y>
+        <y>80</y>
+        <width>1308</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <widget class="QTableWidget" name="tableWidget_36">
+         <property name="minimumSize">
+          <size>
+           <width>650</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>650</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <column>
+          <property name="text">
+           <string>Дата</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Номер</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Имя</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Контрагент</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Размер</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Номер заказа</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableWidget_37">
+         <property name="minimumSize">
+          <size>
+           <width>650</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>650</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <column>
+          <property name="text">
+           <string>Дата</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Номер</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Имя</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Контрагент</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Размер</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Номер заказа</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>10</y>
         <width>521</width>
-        <height>521</height>
+        <height>58</height>
        </rect>
       </property>
-      <column>
-       <property name="text">
-        <string>Номер</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Дата</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Контрагент</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Размер</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Номер заказа</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_37">
-      <property name="geometry">
-       <rect>
-        <x>570</x>
-        <y>50</y>
-        <width>521</width>
-        <height>521</height>
-       </rect>
-      </property>
-      <column>
-       <property name="text">
-        <string>Номер</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Дата</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Контрагент</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Размер</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Номер заказа</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QLabel" name="label_16">
-      <property name="geometry">
-       <rect>
-        <x>325</x>
-        <y>10</y>
-        <width>47</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Поиск</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_22">
-      <property name="geometry">
-       <rect>
-        <x>690</x>
-        <y>10</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Сброс</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_22">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>10</y>
-        <width>69</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_14">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>10</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_23">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>10</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Ок</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Поиск</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_14"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_22"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_23">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Ок</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_22">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Сброс</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <spacer name="horizontalSpacer_12">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>15</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="maximumSize">
+            <size>
+             <width>9</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>С:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dateEdit_3">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="maximumSize">
+            <size>
+             <width>15</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>По:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dateEdit_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_5">
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="agent_tab">
