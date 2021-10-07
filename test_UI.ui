@@ -310,11 +310,14 @@
        <rect>
         <x>348</x>
         <y>12</y>
-        <width>637</width>
+        <width>651</width>
         <height>171</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
