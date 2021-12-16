@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 from PyQt5.QtCore import QFile
-from ui_mainwindow import Ui_MainWindow
+from test_UI import Ui_MainWindow
 
 
 class MainWindow(QMainWindow):
@@ -9,6 +9,15 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        
+
+class Screen2(QDialog):
+    def __init__(self):
+        super(Screen2, self).__init__()
+        self.ui = ui_cehwindow()
+        self.ui.setupUi(self)
+
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
@@ -17,3 +26,4 @@ if __name__ == "__main__":
 
     sys.exit(app.exec())
     
+
