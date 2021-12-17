@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>base_window</class>
+ <widget class="QMainWindow" name="base_window">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -4198,7 +4198,7 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QPushButton" name="PushButton">
+   <widget class="QPushButton" name="PushButton_test">
     <property name="geometry">
      <rect>
       <x>750</x>
