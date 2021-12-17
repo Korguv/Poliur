@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 from PyQt5.QtCore import QFile
 from test_UI import Ui_MainWindow
-from ceh_ui import
+from ceh_ui import Ui_CehWindow
 
 
 class MainWindow(QMainWindow):
@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
 class Screen2(QDialog):
     def __init__(self):
         super(Screen2, self).__init__()
-        self.ui = ui_cehwindow()
+        self.ui = Ui_CehWindow()
         self.ui.setupUi(self)
 
 
