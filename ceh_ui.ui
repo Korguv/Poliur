@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ceh_window</class>
- <widget class="QMainWindow" name="ceh_window">
+ <class>w_ceh</class>
+ <widget class="QMainWindow" name="w_ceh">
   <property name="geometry">
    <rect>
     <x>0</x>

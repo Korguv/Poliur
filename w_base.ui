@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>base_window</class>
- <widget class="QMainWindow" name="base_window">
+ <class>w_main</class>
+ <widget class="QMainWindow" name="w_main">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="tab_moove">
      <attribute name="title">
