@@ -23,7 +23,6 @@ class MainWindow(QMainWindow):
         self.ui = Ui_CehWindow()
         self.ui.setupUi(self)
 """
-   
 
 
 if __name__ == "__main__":
