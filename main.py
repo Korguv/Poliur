@@ -2,34 +2,25 @@ import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 from PyQt5.QtCore import QFile
-from test_UI import Ui_base_window
-from сeh_Ui import Ui_ceh_window
-
-
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super(MainWindow, self).__init__()
-        self.ui = Ui_base_window()
-        self.ui.setupUi(self)
-    
-    def clicked_1(self):
-        self.PushButton.hide() # Скрыть интерфейс 1
-        self.PushButton.show() # Интерфейс дисплея 2
-        
-
-"""class Screen2(QDialog):
-    def __init__(self):
-        super(Screen2, self).__init__()
-        self.ui = Ui_CehWindow()
-        self.ui.setupUi(self)
-"""
-
+from w_base import Ui_w_main
+from сeh_ui import Ui_w_ceh
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
+	app = QtWidgets.QApplication(sys.argv)
+	w_main = QtWidgets.QMainWindow()
+	ui = Ui_w_main()
+	ui.setupUi(w_main)
+	w_main.show()
 
-    sys.exit(app.exec())
-    
+def opn_w():
+	global w_ceh
+	w_ceh = QtWidgets.QMainWindow()
+	ui = Ui_w_ceh()
+	ui.setupUi(w_ceh)
+	w_main.hide()
+	w_ceh.show()
+	
 
+ui.PushButton_test.clicked.connect(opn_w)
+
+sys.exit(app.exec_())
