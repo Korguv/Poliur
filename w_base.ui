@@ -2441,11 +2441,11 @@
          </widget>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
+         <layout class="QVBoxLayout" name="layout_left_ord">
           <item>
-           <layout class="QHBoxLayout" name="lay_menu_moove_2">
+           <layout class="QHBoxLayout" name="lay_menu_ord">
             <item>
-             <widget class="QTreeWidget" name="tree_moove_2">
+             <widget class="QTreeWidget" name="tree_ord">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                 <horstretch>0</horstretch>
@@ -2501,7 +2501,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QGroupBox" name="box_serch_moove_2">
+             <widget class="QGroupBox" name="box_serch_ord">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
                 <horstretch>0</horstretch>
@@ -2513,9 +2513,9 @@
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_6">
                <item>
-                <layout class="QHBoxLayout" name="lay_nomber_serch_moove_2">
+                <layout class="QHBoxLayout" name="lay_nomber_serch_ord">
                  <item>
-                  <widget class="QLabel" name="label_nomber_serch_moove_2">
+                  <widget class="QLabel" name="label_nomber_serch_ord">
                    <property name="font">
                     <font>
                      <pointsize>12</pointsize>
@@ -2527,7 +2527,7 @@
                   </widget>
                  </item>
                  <item>
-                  <spacer name="hspacer_nomber_serch_moove_2">
+                  <spacer name="hspacer_nomber_serch_ord">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -2543,10 +2543,10 @@
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineedit_nomber_serch_moove_2"/>
+                  <widget class="QLineEdit" name="lineedit_nomber_serch_ord"/>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushbutton_ok_nomber_serch_moove_2">
+                  <widget class="QPushButton" name="pushbutton_ok_nomber_serch_ord">
                    <property name="font">
                     <font>
                      <pointsize>9</pointsize>
@@ -2560,7 +2560,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_moove_2">
+                  <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_ord">
                    <property name="font">
                     <font>
                      <pointsize>9</pointsize>
@@ -2576,9 +2576,9 @@
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="lay_date_serch_moove_2">
+                <layout class="QHBoxLayout" name="lay_date_serch_ord">
                  <item>
-                  <widget class="QLabel" name="label1_data_serch_moove_2">
+                  <widget class="QLabel" name="label1_data_serch_ord">
                    <property name="maximumSize">
                     <size>
                      <width>9</width>
@@ -2591,7 +2591,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QDateEdit" name="dateedit_start_serch_moove_2">
+                  <widget class="QDateEdit" name="dateedit_start_serch_ord">
                    <property name="minimumSize">
                     <size>
                      <width>100</width>
@@ -2601,7 +2601,7 @@
                   </widget>
                  </item>
                  <item>
-                  <spacer name="hspacer2__data_serch_moove_2">
+                  <spacer name="hspacer2__data_serch_ord">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -2617,7 +2617,7 @@
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label2_data_serch_moove_2">
+                  <widget class="QLabel" name="label2_data_serch_ord">
                    <property name="maximumSize">
                     <size>
                      <width>15</width>
@@ -2630,7 +2630,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QDateEdit" name="dateedit_finish_serch_moove_2">
+                  <widget class="QDateEdit" name="dateedit_finish_serch_ord">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -2646,7 +2646,7 @@
                   </widget>
                  </item>
                  <item>
-                  <spacer name="hspacer1_data_serch_moove_2">
+                  <spacer name="hspacer1_data_serch_ord">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -2662,14 +2662,14 @@
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushbutton_ok_data_serch_moove_2">
+                  <widget class="QPushButton" name="pushbutton_ok_data_serch_ord">
                    <property name="text">
                     <string>PushButton</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushbutton_cancel_data_serch_moove_2">
+                  <widget class="QPushButton" name="pushbutton_cancel_data_serch_ord">
                    <property name="text">
                     <string>PushButton</string>
                    </property>
