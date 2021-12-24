@@ -17,11 +17,11 @@
    <number>-4</number>
   </property>
   <widget class="QWidget" name="mainwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_18">
+   <layout class="QVBoxLayout" name="verticalLayout_10">
     <item>
      <widget class="QTabWidget" name="tab_all">
       <property name="currentIndex">
-       <number>5</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -2407,7 +2407,7 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QTableWidget" name="tableWidget_3">
+         <widget class="QTableWidget" name="table_ord">
           <column>
            <property name="text">
             <string>Номер</string>
@@ -2683,7 +2683,7 @@
            </layout>
           </item>
           <item>
-           <widget class="QTableWidget" name="tableWidget_41">
+           <widget class="QTableWidget" name="table_value_menu_ord">
             <column>
              <property name="text">
               <string>Наименование</string>
@@ -2744,149 +2744,512 @@
        <attribute name="title">
         <string>План производства</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_17">
-        <item row="0" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_9">
-          <item>
-           <widget class="QGroupBox" name="groupBox_19">
-            <property name="title">
-             <string>GroupBox</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_11">
-             <item row="0" column="0">
-              <widget class="QTableWidget" name="tableWidget_43">
-               <row>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>2</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>3</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>4</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>5</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>7</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>8</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>9</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>10</string>
-                </property>
-               </row>
-               <column>
-                <property name="text">
-                 <string>Твердость</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Наименований</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Изделий</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Вес</string>
-                </property>
-               </column>
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <widget class="QGroupBox" name="box_serch_plan">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Анализ</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QTableWidget" name="tableWidget_43">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>300</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>450</width>
+               <height>300</height>
+              </size>
+             </property>
+             <row>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>3</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>4</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>5</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>7</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>8</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>9</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>10</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>Твердость</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Наименований</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Изделий</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Вес</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_11">
+             <item>
+              <widget class="QGroupBox" name="box_serch_moove_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_13">
+                <item>
+                 <layout class="QHBoxLayout" name="lay_value_serch_moove_2">
+                  <item>
+                   <widget class="QLabel" name="label_value_serch_moove_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Поиск по значению</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineedit_value_serch_moove_2"/>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushbutton_ok_value_serch_moove_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Ок</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_cancel_value_serch_moove_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Сброс</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="lay_nomber_serch_moove_2">
+                  <item>
+                   <widget class="QLabel" name="label_nomber_serch_moove_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Поиск по заказу</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="hspacer_nomber_serch_moove_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>18</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineedit_nomber_serch_moove_2"/>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushbutton_ok_nomber_serch_moove_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Ок</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_moove_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Сброс</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="lay_date_serch_moove_2">
+                  <item>
+                   <widget class="QLabel" name="label1_data_serch_moove_2">
+                    <property name="maximumSize">
+                     <size>
+                      <width>9</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>С:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateEdit" name="dateedit_start_serch_moove_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>100</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="hspacer2__data_serch_moove_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label2_data_serch_moove_2">
+                    <property name="maximumSize">
+                     <size>
+                      <width>15</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>По:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateEdit" name="dateedit_finish_serch_moove_2">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>100</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="hspacer1_data_serch_moove_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushbutton_ok_data_serch_moove_2">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushbutton_cancel_data_serch_moove_2">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_6">
+                  <item>
+                   <widget class="QTableWidget" name="tableWidget_2">
+                    <property name="maximumSize">
+                     <size>
+                      <width>300</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <attribute name="horizontalHeaderDefaultSectionSize">
+                     <number>250</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderMinimumSectionSize">
+                     <number>100</number>
+                    </attribute>
+                    <row>
+                     <property name="text">
+                      <string>New Row</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>New Row</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>New Row</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>New Row</string>
+                     </property>
+                    </row>
+                    <column>
+                     <property name="text">
+                      <string>New Column</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTableWidget" name="tableWidget">
+                    <property name="maximumSize">
+                     <size>
+                      <width>300</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <attribute name="horizontalHeaderDefaultSectionSize">
+                     <number>250</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderMinimumSectionSize">
+                     <number>100</number>
+                    </attribute>
+                    <row>
+                     <property name="text">
+                      <string>New Row</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>New Row</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>New Row</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>New Row</string>
+                     </property>
+                    </row>
+                    <column>
+                     <property name="text">
+                      <string>New Column</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
-           </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Перечень</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox_20">
-            <property name="title">
-             <string>GroupBox</string>
+           <widget class="QTableWidget" name="tableWidget_42">
+            <property name="gridStyle">
+             <enum>Qt::DashLine</enum>
             </property>
-            <layout class="QGridLayout" name="gridLayout_16">
-             <item row="0" column="0">
-              <widget class="QTableWidget" name="tableWidget_42">
-               <property name="gridStyle">
-                <enum>Qt::DashLine</enum>
-               </property>
-               <property name="sortingEnabled">
-                <bool>true</bool>
-               </property>
-               <column>
-                <property name="text">
-                 <string>Наименование</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Форма</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Масса единицы</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Колво план</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Масса оставшегося</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Колво факт</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Фин план</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Фин факт</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Описание</string>
-                </property>
-               </column>
-              </widget>
-             </item>
-            </layout>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <column>
+             <property name="text">
+              <string>Наименование</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Форма</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Масса единицы</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Колво план</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Масса оставшегося</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Колво факт</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Фин план</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Фин факт</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Описание</string>
+             </property>
+            </column>
            </widget>
           </item>
          </layout>
