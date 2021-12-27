@@ -2758,7 +2758,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <widget class="QTableWidget" name="tableWidget_43">
+            <widget class="QTableWidget" name="table_hardnes_serch_plan">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -2839,9 +2839,9 @@
             </widget>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_11">
+            <layout class="QVBoxLayout" name="lay_serch_plan">
              <item>
-              <widget class="QGroupBox" name="box_serch_moove_2">
+              <widget class="QGroupBox" name="box_serch_plan">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
                  <horstretch>0</horstretch>
@@ -2853,9 +2853,9 @@
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_13">
                 <item>
-                 <layout class="QHBoxLayout" name="lay_value_serch_moove_2">
+                 <layout class="QHBoxLayout" name="lay_value_serch_plan">
                   <item>
-                   <widget class="QLabel" name="label_value_serch_moove_2">
+                   <widget class="QLabel" name="label_value_serch_plan">
                     <property name="font">
                      <font>
                       <pointsize>12</pointsize>
@@ -2867,10 +2867,10 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineedit_value_serch_moove_2"/>
+                   <widget class="QLineEdit" name="lineedit_value_serch_plan"/>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="pushbutton_ok_value_serch_moove_2">
+                   <widget class="QPushButton" name="pushbutton_ok_value_serch_plan">
                     <property name="font">
                      <font>
                       <pointsize>9</pointsize>
@@ -2884,7 +2884,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="pushButton_cancel_value_serch_moove_2">
+                   <widget class="QPushButton" name="pushButton_cancel_value_serch_plan">
                     <property name="font">
                      <font>
                       <pointsize>9</pointsize>
@@ -2900,9 +2900,9 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="lay_nomber_serch_moove_2">
+                 <layout class="QHBoxLayout" name="lay_nomber_serch_plan">
                   <item>
-                   <widget class="QLabel" name="label_nomber_serch_moove_2">
+                   <widget class="QLabel" name="label_nomber_serch_plan">
                     <property name="font">
                      <font>
                       <pointsize>12</pointsize>
@@ -2914,7 +2914,7 @@
                    </widget>
                   </item>
                   <item>
-                   <spacer name="hspacer_nomber_serch_moove_2">
+                   <spacer name="hspacer_nomber_serch_plan">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
                     </property>
@@ -2930,10 +2930,10 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineedit_nomber_serch_moove_2"/>
+                   <widget class="QLineEdit" name="lineedit_nomber_serch_plan"/>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="pushbutton_ok_nomber_serch_moove_2">
+                   <widget class="QPushButton" name="pushbutton_ok_nomber_serch_plan">
                     <property name="font">
                      <font>
                       <pointsize>9</pointsize>
@@ -2947,7 +2947,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_moove_2">
+                   <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_plan">
                     <property name="font">
                      <font>
                       <pointsize>9</pointsize>
@@ -2963,9 +2963,9 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="lay_date_serch_moove_2">
+                 <layout class="QHBoxLayout" name="lay_date_serch_plan">
                   <item>
-                   <widget class="QLabel" name="label1_data_serch_moove_2">
+                   <widget class="QLabel" name="label1_data_serch_plan">
                     <property name="maximumSize">
                      <size>
                       <width>9</width>
@@ -2978,7 +2978,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QDateEdit" name="dateedit_start_serch_moove_2">
+                   <widget class="QDateEdit" name="dateedit_start_serch_plan">
                     <property name="minimumSize">
                      <size>
                       <width>100</width>
@@ -2988,7 +2988,7 @@
                    </widget>
                   </item>
                   <item>
-                   <spacer name="hspacer2__data_serch_moove_2">
+                   <spacer name="hspacer2__data_serch_plan">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
                     </property>
@@ -3004,7 +3004,7 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QLabel" name="label2_data_serch_moove_2">
+                   <widget class="QLabel" name="label2_data_serch_plan">
                     <property name="maximumSize">
                      <size>
                       <width>15</width>
@@ -3017,7 +3017,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QDateEdit" name="dateedit_finish_serch_moove_2">
+                   <widget class="QDateEdit" name="dateedit_finish_serch_plan">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -3033,7 +3033,7 @@
                    </widget>
                   </item>
                   <item>
-                   <spacer name="hspacer1_data_serch_moove_2">
+                   <spacer name="hspacer1_data_serch_plan">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
                     </property>
@@ -3049,14 +3049,14 @@
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="pushbutton_ok_data_serch_moove_2">
+                   <widget class="QPushButton" name="pushbutton_ok_data_serch_plan">
                     <property name="text">
                      <string>PushButton</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="pushbutton_cancel_data_serch_moove_2">
+                   <widget class="QPushButton" name="pushbutton_cancel_data_serch_plan">
                     <property name="text">
                      <string>PushButton</string>
                     </property>
@@ -3592,9 +3592,9 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_15">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_45">
+         <layout class="QHBoxLayout" name="layout_serch_zayav">
           <item>
-           <spacer name="horizontalSpacer_68">
+           <spacer name="hspacer1_serch_zayav">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -3610,7 +3610,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="label_44">
+           <widget class="QLabel" name="label1_serch_zayav">
             <property name="maximumSize">
              <size>
               <width>9</width>
@@ -3623,7 +3623,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QDateEdit" name="dateEdit_17">
+           <widget class="QDateEdit" name="dateedit_start_serch_zayav">
             <property name="minimumSize">
              <size>
               <width>100</width>
@@ -3633,7 +3633,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_69">
+           <spacer name="hspacer2_serch_zayav">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -3649,7 +3649,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="label_45">
+           <widget class="QLabel" name="label2_serch_zayav">
             <property name="maximumSize">
              <size>
               <width>15</width>
@@ -3662,7 +3662,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QDateEdit" name="dateEdit_18">
+           <widget class="QDateEdit" name="dateedit_finish_serch_zayav">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -3678,7 +3678,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_70">
+           <spacer name="hspacer3_serch_zayav">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -3694,21 +3694,21 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_71">
+           <widget class="QPushButton" name="pushbutton_ok_serch_zayav">
             <property name="text">
              <string>PushButton</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_72">
+           <widget class="QPushButton" name="pushbutton_cancel_serch_zayav">
             <property name="text">
              <string>PushButton</string>
             </property>
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_17">
+           <spacer name="hspacer4_serch_zayav">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -3723,7 +3723,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTableWidget" name="tableWidget_51">
+         <widget class="QTableWidget" name="table_zayav">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
             <horstretch>99</horstretch>
