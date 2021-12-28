@@ -21,7 +21,7 @@
     <item>
      <widget class="QTabWidget" name="tab_all">
       <property name="currentIndex">
-       <number>6</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -3065,9 +3065,9 @@
                  </layout>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <layout class="QHBoxLayout" name="layout_source_serch_plan">
                   <item>
-                   <widget class="QTableWidget" name="tableWidget_2">
+                   <widget class="QTableWidget" name="table_polymer_source_serch_plan">
                     <property name="maximumSize">
                      <size>
                       <width>300</width>
@@ -3108,7 +3108,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QTableWidget" name="tableWidget">
+                   <widget class="QTableWidget" name="table_hardner_source_serch_plan">
                     <property name="maximumSize">
                      <size>
                       <width>300</width>
@@ -3149,7 +3149,7 @@
                    </widget>
                   </item>
                   <item>
-                   <spacer name="horizontalSpacer_2">
+                   <spacer name="hspacer_source_serch_plan">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
                     </property>
@@ -3172,18 +3172,18 @@
          </widget>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_9">
+         <layout class="QVBoxLayout" name="layout_table_plan">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <layout class="QHBoxLayout" name="layout_name_table_plan">
             <item>
-             <widget class="QLabel" name="label_2">
+             <widget class="QLabel" name="label_name_table_plan">
               <property name="text">
                <string>Перечень</string>
               </property>
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_3">
+             <spacer name="hspacer_name_table_plan">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -3198,7 +3198,7 @@
            </layout>
           </item>
           <item>
-           <widget class="QTableWidget" name="tableWidget_42">
+           <widget class="QTableWidget" name="table_info_plan">
             <property name="gridStyle">
              <enum>Qt::DashLine</enum>
             </property>
@@ -3492,41 +3492,41 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout">
+         <layout class="QVBoxLayout" name="layout_menu_hour">
           <item>
-           <widget class="QTableWidget" name="tableWidget_17"/>
+           <widget class="QTableWidget" name="table_info_serch_hour"/>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <layout class="QHBoxLayout" name="layout_serch_hour">
             <item>
-             <widget class="QLabel" name="label_20">
+             <widget class="QLabel" name="label_serch_hour">
               <property name="text">
                <string>Поиск</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_18"/>
+             <widget class="QLineEdit" name="lineedit_serch_hours"/>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_26"/>
+             <widget class="QComboBox" name="combobox_serch_hour"/>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_31">
+             <widget class="QPushButton" name="pushbutton_ok_serch_hour">
               <property name="text">
                <string>Ок</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_30">
+             <widget class="QPushButton" name="pushbutton_cancel_serch_hour">
               <property name="text">
                <string>Сброс</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_3">
+             <widget class="QPushButton" name="pushbutton_clear_serch_hour">
               <property name="text">
                <string>PushButton</string>
               </property>
@@ -3535,7 +3535,7 @@
            </layout>
           </item>
           <item>
-           <widget class="QTableWidget" name="tableWidget_6">
+           <widget class="QTableWidget" name="table_month_serch_hour">
             <column>
              <property name="text">
               <string>Месяц</string>
@@ -3566,7 +3566,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTableWidget" name="tableWidget_11">
+         <widget class="QTableWidget" name="table_grafic_hours">
           <column>
            <property name="text">
             <string>Дата</string>
