@@ -3262,7 +3262,7 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_38">
         <item row="1" column="0">
-         <widget class="QTableWidget" name="tableWidget_4">
+         <widget class="QTableWidget" name="table_nom">
           <column>
            <property name="text">
             <string>Группа</string>
@@ -3291,9 +3291,9 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_69">
+         <layout class="QHBoxLayout" name="layout_serch_nom">
           <item>
-           <widget class="QTreeWidget" name="treeWidget_27">
+           <widget class="QTreeWidget" name="treewidget_serch_nom">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
               <horstretch>0</horstretch>
@@ -3349,11 +3349,11 @@
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_65">
+           <layout class="QHBoxLayout" name="layout1_name_serch_nom">
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_62">
+             <layout class="QVBoxLayout" name="layout2_name_serch_nom">
               <item>
-               <widget class="QGroupBox" name="groupBox_10">
+               <widget class="QGroupBox" name="groupbox_name_serch_nom">
                 <property name="minimumSize">
                  <size>
                   <width>500</width>
@@ -3369,7 +3369,7 @@
                 <property name="title">
                  <string>GroupBox</string>
                 </property>
-                <widget class="QLabel" name="label_19">
+                <widget class="QLabel" name="label1_name_serch_nom">
                  <property name="geometry">
                   <rect>
                    <x>10</x>
@@ -3387,7 +3387,7 @@
                   <string>Поиск</string>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="lineEdit_17">
+                <widget class="QLineEdit" name="lineedit_name_serch_nom">
                  <property name="geometry">
                   <rect>
                    <x>60</x>
@@ -3397,7 +3397,7 @@
                   </rect>
                  </property>
                 </widget>
-                <widget class="QComboBox" name="comboBox_25">
+                <widget class="QComboBox" name="combobox_name_sech_nom">
                  <property name="geometry">
                   <rect>
                    <x>199</x>
@@ -3407,7 +3407,7 @@
                   </rect>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_29">
+                <widget class="QPushButton" name="pushbutton_ok_serch_nom">
                  <property name="geometry">
                   <rect>
                    <x>274</x>
@@ -3427,7 +3427,7 @@
                   <string>Ок</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_28">
+                <widget class="QPushButton" name="pushbutton_cancel_serch_nom">
                  <property name="geometry">
                   <rect>
                    <x>355</x>
@@ -3450,7 +3450,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="verticalSpacer">
+               <spacer name="vspacer_serch_nom">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -3468,7 +3468,7 @@
              </layout>
             </item>
             <item>
-             <spacer name="horizontalSpacer">
+             <spacer name="hspacer_serch_nom">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -3817,6 +3817,16 @@
    <addaction name="menu"/>
    <addaction name="menu_2"/>
   </widget>
+  <action name="action_3">
+   <property name="text">
+    <string>кнопка</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>аааааа</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
