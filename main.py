@@ -10,7 +10,7 @@ if __name__ == "__main__":
 	w_main = QtWidgets.QMainWindow()
 	ui = Ui_w_main()
 	ui.setupUi(w_main)
-	w_main.show()
+	w_main.showMaximized()
 
 def opn_w():
 	global w_ceh
