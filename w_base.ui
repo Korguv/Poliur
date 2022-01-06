@@ -21,7 +21,7 @@
     <item>
      <widget class="QTabWidget" name="tab_all">
       <property name="currentIndex">
-       <number>7</number>
+       <number>8</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -3494,7 +3494,58 @@
         <item>
          <layout class="QVBoxLayout" name="layout_menu_hour">
           <item>
-           <widget class="QTableWidget" name="table_info_serch_hour"/>
+           <layout class="QHBoxLayout" name="layout_menu_hour_2">
+            <item>
+             <widget class="QLabel" name="label1_menu_hour">
+              <property name="text">
+               <string>Часов в месяц</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineedit1_meny_hour"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushbutton_report_menu_hour">
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushbutton_worker_menu_hour">
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_hollyday_menu_hour">
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="table_info_serch_hour">
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+           </widget>
           </item>
           <item>
            <layout class="QHBoxLayout" name="layout_serch_hour">
@@ -3553,12 +3604,17 @@
             </column>
             <column>
              <property name="text">
-              <string>Оклад</string>
+              <string>Оклад </string>
              </property>
             </column>
             <column>
              <property name="text">
               <string>Премия</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Выплачено</string>
              </property>
             </column>
            </widget>
