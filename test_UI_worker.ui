@@ -6,85 +6,111 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>902</width>
     <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QTableWidget" name="tableWidget_8">
-      <column>
+  <widget class="QWidget" name="widget">
+   <widget class="QTableWidget" name="table">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>ФИО</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Должность</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Телефон</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Почта</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Пометки</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Документы</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Оклад</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Премия</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>30</y>
+      <width>669</width>
+      <height>138</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="layout_menu">
+     <item>
+      <widget class="QPushButton" name="pushbutton_plus_menu">
        <property name="text">
-        <string>ФИО</string>
+        <string>Добавить</string>
        </property>
-      </column>
-      <column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushbutton_delete_menu">
        <property name="text">
-        <string>Должность</string>
+        <string>Удалить</string>
        </property>
-      </column>
-      <column>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushbutton_end_menu">
        <property name="text">
-        <string>Телефон</string>
+        <string>Закрыть</string>
        </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Почта</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Пометки</string>
-       </property>
-      </column>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
