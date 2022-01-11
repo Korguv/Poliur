@@ -1,78 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>w_worker</class>
- <widget class="QMainWindow" name="w_worker">
+ <class>d_worker</class>
+ <widget class="QDialog" name="d_worker">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>902</width>
-    <height>600</height>
+    <width>906</width>
+    <height>607</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="widget">
-   <widget class="QTableWidget" name="table">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-    <column>
-     <property name="text">
-      <string>ФИО</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Должность</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Телефон</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Почта</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Пометки</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Документы</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Оклад</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Премия</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>30</y>
-      <width>669</width>
-      <height>138</height>
-     </rect>
-    </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QTableWidget" name="table">
+     <column>
+      <property name="text">
+       <string>ФИО</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Должность</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Телефон</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Почта</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Пометки</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Документы</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Оклад</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Премия</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
     <layout class="QVBoxLayout" name="layout_menu">
      <item>
       <widget class="QPushButton" name="pushbutton_plus_menu">
@@ -109,8 +95,8 @@
       </widget>
      </item>
     </layout>
-   </widget>
-  </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
