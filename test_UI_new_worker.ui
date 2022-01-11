@@ -11,40 +11,40 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Сотрудник</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_11">
+  <layout class="QVBoxLayout" name="verticalLayout_10">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="layout_data_work_n">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_9">
+      <layout class="QVBoxLayout" name="layout_left">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <layout class="QHBoxLayout" name="layout_name">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_8">
+          <layout class="QVBoxLayout" name="layout_text_name">
            <item>
-            <widget class="QLabel" name="label">
+            <widget class="QLabel" name="label_name">
              <property name="text">
               <string>ФИО</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_2">
+            <widget class="QLabel" name="label_post">
              <property name="text">
               <string>Должность</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_3">
+            <widget class="QLabel" name="label_tel">
              <property name="text">
               <string>Телефон</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_4">
+            <widget class="QLabel" name="label_mail">
              <property name="text">
               <string>Почта</string>
              </property>
@@ -53,36 +53,36 @@
           </layout>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_7">
+          <layout class="QVBoxLayout" name="layout_data_name">
            <item>
-            <widget class="QLineEdit" name="lineEdit"/>
+            <widget class="QLineEdit" name="lineedit_name"/>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_2"/>
+            <widget class="QLineEdit" name="lineedit_post"/>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_4"/>
+            <widget class="QLineEdit" name="lineedit_tel"/>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_3"/>
+            <widget class="QLineEdit" name="lineedit_mail"/>
            </item>
           </layout>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QHBoxLayout" name="layout_doc">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_6">
+          <layout class="QVBoxLayout" name="layout_name_doc">
            <item>
-            <widget class="QLabel" name="label_5">
+            <widget class="QLabel" name="label_doc">
              <property name="text">
               <string>Документы</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_6">
+            <widget class="QLabel" name="label_foto">
              <property name="text">
               <string>Фото</string>
              </property>
@@ -91,16 +91,16 @@
           </layout>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout">
+          <layout class="QVBoxLayout" name="layout_button">
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="pushbutton_save_doc">
              <property name="text">
               <string>Сохранить</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="pushbutton_save_foto">
              <property name="text">
               <string>Сохранить</string>
              </property>
@@ -111,10 +111,10 @@
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
-            <widget class="QLineEdit" name="lineEdit_5"/>
+            <widget class="QLineEdit" name="lineedit_doc"/>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_6"/>
+            <widget class="QLineEdit" name="lineedit_foto"/>
            </item>
           </layout>
          </item>
@@ -123,34 +123,30 @@
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_10">
+      <layout class="QVBoxLayout" name="layout_right">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>Дополнительная информация</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QListView" name="listView"/>
-         </item>
-        </layout>
+        <widget class="QLabel" name="label_text">
+         <property name="text">
+          <string>Дополнительная информация</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <widget class="QListView" name="listview_text"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layout_money">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <layout class="QVBoxLayout" name="layout_text_money">
            <item>
-            <widget class="QLabel" name="label_8">
+            <widget class="QLabel" name="label_pay">
              <property name="text">
               <string>Оклад</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_9">
+            <widget class="QLabel" name="label_owerpay">
              <property name="text">
               <string>Процент</string>
              </property>
@@ -159,12 +155,12 @@
           </layout>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_5">
+          <layout class="QVBoxLayout" name="layout_data_money">
            <item>
-            <widget class="QLineEdit" name="lineEdit_7"/>
+            <widget class="QLineEdit" name="lineedit_pay"/>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_8"/>
+            <widget class="QLineEdit" name="lineedit_owerpay"/>
            </item>
           </layout>
          </item>
@@ -175,9 +171,9 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <layout class="QHBoxLayout" name="layout_button_work_n">
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="hspacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -190,14 +186,14 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="pushbutton_cancel">
        <property name="text">
         <string>Сохранить</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushbutton_save">
        <property name="text">
         <string>Отмена</string>
        </property>
