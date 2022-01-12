@@ -7,105 +7,128 @@
     <x>0</x>
     <y>0</y>
     <width>831</width>
-    <height>446</height>
+    <height>366</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Номенклатура</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="layout_menu">
      <item>
-      <layout class="QFormLayout" name="formLayout">
+      <layout class="QGridLayout" name="layout_left">
        <item row="0" column="0">
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="label_name">
          <property name="text">
           <string>Наименование</string>
          </property>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="lineedit_name"/>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="label_nicname">
          <property name="text">
           <string>Условное наименование</string>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_2"/>
-       </item>
-       <item row="2" column="1">
-        <widget class="QComboBox" name="comboBox"/>
-       </item>
-       <item row="3" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <widget class="QLineEdit" name="lineEdit_5"/>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_2">
-           <property name="text">
-            <string>PushButton</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QLineEdit" name="lineedit_nicname"/>
        </item>
        <item row="2" column="0">
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="label_group">
          <property name="text">
           <string>Группировка</string>
          </property>
         </widget>
        </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="combobox_group"/>
+       </item>
        <item row="3" column="0">
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="label_project">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>80</height>
+          </size>
+         </property>
          <property name="text">
           <string>Чертёж</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>Номер формы</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="lineEdit_6"/>
-       </item>
-       <item row="5" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout">
+       <item row="3" column="1">
+        <layout class="QHBoxLayout" name="layout_project">
          <item>
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="lineedit_project"/>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="pushbutton_project">
            <property name="text">
-            <string>PushButton</string>
+            <string>Прикрепить</string>
            </property>
           </widget>
          </item>
         </layout>
        </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_nomber">
+         <property name="text">
+          <string>Номер формы</string>
+         </property>
+        </widget>
+       </item>
        <item row="5" column="0">
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="label_value">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>80</height>
+          </size>
+         </property>
          <property name="text">
           <string>Объём</string>
          </property>
         </widget>
        </item>
+       <item row="5" column="1">
+        <layout class="QHBoxLayout" name="layout_value">
+         <item>
+          <widget class="QLineEdit" name="lineedit_value"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_value">
+           <property name="text">
+            <string>Расчет</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="1">
+        <layout class="QHBoxLayout" name="layout_nomber">
+         <item>
+          <widget class="QLineEdit" name="lineedit_form"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_form">
+           <property name="text">
+            <string>Прикрепить</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="layout_right">
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="label_text">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
@@ -124,7 +147,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_3">
+        <widget class="QLineEdit" name="lineedit_text">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
@@ -144,9 +167,9 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="layout_button">
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="hspacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -159,16 +182,16 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushbutton_save">
        <property name="text">
-        <string>PushButton</string>
+        <string>Сохранить</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="pushbutton_cancel">
        <property name="text">
-        <string>PushButton</string>
+        <string>Отменить</string>
        </property>
       </widget>
      </item>
