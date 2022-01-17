@@ -23,7 +23,7 @@
       </sizepolicy>
      </property>
      <property name="title">
-      <string>GroupBox</string>
+      <string/>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_5">
       <item>
@@ -72,7 +72,7 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_4">
+         <spacer name="hspacer_4">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -148,7 +148,7 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_3">
+         <spacer name="hspacer_3">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -163,9 +163,9 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <layout class="QHBoxLayout" name="layout_type">
         <item>
-         <widget class="QComboBox" name="comboBox"/>
+         <widget class="QComboBox" name="combobox_type"/>
         </item>
         <item>
          <widget class="QPushButton" name="pushbutton_cancel_hard_serch_agent">
@@ -175,7 +175,7 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_2">
+         <spacer name="hspacer_2">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -196,12 +196,12 @@
     </widget>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableWidget"/>
+    <widget class="QTableWidget" name="table"/>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="layout_button">
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="hspacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -214,16 +214,16 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="pushbutton_save">
        <property name="text">
-        <string>PushButton</string>
+        <string>Выбрать</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="pushbutton_cancel">
        <property name="text">
-        <string>PushButton</string>
+        <string>Отменить</string>
        </property>
       </widget>
      </item>
