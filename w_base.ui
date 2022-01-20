@@ -21,7 +21,7 @@
     <item>
      <widget class="QTabWidget" name="tab_all">
       <property name="currentIndex">
-       <number>0</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -3051,14 +3051,14 @@
                   <item>
                    <widget class="QPushButton" name="pushbutton_ok_data_serch_plan">
                     <property name="text">
-                     <string>PushButton</string>
+                     <string>Поиск</string>
                     </property>
                    </widget>
                   </item>
                   <item>
                    <widget class="QPushButton" name="pushbutton_cancel_data_serch_plan">
                     <property name="text">
-                     <string>PushButton</string>
+                     <string>Сброс</string>
                     </property>
                    </widget>
                   </item>
@@ -3102,7 +3102,7 @@
                     </row>
                     <column>
                      <property name="text">
-                      <string>New Column</string>
+                      <string>Остаток полимера</string>
                      </property>
                     </column>
                    </widget>
@@ -3123,27 +3123,27 @@
                     </attribute>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>107</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>185</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>121</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>МОКА</string>
                      </property>
                     </row>
                     <column>
                      <property name="text">
-                      <string>New Column</string>
+                      <string>Остаток отвердителя</string>
                      </property>
                     </column>
                    </widget>
