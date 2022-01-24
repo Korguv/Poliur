@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1022</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>181</y>
+     <width>204</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Сохранить</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Отменить</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>80</y>
+     <width>902</width>
+     <height>194</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="lay_menu_stor">
+    <item>
+     <widget class="QTreeWidget" name="tree_stor">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>330</width>
+        <height>180</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <attribute name="headerDefaultSectionSize">
+       <number>120</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string notr="true">Классификация</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Количество наименований</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>lv1</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>lv2</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="box_serch_stor">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QHBoxLayout" name="lay_value_serch_stor">
+         <item>
+          <widget class="QLabel" name="label_value_serch_stor">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Поиск по значению</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineedit_value_serch_stor"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_ok_value_serch_stor">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Ок</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_cancel_value_serch_stor">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Сброс</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="lay_nomber_serch_stor">
+         <item>
+          <widget class="QLabel" name="label_nomber_serch_stor">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Поиск по заказу</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="hspacer_nomber_serch_stor">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineedit_nomber_serch_stor"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_ok_nomber_serch_stor">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Ок</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_stor">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Сброс</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="lay_date_serch_stor">
+         <item>
+          <widget class="QLabel" name="label1_data_serch_stor">
+           <property name="maximumSize">
+            <size>
+             <width>9</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>С:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dateedit_start_serch_stor">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="hspacer2__data_serch_stor">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label2_data_serch_stor">
+           <property name="maximumSize">
+            <size>
+             <width>15</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>По:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dateedit_finish_serch_stor">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="hspacer1_data_serch_stor">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_ok_data_serch_stor">
+           <property name="text">
+            <string>Ок</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushbutton_cancel_data_serch_stor">
+           <property name="text">
+            <string>Сброс</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="lay_hard_serch_stor">
+         <item row="1" column="5">
+          <widget class="QCheckBox" name="checkbox_95_hard_serch_stor">
+           <property name="text">
+            <string>95</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QCheckBox" name="checkbox_90_hard_serch_stor">
+           <property name="text">
+            <string>90</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QPushButton" name="pushbutton_cancel_hard_serch_stor">
+           <property name="text">
+            <string>Сброс</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QCheckBox" name="checkbox_85_hard_serch_stor">
+           <property name="text">
+            <string>85</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkbox_45_hard_serch_stor">
+           <property name="text">
+            <string>45</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QCheckBox" name="checkbox_65_hard_serch_stor">
+           <property name="text">
+            <string>65</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QCheckBox" name="checkbox_75_hard_serch_stor">
+           <property name="text">
+            <string>75</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="checkbox_55_hard_serch_stor">
+           <property name="text">
+            <string>55</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QCheckBox" name="checkbox_plast_hard_serch_stor">
+           <property name="text">
+            <string>Пластик</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QCheckBox" name="checkbox_80_hard_serch_stor">
+           <property name="text">
+            <string>80</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QCheckBox" name="checkbox_70_hard_serch_stor">
+           <property name="text">
+            <string>70</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="checkbox_40_hard_serch_stor">
+           <property name="text">
+            <string>40</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="checkbox_50_hard_serch_stor">
+           <property name="text">
+            <string>50</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QCheckBox" name="checkbox_60_hard_serch_stor">
+           <property name="text">
+            <string>60</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="hspacer_stor">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="table_stor">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>300</y>
+     <width>1855</width>
+     <height>746</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>№</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Наименование</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Условное обозначение</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Твердость</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Количество</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Дополнительная информация</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

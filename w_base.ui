@@ -21,7 +21,7 @@
     <item>
      <widget class="QTabWidget" name="tab_all">
       <property name="currentIndex">
-       <number>6</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -1366,14 +1366,14 @@
                <item>
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_stor">
                  <property name="text">
-                  <string>PushButton</string>
+                  <string>Ок</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_stor">
                  <property name="text">
-                  <string>PushButton</string>
+                  <string>Сброс</string>
                  </property>
                 </widget>
                </item>
