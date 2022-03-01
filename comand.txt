@@ -1,0 +1,1 @@
+pyuic5 Poliur\ceh_ui.ui -x -o  poliur\сeh_ui.py
