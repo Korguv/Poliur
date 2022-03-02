@@ -8,4 +8,4 @@ def generate_alphanum_random_string(length):
     print("Alphanum Random string of length", length, "is:", rand_string)
 
 
-generate_alphanum_random_string(20)
+generate_alphanum_random_string(12)
