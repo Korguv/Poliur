@@ -16,6 +16,31 @@
   <property name="toolTipDuration">
    <number>-4</number>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background-color: #ffffff;
+	font-family: Andale Mono;
+	font-weight: 600;
+    color: #282726;
+}
+QPushButton {
+	background-color:#239c4b;
+	border: none;
+	font-size: 13pt;
+
+}
+QPushButton:hover {
+	background-color: #1b7f3c;
+    color: #ffffff;
+}
+
+QPushButton:pressed {
+	background-color: #1b5f4f;
+}
+QTabBar::tab:!selected:hover {
+    background: #FFFFFF;
+}</string>
+  </property>
   <widget class="QWidget" name="mainwidget">
    <layout class="QVBoxLayout" name="verticalLayout_10">
     <item>
@@ -46,9 +71,9 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
+              <family>Andale Mono</family>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <attribute name="headerDefaultSectionSize">
@@ -104,7 +129,9 @@
                 <widget class="QLabel" name="label_value_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -119,10 +146,14 @@
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
                  </property>
                  <property name="text">
                   <string>Найти</string>
@@ -133,7 +164,8 @@
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -151,7 +183,9 @@
                 <widget class="QLabel" name="label_nomber_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -182,7 +216,8 @@
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -196,7 +231,8 @@
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -298,7 +334,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -310,7 +349,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -340,7 +382,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_moove">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -469,7 +514,9 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>12</pointsize>
+              <family>Andale Mono</family>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="rowCount">
@@ -552,7 +599,9 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>12</pointsize>
+              <family>Andale Mono</family>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="rowCount">
@@ -649,9 +698,9 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
+              <family>Andale Mono</family>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <attribute name="headerDefaultSectionSize">
@@ -707,7 +756,9 @@
                 <widget class="QLabel" name="label_value_serch_pay">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -722,9 +773,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_pay">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -736,9 +788,10 @@
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_pay">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -754,7 +807,9 @@
                 <widget class="QLabel" name="label_nomber_serch_pay">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -785,9 +840,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_pay">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -799,9 +855,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_pay">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -901,8 +958,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_pay">
                  <property name="font">
                   <font>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -914,8 +973,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_pay">
                  <property name="font">
                   <font>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -945,8 +1006,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_pay">
                  <property name="font">
                   <font>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1148,9 +1211,9 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
+              <family>Andale Mono</family>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <attribute name="headerDefaultSectionSize">
@@ -1206,7 +1269,9 @@
                 <widget class="QLabel" name="label_value_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1221,9 +1286,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1235,9 +1301,10 @@
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1253,7 +1320,9 @@
                 <widget class="QLabel" name="label_nomber_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1284,9 +1353,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1298,9 +1368,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1400,9 +1471,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1414,9 +1486,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1446,9 +1519,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_stor">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1617,7 +1691,9 @@
                <widget class="QLabel" name="label_value_serch_fin">
                 <property name="font">
                  <font>
-                  <pointsize>12</pointsize>
+                  <family>Andale Mono</family>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -1635,9 +1711,10 @@
                <widget class="QPushButton" name="pushbutton_ok_value_serch_fin">
                 <property name="font">
                  <font>
-                  <pointsize>9</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
+                  <family>Andale Mono</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -1649,9 +1726,10 @@
                <widget class="QPushButton" name="pushbutton_cancel_value_serch_fin">
                 <property name="font">
                  <font>
-                  <pointsize>9</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
+                  <family>Andale Mono</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -1917,9 +1995,9 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
+              <family>Andale Mono</family>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <attribute name="headerDefaultSectionSize">
@@ -1975,7 +2053,9 @@
                 <widget class="QLabel" name="label_value_serch_agent">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1990,9 +2070,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_agent">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2004,9 +2085,10 @@
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_agent">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2022,7 +2104,9 @@
                 <widget class="QLabel" name="label_nomber_serch_agent">
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2053,9 +2137,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_agent">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2067,9 +2152,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_agent">
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2169,8 +2255,10 @@
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_agent">
                  <property name="font">
                   <font>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2182,8 +2270,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_agent">
                  <property name="font">
                   <font>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2213,8 +2303,10 @@
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_agent">
                  <property name="font">
                   <font>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2532,9 +2624,9 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>11</pointsize>
-                <weight>50</weight>
-                <bold>false</bold>
+                <family>Andale Mono</family>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <attribute name="headerDefaultSectionSize">
@@ -2590,7 +2682,9 @@
                   <widget class="QLabel" name="label_nomber_serch_ord">
                    <property name="font">
                     <font>
-                     <pointsize>12</pointsize>
+                     <family>Andale Mono</family>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2621,9 +2715,10 @@
                   <widget class="QPushButton" name="pushbutton_ok_nomber_serch_ord">
                    <property name="font">
                     <font>
-                     <pointsize>9</pointsize>
-                     <weight>50</weight>
-                     <bold>false</bold>
+                     <family>Andale Mono</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2635,9 +2730,10 @@
                   <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_ord">
                    <property name="font">
                     <font>
-                     <pointsize>9</pointsize>
-                     <weight>50</weight>
-                     <bold>false</bold>
+                     <family>Andale Mono</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2737,9 +2833,10 @@
                   <widget class="QPushButton" name="pushbutton_ok_data_serch_ord">
                    <property name="font">
                     <font>
-                     <pointsize>9</pointsize>
-                     <weight>50</weight>
-                     <bold>false</bold>
+                     <family>Andale Mono</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2751,9 +2848,10 @@
                   <widget class="QPushButton" name="pushbutton_cancel_data_serch_ord">
                    <property name="font">
                     <font>
-                     <pointsize>9</pointsize>
-                     <weight>50</weight>
-                     <bold>false</bold>
+                     <family>Andale Mono</family>
+                     <pointsize>13</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2944,7 +3042,9 @@
                    <widget class="QLabel" name="label_value_serch_plan">
                     <property name="font">
                      <font>
-                      <pointsize>12</pointsize>
+                      <family>Andale Mono</family>
+                      <weight>75</weight>
+                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -2959,9 +3059,10 @@
                    <widget class="QPushButton" name="pushbutton_ok_value_serch_plan">
                     <property name="font">
                      <font>
-                      <pointsize>9</pointsize>
-                      <weight>50</weight>
-                      <bold>false</bold>
+                      <family>Andale Mono</family>
+                      <pointsize>13</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -2973,9 +3074,10 @@
                    <widget class="QPushButton" name="pushButton_cancel_value_serch_plan">
                     <property name="font">
                      <font>
-                      <pointsize>9</pointsize>
-                      <weight>50</weight>
-                      <bold>false</bold>
+                      <family>Andale Mono</family>
+                      <pointsize>13</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -2991,7 +3093,9 @@
                    <widget class="QLabel" name="label_nomber_serch_plan">
                     <property name="font">
                      <font>
-                      <pointsize>12</pointsize>
+                      <family>Andale Mono</family>
+                      <weight>75</weight>
+                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3022,9 +3126,10 @@
                    <widget class="QPushButton" name="pushbutton_ok_nomber_serch_plan">
                     <property name="font">
                      <font>
-                      <pointsize>9</pointsize>
-                      <weight>50</weight>
-                      <bold>false</bold>
+                      <family>Andale Mono</family>
+                      <pointsize>13</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3036,9 +3141,10 @@
                    <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_plan">
                     <property name="font">
                      <font>
-                      <pointsize>9</pointsize>
-                      <weight>50</weight>
-                      <bold>false</bold>
+                      <family>Andale Mono</family>
+                      <pointsize>13</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3138,7 +3244,10 @@
                    <widget class="QPushButton" name="pushbutton_ok_data_serch_plan">
                     <property name="font">
                      <font>
-                      <pointsize>9</pointsize>
+                      <family>Andale Mono</family>
+                      <pointsize>13</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3150,7 +3259,10 @@
                    <widget class="QPushButton" name="pushbutton_cancel_data_serch_plan">
                     <property name="font">
                      <font>
-                      <pointsize>9</pointsize>
+                      <family>Andale Mono</family>
+                      <pointsize>13</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3404,9 +3516,9 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>11</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
+              <family>Andale Mono</family>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <attribute name="headerDefaultSectionSize">
@@ -3476,7 +3588,9 @@
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>12</pointsize>
+                   <family>Andale Mono</family>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -3514,9 +3628,10 @@
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -3534,9 +3649,10 @@
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
+                   <family>Andale Mono</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -3634,7 +3750,10 @@
              <widget class="QPushButton" name="pushbutton_report_menu_hour">
               <property name="font">
                <font>
-                <pointsize>9</pointsize>
+                <family>Andale Mono</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
@@ -3646,7 +3765,10 @@
              <widget class="QPushButton" name="pushbutton_worker_menu_hour">
               <property name="font">
                <font>
-                <pointsize>9</pointsize>
+                <family>Andale Mono</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
@@ -3658,7 +3780,10 @@
              <widget class="QPushButton" name="pushButton_hollyday_menu_hour">
               <property name="font">
                <font>
-                <pointsize>9</pointsize>
+                <family>Andale Mono</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
@@ -3706,7 +3831,10 @@
              <widget class="QPushButton" name="pushbutton_ok_serch_hour">
               <property name="font">
                <font>
-                <pointsize>9</pointsize>
+                <family>Andale Mono</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
@@ -3718,7 +3846,10 @@
              <widget class="QPushButton" name="pushbutton_cancel_serch_hour">
               <property name="font">
                <font>
-                <pointsize>9</pointsize>
+                <family>Andale Mono</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
@@ -3730,7 +3861,10 @@
              <widget class="QPushButton" name="pushbutton_clear_serch_hour">
               <property name="font">
                <font>
-                <pointsize>9</pointsize>
+                <family>Andale Mono</family>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="text">
@@ -3912,7 +4046,10 @@
                <widget class="QPushButton" name="pushbutton_ok_serch_zayav">
                 <property name="font">
                  <font>
-                  <pointsize>9</pointsize>
+                  <family>Andale Mono</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -3924,7 +4061,10 @@
                <widget class="QPushButton" name="pushbutton_cancel_serch_zayav">
                 <property name="font">
                  <font>
-                  <pointsize>9</pointsize>
+                  <family>Andale Mono</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -3976,7 +4116,9 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>12</pointsize>
+                <family>Andale Mono</family>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="rowCount">
@@ -4131,7 +4273,10 @@
                <widget class="QPushButton" name="pushbutton_ok_serch_zayav_2">
                 <property name="font">
                  <font>
-                  <pointsize>9</pointsize>
+                  <family>Andale Mono</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -4143,7 +4288,10 @@
                <widget class="QPushButton" name="pushbutton_cancel_serch_zayav_2">
                 <property name="font">
                  <font>
-                  <pointsize>9</pointsize>
+                  <family>Andale Mono</family>
+                  <pointsize>13</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -4188,7 +4336,9 @@
               </property>
               <property name="font">
                <font>
-                <pointsize>12</pointsize>
+                <family>Andale Mono</family>
+                <weight>75</weight>
+                <bold>true</bold>
                </font>
               </property>
               <property name="rowCount">
@@ -4249,7 +4399,7 @@
      <x>0</x>
      <y>0</y>
      <width>1897</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

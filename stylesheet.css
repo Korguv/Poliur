@@ -1,0 +1,24 @@
+QWidget {
+	background-color: #ffffff;
+	font-family: Andale Mono;
+	font-weight: 600;
+    color: #282726;
+}
+QPushButton {
+	background-color:#239c4b;
+    border: none;
+    font-size: 13pt;
+
+}
+QPushButton:hover {
+	background-color: #1b7f3c;
+    color: #ffffff;
+}
+
+QPushButton:pressed {
+	background-color: #1b5f4f;
+}
+QTabBar::tab:!selected:hover {
+    background: #FFFFFF;
+}
+#222d35 дополнительный фон
