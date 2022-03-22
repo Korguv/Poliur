@@ -185,6 +185,9 @@ QTabBar::close-button:hover {
 }</string>
   </property>
   <widget class="QWidget" name="mainwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_10">
     <item>
      <widget class="QTabWidget" name="tab_all">
