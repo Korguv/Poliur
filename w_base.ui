@@ -132,7 +132,7 @@ QTabWidget::tab-bar {
     it reads QTabBar _not_ QTabWidget */
 QTabBar::tab {
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0 #ffffff, stop: 0.4 #ffffff,
                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
     border: 2px solid #C4C4C3;
     border-bottom-color: #C2C7CB; /* same as the pane color */
@@ -290,6 +290,12 @@ QTabBar::close-button:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <family>Andale Mono</family>
@@ -308,6 +314,12 @@ QTabBar::close-button:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <family>Andale Mono</family>
@@ -360,6 +372,12 @@ QTabBar::close-button:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <family>Andale Mono</family>
@@ -375,6 +393,12 @@ QTabBar::close-button:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <family>Andale Mono</family>
@@ -478,6 +502,18 @@ QTabBar::close-button:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <family>Andale Mono</family>
@@ -493,6 +529,12 @@ QTabBar::close-button:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_moove">
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <family>Andale Mono</family>
@@ -519,8 +561,14 @@ QTabBar::close-button:hover {
                </item>
                <item row="0" column="5">
                 <widget class="QCheckBox" name="checkbox_90_hard_serch_moove">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
                  <property name="text">
                   <string>90</string>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
                  </property>
                 </widget>
                </item>
