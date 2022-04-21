@@ -30,6 +30,7 @@ class Ui_w_main(object):
 "    border: none;\n"
 "    font: 13pt \"Roboto\";\n"
 "    font-size: 13pt;\n"
+"     padding: 2px;\n"
 "\n"
 "}\n"
 "QPushButton:hover {\n"
@@ -62,9 +63,9 @@ class Ui_w_main(object):
 "                                stop: 0 #ffffff, stop: 0.4 #ffffff);\n"
 "    border: 2px solid #C4C4C3;\n"
 "    border-bottom-color: #C2C7CB; /* same as the pane color */\n"
-"    border-top-left-radius: 4px;\n"
-"    border-top-right-radius: 4px;\n"
-"    min-width: 8ex;\n"
+"    border-top-left-radius: 3px;\n"
+"    border-top-right-radius: 3px;\n"
+"    min-width: 20ex;\n"
 "    padding: 2px;\n"
 "}\n"
 "\n"
@@ -2128,7 +2129,7 @@ class Ui_w_main(object):
         self.menubar.addAction(self.menu_2.menuAction())
 
         self.retranslateUi(w_main)
-        self.tab_all.setCurrentIndex(0)
+        self.tab_all.setCurrentIndex(9)
         QtCore.QMetaObject.connectSlotsByName(w_main)
 
     def retranslateUi(self, w_main):
