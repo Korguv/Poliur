@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Полиуретан Смоленск</string>
+   <string>Главная страница</string>
   </property>
   <property name="toolTipDuration">
    <number>-4</number>
@@ -121,7 +121,7 @@ QTabBar::close-button:hover {
     <item>
      <widget class="QTabWidget" name="tab_all">
       <property name="currentIndex">
-       <number>9</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>w_ord</class>
- <widget class="QDialog" name="w_ord">
+ <class>w_o_dialog_2</class>
+ <widget class="QDialog" name="w_o_dialog_2">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,11 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Состав заказа</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <layout class="QHBoxLayout" name="hlayout_filter">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>

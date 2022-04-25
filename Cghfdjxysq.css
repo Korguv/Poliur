@@ -1185,7 +1185,7 @@ QSplitter получен от QFrame и поэтому к нему можно п
  }
 
 Начиная с Qt 4.6 кнопка закрытия может быть настроена следующим образом:
-
+ 
 QTabBar::close-button {
      image: url(close.png)
      subcontrol-position: left;

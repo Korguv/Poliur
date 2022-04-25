@@ -11,9 +11,9 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Выходные</string>
   </property>
-  <widget class="QTableWidget" name="tableWidget_9">
+  <widget class="QTableWidget" name="table">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -44,16 +44,16 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="button_new">
       <property name="text">
-       <string>PushButton</string>
+       <string>Добавить</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="button_exit">
       <property name="text">
-       <string>PushButton</string>
+       <string>Закрыть</string>
       </property>
      </widget>
     </item>

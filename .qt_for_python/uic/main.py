@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\Admin_CPU\Desktop\Сode\1\Poliur\w_base.ui'
+# Form implementation generated from reading ui file 'c:\Users\Admin_CPU\Desktop\Сode\1\Poliur\main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
