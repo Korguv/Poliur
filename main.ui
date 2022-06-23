@@ -11,22 +11,27 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Полиуретан Смоленск</string>
+   <string>Главная страница</string>
   </property>
   <property name="toolTipDuration">
    <number>-4</number>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
+   <string notr="true">QMainWindow {
+    background: #222d35;
+}
+
+QWidget {
 	background-color: #ffffff;
-	font-family: Andale Mono;
 	font-weight: 600;
     color: #282726;
 }
 QPushButton {
 	background-color:#239c4b;
-	border: none;
-	font-size: 13pt;
+    border: none;
+	font: 13pt &quot;Roboto&quot;;
+    font-size: 13pt;
+	 padding: 2px;
 
 }
 QPushButton:hover {
@@ -39,14 +44,84 @@ QPushButton:pressed {
 }
 QTabBar::tab:!selected:hover {
     background: #FFFFFF;
-}</string>
+}
+
+
+QTabWidget::pane { /* The tab widget frame */
+    border-top: 2px solid #C2C7CB;
+    position: absolute;
+    top: -0.5em;
+}
+
+QTabWidget::tab-bar {
+    alignment: center;
+}
+
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ffffff, stop: 0.4 #ffffff);
+    border: 2px solid #C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    min-width: 20ex;
+    padding: 2px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}
+
+
+QTabBar::tear {
+    image: url(tear_indicator.png);
+}
+
+QTabBar::scroller { /* the width of the scroll buttons */
+    width: 20px;
+}
+
+QTabBar QToolButton { /* the scroll buttons are tool buttons */
+    border-image: url(scrollbutton.png) 2;
+    border-width: 2px;
+}
+
+QTabBar QToolButton::right-arrow { /* the arrow mark in the tool buttons */
+    image: url(rightarrow.png);
+}
+
+QTabBar QToolButton::left-arrow {
+    image: url(leftarrow.png);
+}
+
+
+QTabBar::close-button {
+    image: url(close.png)
+    subcontrol-position: left;
+}
+QTabBar::close-button:hover {
+    image: url(close-hover.png)
+}
+</string>
   </property>
   <widget class="QWidget" name="mainwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_10">
     <item>
      <widget class="QTabWidget" name="tab_all">
       <property name="currentIndex">
-       <number>0</number>
+       <number>9</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -144,12 +219,19 @@ QTabBar::tab:!selected:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -162,12 +244,19 @@ QTabBar::tab:!selected:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -203,7 +292,7 @@ QTabBar::tab:!selected:hover {
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>18</width>
+                   <width>11</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -214,12 +303,19 @@ QTabBar::tab:!selected:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -229,12 +325,19 @@ QTabBar::tab:!selected:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -332,12 +435,25 @@ QTabBar::tab:!selected:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -347,12 +463,19 @@ QTabBar::tab:!selected:hover {
                </item>
                <item>
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_moove">
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -373,8 +496,14 @@ QTabBar::tab:!selected:hover {
                </item>
                <item row="0" column="5">
                 <widget class="QCheckBox" name="checkbox_90_hard_serch_moove">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
                  <property name="text">
                   <string>90</string>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
                  </property>
                 </widget>
                </item>
@@ -382,10 +511,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_moove">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -773,10 +903,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -788,10 +919,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -840,10 +972,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -855,10 +988,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -958,10 +1092,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -973,10 +1108,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1006,10 +1142,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1286,10 +1423,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1301,10 +1439,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1353,10 +1492,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1368,10 +1508,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1471,10 +1612,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1486,10 +1628,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1519,10 +1662,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -1711,10 +1855,11 @@ QTabBar::tab:!selected:hover {
                <widget class="QPushButton" name="pushbutton_ok_value_serch_fin">
                 <property name="font">
                  <font>
-                  <family>Andale Mono</family>
+                  <family>Roboto</family>
                   <pointsize>13</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -1726,10 +1871,11 @@ QTabBar::tab:!selected:hover {
                <widget class="QPushButton" name="pushbutton_cancel_value_serch_fin">
                 <property name="font">
                  <font>
-                  <family>Andale Mono</family>
+                  <family>Roboto</family>
                   <pointsize>13</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -2070,10 +2216,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2085,10 +2232,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2137,10 +2285,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2152,10 +2301,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2255,10 +2405,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2270,10 +2421,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2303,10 +2455,11 @@ QTabBar::tab:!selected:hover {
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -2715,10 +2868,11 @@ QTabBar::tab:!selected:hover {
                   <widget class="QPushButton" name="pushbutton_ok_nomber_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Andale Mono</family>
+                     <family>Roboto</family>
                      <pointsize>13</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2730,10 +2884,11 @@ QTabBar::tab:!selected:hover {
                   <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Andale Mono</family>
+                     <family>Roboto</family>
                      <pointsize>13</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2833,10 +2988,11 @@ QTabBar::tab:!selected:hover {
                   <widget class="QPushButton" name="pushbutton_ok_data_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Andale Mono</family>
+                     <family>Roboto</family>
                      <pointsize>13</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -2848,10 +3004,11 @@ QTabBar::tab:!selected:hover {
                   <widget class="QPushButton" name="pushbutton_cancel_data_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Andale Mono</family>
+                     <family>Roboto</family>
                      <pointsize>13</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
                     </font>
                    </property>
                    <property name="text">
@@ -3059,10 +3216,11 @@ QTabBar::tab:!selected:hover {
                    <widget class="QPushButton" name="pushbutton_ok_value_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Andale Mono</family>
+                      <family>Roboto</family>
                       <pointsize>13</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3074,10 +3232,11 @@ QTabBar::tab:!selected:hover {
                    <widget class="QPushButton" name="pushButton_cancel_value_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Andale Mono</family>
+                      <family>Roboto</family>
                       <pointsize>13</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3126,10 +3285,11 @@ QTabBar::tab:!selected:hover {
                    <widget class="QPushButton" name="pushbutton_ok_nomber_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Andale Mono</family>
+                      <family>Roboto</family>
                       <pointsize>13</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3141,10 +3301,11 @@ QTabBar::tab:!selected:hover {
                    <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Andale Mono</family>
+                      <family>Roboto</family>
                       <pointsize>13</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3244,10 +3405,11 @@ QTabBar::tab:!selected:hover {
                    <widget class="QPushButton" name="pushbutton_ok_data_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Andale Mono</family>
+                      <family>Roboto</family>
                       <pointsize>13</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3259,10 +3421,11 @@ QTabBar::tab:!selected:hover {
                    <widget class="QPushButton" name="pushbutton_cancel_data_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Andale Mono</family>
+                      <family>Roboto</family>
                       <pointsize>13</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -3628,10 +3791,11 @@ QTabBar::tab:!selected:hover {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -3649,10 +3813,11 @@ QTabBar::tab:!selected:hover {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <family>Roboto</family>
                    <pointsize>13</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="text">
@@ -3750,10 +3915,11 @@ QTabBar::tab:!selected:hover {
              <widget class="QPushButton" name="pushbutton_report_menu_hour">
               <property name="font">
                <font>
-                <family>Andale Mono</family>
+                <family>Roboto</family>
                 <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -3765,10 +3931,11 @@ QTabBar::tab:!selected:hover {
              <widget class="QPushButton" name="pushbutton_worker_menu_hour">
               <property name="font">
                <font>
-                <family>Andale Mono</family>
+                <family>Roboto</family>
                 <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -3780,10 +3947,11 @@ QTabBar::tab:!selected:hover {
              <widget class="QPushButton" name="pushButton_hollyday_menu_hour">
               <property name="font">
                <font>
-                <family>Andale Mono</family>
+                <family>Roboto</family>
                 <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -3831,10 +3999,11 @@ QTabBar::tab:!selected:hover {
              <widget class="QPushButton" name="pushbutton_ok_serch_hour">
               <property name="font">
                <font>
-                <family>Andale Mono</family>
+                <family>Roboto</family>
                 <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -3846,10 +4015,11 @@ QTabBar::tab:!selected:hover {
              <widget class="QPushButton" name="pushbutton_cancel_serch_hour">
               <property name="font">
                <font>
-                <family>Andale Mono</family>
+                <family>Roboto</family>
                 <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -3861,10 +4031,11 @@ QTabBar::tab:!selected:hover {
              <widget class="QPushButton" name="pushbutton_clear_serch_hour">
               <property name="font">
                <font>
-                <family>Andale Mono</family>
+                <family>Roboto</family>
                 <pointsize>13</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -4046,10 +4217,11 @@ QTabBar::tab:!selected:hover {
                <widget class="QPushButton" name="pushbutton_ok_serch_zayav">
                 <property name="font">
                  <font>
-                  <family>Andale Mono</family>
+                  <family>Roboto</family>
                   <pointsize>13</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -4061,10 +4233,11 @@ QTabBar::tab:!selected:hover {
                <widget class="QPushButton" name="pushbutton_cancel_serch_zayav">
                 <property name="font">
                  <font>
-                  <family>Andale Mono</family>
+                  <family>Roboto</family>
                   <pointsize>13</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -4273,10 +4446,11 @@ QTabBar::tab:!selected:hover {
                <widget class="QPushButton" name="pushbutton_ok_serch_zayav_2">
                 <property name="font">
                  <font>
-                  <family>Andale Mono</family>
+                  <family>Roboto</family>
                   <pointsize>13</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -4288,10 +4462,11 @@ QTabBar::tab:!selected:hover {
                <widget class="QPushButton" name="pushbutton_cancel_serch_zayav_2">
                 <property name="font">
                  <font>
-                  <family>Andale Mono</family>
+                  <family>Roboto</family>
                   <pointsize>13</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -4399,7 +4574,7 @@ QTabBar::tab:!selected:hover {
      <x>0</x>
      <y>0</y>
      <width>1897</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

@@ -1,0 +1,1399 @@
+ В указанных примерах я всего лишь меняю фоновые изображения кнопки. Вы можете задать градиенты, цвета, изменить шрифт и пр.
+
+зы вот список возможных состояний кнопки:
+
+    :checked    Кнопка выбрана
+    :disabled    Кнопка выключена
+    :enabled    Кнопка включена
+    :focus         На кнопке фокус
+    :hover     Указатель мыши над кнопкой
+    :pressed     Кнопка нажата
+    :unchecked     Кнопка не выбрана
+
+Для кнопки переключателя (toggle) :
+
+    :off     Переключатель вы выключенном состоянии
+    :on    Переключатель во включенном состоянии
+Использование таблиц стилей
+Настройка цвета переднего плана и фона
+
+Начнем с того, что установим желтый цвет в качестве фона во всех объектах QLineEdit приложения. Этого можно достичь следующим образом:
+
+ qApp->setStyleSheet("QLineEdit { background-color: yellow }");
+
+Если мы хотим применить свойство только к объектам QLineEdit, которые являются потомками (или потоками потомков или потомками потомков потомков) заданного диалога, будет лучше сделать это так:
+
+ myDialog->setStyleSheet("QLineEdit { background-color: yellow }");
+
+Если мы хотим применить свойство только к одному заданному QLineEdit, мы можем передать его имя используя QObject::setObjectName() и использовать селектор идентификатора (ID) чтобы сослаться на него:
+
+ myDialog->setStyleSheet("QLineEdit#nameEdit { background-color: yellow }");
+
+В качестве альтернативы, мы можем установить свойство background-color непосредственно на QLineEdit, пропустив селектор:
+
+ nameEdit->setStyleSheet("background-color: yellow");
+
+Чтобы обеспечить приятный контраст мы также установим подходящий цвет для текста:
+
+ nameEdit->setStyleSheet("color: blue; background-color: yellow");
+
+Также хорошей идеей будет поменять цвет, используемый для выделенного текста:
+
+ nameEdit->setStyleSheet("color: blue;"
+                         "background-color: yellow;"
+                         "selection-color: yellow;"
+                         "selection-background-color: blue;");
+
+Настройка с использованием динамических свойств (dynamic properties)
+
+Имеется множество ситуаций, в которых нам необходима форма с обязательными (mandatory) полями. Чтобы показать пользователю что поле является обязательным одним из эффективных решений (хотя и эстетически сомнительным) является использование в качестве фона таких полей желтого цвета. Оказывается, это очень легко реализовать используя таблицы стилей Qt. Прежде всего, мы будем использовать следующую таблицу стилей приложения:
+
+ *[mandatoryField="true"] { background-color: yellow }
+
+Это означает, что каждый виджет, у которого свойство Qt mandatoryField равно true, будет иметь желтый цвет фона.
+
+Далее, для каждого обязательного поля виджета мы просто создаём "на лету" свойство mandatoryField и устанавливаем его равным true. Например:
+
+ QLineEdit *nameEdit = new QLineEdit(this);
+ nameEdit->setProperty("mandatoryField", true);
+
+ QLineEdit *emailEdit = new QLineEdit(this);
+ emailEdit->setProperty("mandatoryField", true);
+
+ QSpinBox *ageSpinBox = new QSpinBox(this);
+ ageSpinBox->setProperty("mandatoryField", true);
+
+Настройка QPushButton, используя модель "коробки" (Box Model)
+
+А сейчас мы покажем как создать кнопку QPushButton красного цвета. Эта кнопка QPushButton будет, предположительно, соединена с очень разрушительным участком кода.
+
+Сначала мы склонялись к использованию следующей таблицы стилей:
+
+ QPushButton#evilButton { background-color: red }
+
+Однако результат удручает - плоская кнопка без рамки:
+
+Плоская кнопка красного цвета
+
+А происходит вот что:
+
+    Мы сделали запрос, который не может быть удовлетворён с использованием только "родных" стилей (например, механизм тем Windows XP не позволяет задавать цвет фона кнопки).
+    Поэтому кнопка отрисовывается с использованием таблиц стилей.
+    Мы не указывали значений для border-width и border-style, поэтому по умолчанию получили рамку шириной 0 пикселей без стиля.
+
+Давайте исправим ситуацию, установив рамку:
+
+ QPushButton#evilButton {
+     background-color: red;
+     border-style: outset;
+     border-width: 2px;
+     border-color: beige;
+ }
+
+Кнопка красного цвета с бежевой рамкой
+
+Так гораздо лучше. Но кнопка выглядит немного сплющенной. Установим небольшой интервал между рамкой и текстом используя заполнение. Кроме того, принудительно установим минимальную ширину, закругление углов и зададим более крупный шрифт, чтобы кнопка выглядела получше:
+
+ QPushButton#evilButton {
+     background-color: red;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+     border-color: beige;
+     font: bold 14px;
+     min-width: 10em;
+     padding: 6px;
+ }
+
+Кнопка красного цвета с закруглённой бежевой рамкой и крупным, выделенным полужирным шрифтом текстом
+
+Единственной проблемой остается отсутствие реакции кнопки при нажатии на нее. Исправим это, указав слегка другой цвет фона и использование другого стиля рамки.
+
+ QPushButton#evilButton {
+     background-color: red;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+     border-color: beige;
+     font: bold 14px;
+     min-width: 10em;
+     padding: 6px;
+ }
+ QPushButton#evilButton:pressed {
+     background-color: rgb(224, 0, 0);
+     border-style: inset;
+ }
+
+Настройка субэлемента управления индикатора меню QPushButtonа
+
+Субэлементы управления предоставляют доступ к субэлементам виджета. Например, связанная с меню кнопка QPushButton (используя QPushButton::setMenu()) обладает индикатором меню. Настроим индикатор меню для кнопки красного цвета:
+
+ QPushButton#evilButton::menu-indicator {
+     image: url(myindicator.png);
+ }
+
+По умолчанию, индикатор меню располагается в нижнем правом углу прямоугольника заполнения (padding rectangle). Мы можем изменить расположение, указав свойства subcontrol-position и subcontrol-origin для якоря (anchor) индикатора. Также можно использовать свойства top и left чтобы сместить индикатор на несколько пикселов. Например:
+
+ QPushButton::menu-indicator {
+     image: url(myindicator.png);
+     subcontrol-position: right center;
+     subcontrol-origin: padding;
+     left: -2px;
+ }
+
+При этом изображение myindicator.png располагается в кнопке QPushButton справа по центру прямоугольника заполнения (для получения дополнительной информации смотрите subcontrol-origin).
+Пример сложного селектора
+
+Так как нашим предпочтительным цветом похоже стал красный, сделаем текст в QLineEdit красного цвета с помощью установки следующей таблицы стилей приложения:
+
+ QLineEdit { color: red }
+
+Однако мы хотим получить визуальный признак того, что QLineEdit только для чтения, сделав его серым:
+
+ QLineEdit { color: red }
+ QLineEdit[readOnly="true"] { color: gray }
+
+В какой-то момент наша команда проектирования пришла к необходимости, чтобы все объекты QLineEdit в регистрационной форме (с именем объекта registrationDialog) были коричневого цвета:
+
+ QLineEdit { color: red }
+ QLineEdit[readOnly="true"] { color: gray }
+ #registrationDialog QLineEdit { color: brown }
+
+Спустя несколько встреч проектировщиков пользовательского интерфейса мы решили, что все наши объекты QDialog должны иметь объекты QLineEdit окрашенные в коричневый цвет:
+
+ QLineEdit { color: red }
+ QLineEdit[readOnly="true"] { color: gray }
+ QDialog QLineEdit { color: brown }
+
+Контрольный вопрос: Что произойдет если у нас есть поле редактирования QLineEdit только для чтения в QDialog? [Подсказка: В вышеприведенном разделе Разрешения конфликтов разъясняется, что происходит в подобных случаях.]
+Настройка специфичных виджетов
+
+Данный раздел предоставляет примеры настройки специфичных виджетов с использованием таблиц стилей.
+Настройка QAbstractScrollArea
+
+Фон любого объекта QAbstractScrollArea (Представления элементов, QTextEdit и QTextBrowser) может быть установлен используя свойства фона. Например, чтобы установить фоновое изображение (background-image), прокручиваемое одновременно с полосой прокрутки:
+
+ QTextEdit, QListView {
+     background-color: white;
+     background-image: url(draft.png);
+     background-attachment: scroll;
+ }
+
+Если фоновое изображение ограничено окном просмотра:
+
+ QTextEdit, QListView {
+     background-color: white;
+     background-image: url(draft.png);
+     background-attachment: fixed;
+ }
+
+Настройка QCheckBox
+
+Стилизовать QCheckBox почти так же как и QRadioButton. Основная разница заключается в том, что QCheckBox с тремя состояниями имеет неопределенное состояние.
+
+ QCheckBox {
+     spacing: 5px;
+ }
+
+ QCheckBox::indicator {
+     width: 13px;
+     height: 13px;
+ }
+
+ QCheckBox::indicator:unchecked {
+     image: url(:/images/checkbox_unchecked.png);
+ }
+
+ QCheckBox::indicator:unchecked:hover {
+     image: url(:/images/checkbox_unchecked_hover.png);
+ }
+
+ QCheckBox::indicator:unchecked:pressed {
+     image: url(:/images/checkbox_unchecked_pressed.png);
+ }
+
+ QCheckBox::indicator:checked {
+     image: url(:/images/checkbox_checked.png);
+ }
+
+ QCheckBox::indicator:checked:hover {
+     image: url(:/images/checkbox_checked_hover.png);
+ }
+
+ QCheckBox::indicator:checked:pressed {
+     image: url(:/images/checkbox_checked_pressed.png);
+ }
+
+ QCheckBox::indicator:indeterminate:hover {
+     image: url(:/images/checkbox_indeterminate_hover.png);
+ }
+
+ QCheckBox::indicator:indeterminate:pressed {
+     image: url(:/images/checkbox_indeterminate_pressed.png);
+ }
+
+Настройка QComboBox
+
+Рассмотрим пример, когда кнопка выпадающего списка QComboBox появляется "объединенной" (merged) с рамкой выпадающего списка.
+
+ QComboBox {
+     border: 1px solid gray;
+     border-radius: 3px;
+     padding: 1px 18px 1px 3px;
+     min-width: 6em;
+ }
+
+ QComboBox:editable {
+     background: white;
+ }
+
+ QComboBox:!editable, QComboBox::drop-down:editable {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+ }
+
+ /* QComboBox получает состояние "on", когда всплывающий список раскрыт */
+ QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
+                                 stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
+ }
+
+ QComboBox:on { /* сдвиг текста, когда раскрывается всплывающий список */
+     padding-top: 3px;
+     padding-left: 4px;
+ }
+
+ QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 15px;
+
+     border-left-width: 1px;
+     border-left-color: darkgray;
+     border-left-style: solid; /* только одна линия */
+     border-top-right-radius: 3px; /* тот же радиус закругления что и у QComboBox */
+     border-bottom-right-radius: 3px;
+ }
+
+ QComboBox::down-arrow {
+     image: url(/usr/share/icons/crystalsvg/16x16/actions/1downarrow.png);
+ }
+
+ QComboBox::down-arrow:on { /* сдвиг стрелки, когда раскрывается всплывающий список */
+     top: 1px;
+     left: 1px;
+ }
+
+Всплывающий список в QComboBox - это QAbstractItemView и стиль к нему применяется с использованием селектора потомка (descendant selector):
+
+ QComboBox QAbstractItemView {
+     border: 2px solid darkgray;
+     selection-background-color: lightgray;
+ }
+
+Настройка QDockWidget
+
+Панель заголовка и кнопки QDockWidget могут быть настроены следующим образом:
+
+ QDockWidget {
+     border: 1px solid lightgray;
+     titlebar-close-icon: url(close.png);
+     titlebar-normal-icon: url(undock.png);
+ }
+
+ QDockWidget::title {
+     text-align: left; /* текст выровнен по левому краю */
+     background: lightgray;
+     padding-left: 5px;
+ }
+
+ QDockWidget::close-button, QDockWidget::float-button {
+     border: 1px solid transparent;
+     background: darkgray;
+     padding: 0px;
+ }
+
+ QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+     background: gray;
+ }
+
+ QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
+     padding: 1px -1px -1px 1px;
+ }
+
+Если потребуется сдвинуть кнопки присоединяемого виджета влево, то можно использовать следующую таблицу стилей:
+
+ QDockWidget {
+     border: 1px solid lightgray;
+     titlebar-close-icon: url(close.png);
+     titlebar-normal-icon: url(float.png);
+ }
+
+ QDockWidget::title {
+     text-align: left;
+     background: lightgray;
+     padding-left: 35px;
+ }
+
+ QDockWidget::close-button, QDockWidget::float-button {
+     background: darkgray;
+     padding: 0px;
+     icon-size: 14px; /* максимальный размер пиктограммы */
+ }
+
+ QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+     background: gray;
+ }
+
+ QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
+     padding: 1px -1px -1px 1px;
+ }
+
+ QDockWidget::close-button {
+     subcontrol-position: top left;
+     subcontrol-origin: margin;
+     position: absolute;
+     top: 0px; left: 0px; bottom: 0px;
+     width: 14px;
+ }
+
+ QDockWidget::float-button {
+     subcontrol-position: top left;
+     subcontrol-origin: margin;
+     position: absolute;
+     top: 0px; left: 16px; bottom: 0px;
+     width: 14px;
+ }
+
+Замечание: Чтобы настроить разделитель (метку-манипулятор изменения размера) QDockWidgetа используйте QMainWindow::separator.
+Настройка QFrame
+
+Стиль к QFrameу применяется с использованием Модели "коробки".
+
+ QFrame, QLabel, QToolTip {
+     border: 2px solid green;
+     border-radius: 4px;
+     padding: 2px;
+     background-image: url(images/welcome.png);
+ }
+
+Настройка QGroupBox
+
+Взглянем на пример, в котором заголовок QGroupBoxа смещается в центр.
+
+ QGroupBox {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+     border: 2px solid gray;
+     border-radius: 5px;
+     margin-top: 1ex; /* оставляем пространство вверху для заголовка */
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* помещаем вверху по центру */
+     padding: 0 3px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #FFOECE, stop: 1 #FFFFFF);
+ }
+
+Для QGroupBox, который можно отмечать, используйте субэлемент управления {#indicator-sub}{::indicator} и применяйте стиль к нему в точности как и для QCheckBox (т.е.)
+
+ QGroupBox::indicator {
+     width: 13px;
+     height: 13px;
+ }
+
+ QGroupBox::indicator:unchecked {
+     image: url(:/images/checkbox_unchecked.png);
+ }
+
+ /* продолжение такое же как и для применения стиля к QCheckBox */
+
+Настройка QHeaderView
+
+QHeaderView настраивается следующим образом:
+
+ QHeaderView::section {
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #616161, stop: 0.5 #505050,
+                                       stop: 0.6 #434343, stop:1 #656565);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #6c6c6c;
+ }
+
+ QHeaderView::section:checked
+ {
+     background-color: red;
+ }
+
+ /* стиль индикатора сортировки */
+ QHeaderView::down-arrow {
+     image: url(down_arrow.png);
+ }
+
+ QHeaderView::up-arrow {
+     image: url(up_arrow.png);
+ }
+
+Настройка QLineEdit
+
+Стиль к рамке поля редактирования QLineEdit применяется с использованием Модели "коробки". Для создания однострочного поля редактирования с закругленными углами мы можем установить:
+
+ QLineEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: yellow;
+     selection-background-color: darkgray;
+ }
+
+Символ для ввода пароля в однострочных полях редактирования у которых имеется QLineEdit::Password режим "эха" можно установить:
+
+ QLineEdit[echoMode="2"] {
+     lineedit-password-character: 9679;
+ }
+
+Фон для поля редактирования QLineEdit только для чтения можно изменить следующим образом:
+
+ QLineEdit:read-only {
+     background: lightblue;
+
+Настройка QListView
+
+Цвет фона чередующихся строк можно настроить используют следующую таблицу стилей:
+
+ QListView {
+     alternate-background-color: yellow;
+ }
+
+Чтобы получить специальный фон когда мышь располагается над элементами, можно использовать субэлемент управления ::item. Например,
+
+ QListView {
+     show-decoration-selected: 1; /* расширяет диапазон выделения на всю ширину представления */
+ }
+
+ QListView::item:alternate {
+     background: #EEEEEE;
+ }
+
+ QListView::item:selected {
+     border: 1px solid #6a6ea9;
+ }
+
+ QListView::item:selected:!active {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #ABAFE5, stop: 1 #8588B2);
+ }
+
+ QListView::item:selected:active {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #6a6ea9, stop: 1 #888dd9);
+ }
+
+ QListView::item:hover {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+ }
+
+Настройка QMainWindow
+
+Применить стиль к разделителю в QMainWindow можно следующим образом:
+
+ QMainWindow::separator {
+     background: yellow;
+     width: 10px; /* когда вертикальный */
+     height: 10px; /* когда горизонтальный */
+ }
+
+ QMainWindow::separator:hover {
+     background: red;
+ }
+
+Настройка QMenu
+
+Стиль применяется к отдельным пунктам меню QMenu используя субэлемент управления 'item' следующим образом:
+
+ QMenu {
+     background-color: #ABABAB; /* устанавливаем фон меню */
+     border: 1px solid black;
+ }
+
+ QMenu::item {
+     /* устанавливаем фон пункта меню. установите его во что-нибудь непрозрачное
+         если вы хотите чтобы цвет меню отличался от цвета пункта меню */
+     background-color: transparent;
+ }
+
+ QMenu::item:selected { /* когда пользователь выбирает пункт с помощью мыши или клавиатуры */
+     background-color: #654321;
+ }
+
+Для более глубокой настройки используйте таблицу стилей как изложено ниже:
+
+ QMenu {
+     background-color: white;
+     margin: 2px; /* немного пространства вокруг меню */
+ }
+
+ QMenu::item {
+     padding: 2px 25px 2px 20px;
+     border: 1px solid transparent; /* резерв пространства для границы выделения */
+ }
+
+ QMenu::item:selected {
+     border-color: darkblue;
+     background: rgba(100, 100, 100, 150);
+ }
+
+ QMenu::icon:checked { /* внешний вид пиктограммы 'отмечено' */
+     background: gray;
+     border: 1px inset gray;
+     position: absolute;
+     top: 1px;
+     right: 1px;
+     bottom: 1px;
+     left: 1px;
+ }
+
+ QMenu::separator {
+     height: 2px;
+     background: lightblue;
+     margin-left: 10px;
+     margin-right: 5px;
+ }
+
+ QMenu::indicator {
+     width: 13px;
+     height: 13px;
+ }
+
+ /* невзаимоисключающий индикатор = индикатор стиля флажка (смотрите QActionGroup::setExclusive) */
+ QMenu::indicator:non-exclusive:unchecked {
+     image: url(:/images/checkbox_unchecked.png);
+ }
+
+ QMenu::indicator:non-exclusive:unchecked:selected {
+     image: url(:/images/checkbox_unchecked_hover.png);
+ }
+
+ QMenu::indicator:non-exclusive:checked {
+     image: url(:/images/checkbox_checked.png);
+ }
+
+ QMenu::indicator:non-exclusive:checked:selected {
+     image: url(:/images/checkbox_checked_hover.png);
+ }
+
+ /* взаимоисключающий индикатор = индикатор стиля радиокнопки (смотрите QActionGroup::setExclusive) */
+ QMenu::indicator:exclusive:unchecked {
+     image: url(:/images/radiobutton_unchecked.png);
+ }
+
+ QMenu::indicator:exclusive:unchecked:selected {
+     image: url(:/images/radiobutton_unchecked_hover.png);
+ }
+
+ QMenu::indicator:exclusive:checked {
+     image: url(:/images/radiobutton_checked.png);
+ }
+
+ QMenu::indicator:exclusive:checked:selected {
+     image: url(:/images/radiobutton_checked_hover.png);
+ }
+
+Настройка QMenuBar
+
+Стиль к QMenuBar применяется как изложено ниже:
+
+ QMenuBar {
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 lightgray, stop:1 darkgray);
+ }
+
+ QMenuBar::item {
+     spacing: 3px; /* интервал между пунктами меню */
+     padding: 1px 4px;
+     background: transparent;
+     border-radius: 4px;
+ }
+
+ QMenuBar::item:selected { /* когда выделено с помощью мыши или клавиатуры */
+     background: #a8a8a8;
+ }
+
+ QMenuBar::item:pressed {
+     background: #888888;
+ }
+
+Настройка QProgressBar
+
+Используя таблицы стилей можно настроить субэлементы управления QProgressBarа border, chunk и text-align. Однако, если одно свойство или субэлемент управления настраивается, все остальные свойства или субэлементы управления также должны настраиваться.
+
+Например, изменим цвет border на серый, а chunk - на лазурный.
+
+ QProgressBar {
+     border: 2px solid grey;
+     border-radius: 5px;
+ }
+
+ QProgressBar::chunk {
+     background-color: #05B8CC;
+     width: 20px;
+ }
+
+Остался text-align, который мы настроим расположив текст по центру индикатора выполнения.
+
+ QProgressBar {
+     border: 2px solid grey;
+     border-radius: 5px;
+     text-align: center;
+ }
+
+Можно включить свойство margin чтобы получить более видимые чанки (chunks).
+
+На вышеприведенном снимке экрана мы используем margin равный 0.5 пикселя.
+
+ QProgressBar::chunk {
+     background-color: #CD96CD;
+     width: 10px;
+     margin: 0.5px;
+ }
+
+Настройка QPushButton
+
+Стиль к QPushButton применяется как указано ниже:
+
+ QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:flat {
+     border: none; /* для плоской кнопки границы нет */
+ }
+
+ QPushButton:default {
+     border-color: navy; /* делаем кнопку по умолчанию выпуклой */
+ }
+
+Для кнопки QPushButton с меню используйте субэлемент управления ::menu-indicator.
+
+ QPushButton:open { /* когда собственное меню кнопки раскрыто */
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton::menu-indicator {
+     image: url(menu_indicator.png);
+     subcontrol-origin: padding;
+     subcontrol-position: bottom right;
+ }
+
+ QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
+     position: relative;
+     top: 2px; left: 2px; /* сдвигаем стрелку на 2 px */
+ }
+
+У кнопки QPushButton, которую можно отметить, установлено псевдо-состояние :checked.
+Настройка QRadioButton
+
+Индикатор радиокнопки QRadioButton можно изменить используя:
+
+ QRadioButton::indicator {
+     width: 13px;
+     height: 13px;
+ }
+
+ QRadioButton::indicator::unchecked {
+     image: url(:/images/radiobutton_unchecked.png);
+ }
+
+ QRadioButton::indicator:unchecked:hover {
+     image: url(:/images/radiobutton_unchecked_hover.png);
+ }
+
+ QRadioButton::indicator:unchecked:pressed {
+     image: url(:/images/radiobutton_unchecked_pressed.png);
+ }
+
+ QRadioButton::indicator::checked {
+     image: url(:/images/radiobutton_checked.png);
+ }
+
+ QRadioButton::indicator:checked:hover {
+     image: url(:/images/radiobutton_checked_hover.png);
+ }
+
+ QRadioButton::indicator:checked:pressed {
+     image: url(:/images/radiobutton_checked_pressed.png);
+ }
+
+Настройка QScrollBar
+
+Применить стиль к QScrollBar можно используя его субэлементы управления, например, handle, add-line, sub-line и так далее. Обратите внимание на то, что если одно свойство или субэлемент управления настраивается, то все остальные свойства или субэлементы управления также должны настраиваться.
+
+К приведенной выше полосе прокрутки был применен стиль аквамаринового цвета со сплошной серой границей.
+
+ QScrollBar:horizontal {
+     border: 2px solid grey;
+     background: #32CC99;
+     height: 15px;
+     margin: 0px 20px 0 20px;
+ }
+ QScrollBar::handle:horizontal {
+     background: white;
+     min-width: 20px;
+ }
+ QScrollBar::add-line:horizontal {
+     border: 2px solid grey;
+     background: #32CC99;
+     width: 20px;
+     subcontrol-position: right;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:horizontal {
+     border: 2px solid grey;
+     background: #32CC99;
+     width: 20px;
+     subcontrol-position: left;
+     subcontrol-origin: margin;
+ }
+
+Кнопки left-arrow и right-arrow имеют сплошную границу серого цвета с белым фоном. В качестве альтернативы, вы можете также встроить в стрелки изображение.
+
+ QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+     border: 2px solid grey;
+     width: 3px;
+     height: 3px;
+     background: white;
+ }
+
+ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+     background: none;
+ }
+
+Если вы хотите расположить рядом друг с другом кнопки прокрутки на полосе прокрутки (вместо расположения их по краям) как в Mac OS X, вы можете использовать следующую таблицу стилей:
+
+ QScrollBar:horizontal {
+     border: 2px solid green;
+     background: cyan;
+     height: 15px;
+     margin: 0px 40px 0 0px;
+ }
+
+ QScrollBar::handle:horizontal {
+     background: gray;
+     min-width: 20px;
+ }
+
+ QScrollBar::add-line:horizontal {
+     background: blue;
+     width: 16px;
+     subcontrol-position: right;
+     subcontrol-origin: margin;
+     border: 2px solid black;
+ }
+
+ QScrollBar::sub-line:horizontal {
+     background: magenta;
+     width: 16px;
+     subcontrol-position: top right;
+     subcontrol-origin: margin;
+     border: 2px solid black;
+     position: absolute;
+     right: 20px;
+ }
+
+ QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+     width: 3px;
+     height: 3px;
+     background: pink;
+ }
+
+ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+     background: none;
+ }
+
+Полоса прокрутки, использующая приведенную выше таблицу стилей, выглядит примерно так:
+
+Для настройки вертикальной полосы прокрутки используйте таблицу стилей, похожую на следующую:
+
+  QScrollBar:vertical {
+      border: 2px solid grey;
+      background: #32CC99;
+      width: 15px;
+      margin: 22px 0 22px 0;
+  }
+  QScrollBar::handle:vertical {
+      background: white;
+      min-height: 20px;
+  }
+  QScrollBar::add-line:vertical {
+      border: 2px solid grey;
+      background: #32CC99;
+      height: 20px;
+      subcontrol-position: bottom;
+      subcontrol-origin: margin;
+  }
+
+  QScrollBar::sub-line:vertical {
+      border: 2px solid grey;
+      background: #32CC99;
+      height: 20px;
+      subcontrol-position: top;
+      subcontrol-origin: margin;
+  }
+  QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+      border: 2px solid grey;
+      width: 3px;
+      height: 3px;
+      background: white;
+  }
+
+  QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+      background: none;
+  }
+
+Настройка QSizeGrip
+
+Обычно применение стиля к QSizeGrip заключается только в установке изображения.
+
+ QSizeGrip {
+     image: url(:/images/sizegrip.png);
+     width: 16px;
+     height: 16px;
+ }
+
+Настройка QSlider
+
+Вы можете применить стиль к горизонтальному ползунку как изложено ниже:
+
+ QSlider::groove:horizontal {
+     border: 1px solid #999999;
+     height: 8px; /* по умолчанию бороздка расширяется до размеров ползунка. задав высоту она принимает фиксированный размер */
+     background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+     margin: 2px 0;
+ }
+
+ QSlider::handle:horizontal {
+     background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+     border: 1px solid #5c5c5c;
+     width: 18px;
+     margin: -2px 0; /* рукоятка располагается по умолчанию в прямоугольнике содержимого бороздки. Расширяется наружу от бороздки */
+     border-radius: 3px;
+ }
+
+Если вы хотите изменить цвет частей ползунка до и после рукоятки, можете использовать субэлементы управления add-page и sub-page. Например, для вертикального ползунка:
+
+ QSlider::groove:vertical {
+     background: red;
+     position: absolute; /* абсолютная позиция в 4px слева и справа от виджета. установка полей виджета также будет работать... */
+     left: 4px; right: 4px;
+ }
+
+ QSlider::handle:vertical {
+     height: 10px;
+     background: green;
+     margin: 0 -4px; /* расширяется наружу от бороздки */
+ }
+
+ QSlider::add-page:vertical {
+     background: white;
+ }
+
+ QSlider::sub-page:vertical {
+     background: pink;
+ }
+
+Настройка QSpinBox
+
+QSpinBox можно полностью настроить как изложено ниже (таблица стилей имеет однострочные комментарии):
+
+ QSpinBox {
+     padding-right: 15px; /* создаем место для стрелок */
+     border-image: url(:/images/frame.png) 4;
+     border-width: 3;
+ }
+
+ QSpinBox::up-button {
+     subcontrol-origin: border;
+     subcontrol-position: top right; /* позиция - в верхнем правом углу */
+
+     width: 16px; /* 16 + 2*1px border-width = 15px заполнителя + 3px границы родителя */
+     border-image: url(:/images/spinup.png) 1;
+     border-width: 1px;
+ }
+
+ QSpinBox::up-button:hover {
+     border-image: url(:/images/spinup_hover.png) 1;
+ }
+
+ QSpinBox::up-button:pressed {
+     border-image: url(:/images/spinup_pressed.png) 1;
+ }
+
+ QSpinBox::up-arrow {
+     image: url(:/images/up_arrow.png);
+     width: 7px;
+     height: 7px;
+ }
+
+ QSpinBox::up-arrow:disabled, QSpinBox::up-arrow:off { /* выключенное состояние когда достигнуто максимально значение */
+    image: url(:/images/up_arrow_disabled.png);
+ }
+
+ QSpinBox::down-button {
+     subcontrol-origin: border;
+     subcontrol-position: bottom right; /* позиция - в нижнем правом углу */
+
+     width: 16px;
+     border-image: url(:/images/spindown.png) 1;
+     border-width: 1px;
+     border-top-width: 0;
+ }
+
+ QSpinBox::down-button:hover {
+     border-image: url(:/images/spindown_hover.png) 1;
+ }
+
+ QSpinBox::down-button:pressed {
+     border-image: url(:/images/spindown_pressed.png) 1;
+ }
+
+ QSpinBox::down-arrow {
+     image: url(:/images/down_arrow.png);
+     width: 7px;
+     height: 7px;
+ }
+
+ QSpinBox::down-arrow:disabled,
+ QSpinBox::down-arrow:off { /* выключенное состояние когда достигнуто минимальное значение */
+    image: url(:/images/down_arrow_disabled.png);
+ }
+
+Настройка QSplitter
+
+QSplitter получен от QFrame и поэтому к нему можно применить стиль также, как к QFrame. Метку-манипулятор или рукоятку можно настроить используя субэлемент управления ::handle.
+
+ QSplitter::handle {
+     image: url(images/splitter.png);
+ }
+
+ QSplitter::handle:horizontal {
+     width: 2px;
+ }
+
+ QSplitter::handle:vertical {
+     height: 2px;
+ }
+
+ QSplitter::handle:pressed {
+     url(images/splitter_pressed.png);
+ }
+
+Настройка QStatusBar
+
+Мы можем предоставить фон для строки состояния и границу для элементов внутри нее как изложено ниже:
+
+ QStatusBar {
+     background: brown;
+ }
+
+ QStatusBar::item {
+     border: 1px solid red;
+     border-radius: 3px;
+ }
+
+Обратите внимание на то, что применять стиль к виджетам, которые добавляются в QStatusBar, можно используя декларацию потомка (т.е.)
+
+ QStatusBar QLabel {
+     border: 3px solid white;
+ }
+
+Настройка QTabWidget и QTabBar
+
+Для снимка экрана выше необходима таблица стилей как изложено ниже:
+
+ QTabWidget::pane { /* Рамка виджета со вкладками */
+     border-top: 2px solid #C2C7CB;
+ }
+
+ QTabWidget::tab-bar {
+     left: 5px; /* сдвигаем вправо на 5px */
+ }
+
+ /* Применяем стиль ко вкладке используя субэлемент управления tab. Обратите внимание на то, что
+     оно читается как QTabBar, а _не_ QTabWidget */
+ QTabBar::tab {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+     border: 2px solid #C4C4C3;
+     border-bottom-color: #C2C7CB; /* такой же цвет как у панели */
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     min-width: 8ex;
+     padding: 2px;
+ }
+
+ QTabBar::tab:selected, QTabBar::tab:hover {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                 stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+ }
+
+ QTabBar::tab:selected {
+     border-color: #9B9B9B;
+     border-bottom-color: #C2C7CB; /* такой же цвет как у панели */
+ }
+
+ QTabBar::tab:!selected {
+     margin-top: 2px; /* делаем невыбранные вкладки меньше */
+ }
+
+Часто необходимо, чтобы вкладки перекрывались как показано ниже:
+
+Для вышеприведенного виджета со вкладками мы воспользовались отрицательными полями. Результирующая таблица стилей выглядит так:
+
+ QTabWidget::pane { /* Рамка виджета со вкладками */
+     border-top: 2px solid #C2C7CB;
+ }
+
+ QTabWidget::tab-bar {
+     left: 5px; /* сдвигаем вправо на 5px */
+ }
+
+ /* Применяем стиль ко вкладке используя субэлемент управления tab. Обратите внимание на то, что
+     оно читается как QTabBar, а _не_ QTabWidget */
+ QTabBar::tab {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+     border: 2px solid #C4C4C3;
+     border-bottom-color: #C2C7CB; /* такой же цвет как у панели */
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     min-width: 8ex;
+     padding: 2px;
+ }
+
+ QTabBar::tab:selected, QTabBar::tab:hover {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                 stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+ }
+
+ QTabBar::tab:selected {
+     border-color: #9B9B9B;
+     border-bottom-color: #C2C7CB; /* такой же цвет как у панели */
+ }
+
+ QTabBar::tab:!selected {
+     margin-top: 2px; /* делаем невыбранные вкладки меньше */
+ }
+
+ /* воспользуемся отрицательными полями для перекрывания вкладок */
+ QTabBar::tab:selected {
+     /* расширение/перекрытие слева и справа по 4px */
+     margin-left: -4px;
+     margin-right: -4px;
+ }
+
+ QTabBar::tab:first:selected {
+     margin-left: 0; /* первая выбранная вкладка ничего не перекрывает слева от себя */
+ }
+
+ QTabBar::tab:last:selected {
+     margin-right: 0; /* последняя выбранная вкладка ничего не перекрывает справа от себя */
+ }
+
+ QTabBar::tab:only-one {
+     margin: 0; /* если имеется только одна вкладка, перекрывающиеся поля не нужны */
+ }
+
+Чтобы переместить панель вкладок в середину (как показано ниже), необходима следующая таблица стилей:
+
+ QTabWidget::pane { /* Рамка виджета со вкладками */
+     border-top: 2px solid #C2C7CB;
+     position: absolute;
+     top: -0.5em;
+ }
+
+ QTabWidget::tab-bar {
+     alignment: center;
+ }
+
+ /* Применяем стиль ко вкладке используя субэлемент управления tab. Обратите внимание на то, что
+     оно читается как QTabBar, а _не_ QTabWidget */
+ QTabBar::tab {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+     border: 2px solid #C4C4C3;
+     border-bottom-color: #C2C7CB; /* такой же цвет как у панели */
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     min-width: 8ex;
+     padding: 2px;
+ }
+
+ QTabBar::tab:selected, QTabBar::tab:hover {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                 stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+ }
+
+ QTabBar::tab:selected {
+     border-color: #9B9B9B;
+     border-bottom-color: #C2C7CB; /* такой же цвет как у панели */
+ }
+
+Индикатор разрыва (tear) и кнопки прокрутки могут быть в дальнейшем настроены как изложено ниже:
+
+ QTabBar::tear {
+     image: url(tear_indicator.png);
+ }
+
+ QTabBar::scroller { /* ширина кнопок прокрутки */
+     width: 20px;
+ }
+
+ QTabBar QToolButton { /* кнопки прокрутки - инструментальные кнопки */
+     border-image: url(scrollbutton.png) 2;
+     border-width: 2px;
+ }
+
+ QTabBar QToolButton::right-arrow { /* значок стрелки в инструментальной кнопке */
+     image: url(rightarrow.png);
+ }
+
+ QTabBar QToolButton::left-arrow {
+     image: url(leftarrow.png);
+ }
+
+Начиная с Qt 4.6 кнопка закрытия может быть настроена следующим образом:
+ 
+QTabBar::close-button {
+     image: url(close.png)
+     subcontrol-position: left;
+ }
+ QTabBar::close-button:hover {
+     image: url(close-hover.png)
+ }
+
+Настройка QTableView
+
+Допустим, нам понравится если выбранные элементы в QTableView будут иметь фоновым изображением пузырьки, чей цвет постепенно меняется от розового к белому.
+
+Это возможно с помощью свойства selection-background-color и необходимого синтаксиса:
+
+ QTableView {
+     selection-background-color: qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,
+                                 stop: 0 #FF92BB, stop: 1 white);
+ }
+
+Угловой виджет может быть настроен используя следующую таблицу стилей:
+
+ QTableView QTableCornerButton::section {
+     background: red;
+     border: 2px outset red;
+ }
+
+Настройка QToolBar
+
+Фон и рукоятка QToolBar настраивается как изложено ниже:
+
+ QToolBar {
+     background: red;
+     spacing: 3px; /* интервал между элементами в панели инструментов */
+ }
+
+ QToolBar::handle {
+     image: url(handle.png);
+ }
+
+Настройка QToolBox
+
+Вкладки в QToolBox настраиваются используя субэлемент управления 'tab'.
+
+ QToolBox::tab {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+     border-radius: 5px;
+     color: darkgray;
+ }
+
+ QToolBox::tab:selected { /* выбранные вкладки выделяются курсивом */
+     font: italic;
+     color: white;
+ }
+
+Настройка QToolButton
+
+Имеются три типа инструментальных кнопок QToolButton.
+
+    QToolButton без меню. В этом случае стиль к QToolButton применяется точно также как к QPushButton. Смотрите пример Настройки QPushButton.
+    QToolButton имеет меню и свойство QToolButton::popupMode, установленное в QToolButton::DelayedPopup или QToolButton::InstantPopup. В этом случае стиль к QToolButton применяется точно также как к QPushButton с меню. Смотрите пример Настройки QPushButton по использованию псевдо-состояния menu-indicator.
+    У QToolButton свойство QToolButton::popupMode установлено в QToolButton::MenuButtonPopup. В этом случае мы применяем стиль как изложено ниже:
+
+ QToolButton { /* все типы инструментальных кнопок */
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QToolButton[popupMode="1"] { /* только для MenuButtonPopup */
+     padding-right: 20px; /* выделяем место для кнопки всплывающего списка */
+ }
+
+ QToolButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ /* нижеприведенные субэлементы управления используются только в режиме MenuButtonPopup */
+ QToolButton::menu-button {
+     border: 2px solid gray;
+     border-top-right-radius: 6px;
+     border-bottom-right-radius: 6px;
+     /* 16px ширины + 4px для границы = 20px распределено выше */
+     width: 16px;
+ }
+
+ QToolButton::menu-arrow {
+     image: url(downarrow.png);
+ }
+
+ QToolButton::menu-arrow:open {
+     top: 1px; left: 1px; /* слегка сдвинем */
+ }
+
+Настройка QToolTip
+
+QToolTip настраивается точно также как QLabel. Кроме того, для платформ поддерживающих это, для настройки прозрачности можно использовать свойство opacity.
+
+Например,
+
+ QToolTip {
+     border: 2px solid darkkhaki;
+     padding: 5px;
+     border-radius: 3px;
+     opacity: 200;
+ }
+
+Настройка QTreeView
+
+Цвет фона чередующихся строк можно настроить используют следующую таблицу стилей:
+
+ QTreeView {
+     alternate-background-color: yellow;
+ }
+
+Чтобы получить специальный фон когда мышь располагается над элементами, можно использовать субэлемент управления ::item. Например,
+
+ QTreeView {
+     show-decoration-selected: 1;
+ }
+
+ QTreeView::item {
+      border: 1px solid #d9d9d9;
+     border-top-color: transparent;
+     border-bottom-color: transparent;
+ }
+
+ QTreeView::item:hover {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e7effd, stop: 1 #cbdaf1);
+     border: 1px solid #bfcde4;
+ }
+
+ QTreeView::item:selected {
+     border: 1px solid #567dbc;
+ }
+
+ QTreeView::item:selected:active{
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6ea1f1, stop: 1 #567dbc);
+ }
+
+ QTreeView::item:selected:!active {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);
+ }
+
+Стиль к ветвям QTreeView применяется с использованием субэлемента управления ::branch. Следующая таблица стилей кодирует цветами различные состояния при отрисовке ветви.
+
+ QTreeView::branch {
+         background: palette(base);
+ }
+
+ QTreeView::branch:has-siblings:!adjoins-item {
+         background: cyan;
+ }
+
+ QTreeView::branch:has-siblings:adjoins-item {
+         background: red;
+ }
+
+ QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+         background: blue;
+ }
+
+ QTreeView::branch:closed:has-children:has-siblings {
+         background: pink;
+ }
+
+ QTreeView::branch:has-children:!has-siblings:closed {
+         background: gray;
+ }
+
+ QTreeView::branch:open:has-children:has-siblings {
+         background: magenta;
+ }
+
+ QTreeView::branch:open:has-children:!has-siblings {
+         background: green;
+ }
+
+Красочно, однако более полезный пример можно сделать используя следующие изображения:
+
+				
+vline.png	branch-more.png	branch-end.png	branch-closed.png	branch-open.png
+
+ QTreeView::branch:has-siblings:!adjoins-item {
+     border-image: url(vline.png) 0;
+ }
+
+ QTreeView::branch:has-siblings:adjoins-item {
+     border-image: url(branch-more.png) 0;
+ }
+
+ QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+     border-image: url(branch-end.png) 0;
+ }
+
+ QTreeView::branch:has-children:!has-siblings:closed,
+ QTreeView::branch:closed:has-children:has-siblings {
+         border-image: none;
+         image: url(branch-closed.png);
+ }
+
+ QTreeView::branch:open:has-children:!has-siblings,
+ QTreeView::branch:open:has-children:has-siblings  {
+         border-image: none;
+         image: url(branch-open.png);
+ }
+
+Результирующее представление дерева выглядит так:
