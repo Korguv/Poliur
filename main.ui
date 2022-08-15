@@ -121,7 +121,7 @@ QTabBar::close-button:hover {
     <item>
      <widget class="QTabWidget" name="tab_all">
       <property name="currentIndex">
-       <number>6</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
