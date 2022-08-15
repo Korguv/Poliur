@@ -133,7 +133,7 @@ DESC hardness;
 
 DROP  TABLE IF EXISTS source;
 CREATE TABLE source(  #таблица подразделений имточников записей
-  id SMALLINT PRIMARY KEY AUTO_INCREMENT,
+  id SMALLINT PRIMARY KEY AUTO_INCREMENT 
   name VARCHAR(20) NOT NULL 
 );
 DESC source;
