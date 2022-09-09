@@ -4,3 +4,15 @@
 #282726 основной текст
 #ffffff основной фон
 #222d35 дополнительный фон
+
+
+QTabBar::tab {
+    border: none;
+	font: 19pt "Roboto";
+	font-size: 100%;
+	background-color: #239c4b;
+    padding: 0;
+	width: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
