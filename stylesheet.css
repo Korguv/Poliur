@@ -29,16 +29,16 @@ QTabBar::tab:!selected:hover {
 }
 
 QTabWidget::tab-bar {
-    alignment: left;
+    alignment: auto;
 }
 QTabBar {
 	font: 16pt "Roboto";
-	width: auto;
+	width: 0;
 }
 QTabBar::tab {
     border: none;
 	background-color: #239c4b;
-    padding:20;
+    padding:15px 32 ;
     text-align: center;
 		
 }
@@ -52,4 +52,8 @@ QTabBar::tab:selected {
     border-bottom-color: #C2C7CB; 
 }
 
-
+QTableWidget  {
+	width:auto;
+	font: 14pt "Roboto";
+	selection-background-color: #1b7f3c;
+}

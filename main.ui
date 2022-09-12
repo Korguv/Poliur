@@ -55,16 +55,16 @@ QTabBar::tab:!selected:hover {
 }
 
 QTabWidget::tab-bar {
-    alignment: left;
+    alignment: auto;
 }
 QTabBar {
 	font: 16pt &quot;Roboto&quot;;
-	width: auto;
+	width: 0;
 }
 QTabBar::tab {
     border: none;
 	background-color: #239c4b;
-    padding:20;
+    padding:15px 32 ;
     text-align: center;
 		
 }
@@ -76,6 +76,12 @@ QTabBar::tab:selected, QTabBar::tab:hover {
 QTabBar::tab:selected {
     border-color: #9B9B9B;
     border-bottom-color: #C2C7CB; 
+}
+
+QTableWidget  {
+	width:auto;
+	font: 14pt &quot;Roboto&quot;;
+	selection-background-color: #1b7f3c;
 }
 
 
@@ -99,7 +105,7 @@ QTabBar::tab:selected {
        <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -622,9 +628,11 @@ QTabBar::tab:selected {
             </property>
             <property name="font">
              <font>
-              <family>Andale Mono</family>
-              <weight>75</weight>
-              <bold>true</bold>
+              <family>Roboto</family>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
              </font>
             </property>
             <property name="rowCount">
@@ -689,6 +697,11 @@ QTabBar::tab:selected {
               <string>Текст</string>
              </property>
             </column>
+            <item row="0" column="0">
+             <property name="text">
+              <string>test</string>
+             </property>
+            </item>
            </widget>
           </item>
           <item>
@@ -707,9 +720,11 @@ QTabBar::tab:selected {
             </property>
             <property name="font">
              <font>
-              <family>Andale Mono</family>
-              <weight>75</weight>
-              <bold>true</bold>
+              <family>Roboto</family>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
              </font>
             </property>
             <property name="rowCount">
@@ -4272,9 +4287,11 @@ QTabBar::tab:selected {
               </property>
               <property name="font">
                <font>
-                <family>Andale Mono</family>
-                <weight>75</weight>
-                <bold>true</bold>
+                <family>Roboto</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="rowCount">
@@ -4494,9 +4511,11 @@ QTabBar::tab:selected {
               </property>
               <property name="font">
                <font>
-                <family>Andale Mono</family>
-                <weight>75</weight>
-                <bold>true</bold>
+                <family>Roboto</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="rowCount">
