@@ -14,7 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_w_main(object):
     def setupUi(self, w_main):
         w_main.setObjectName("w_main")
-        w_main.resize(1897, 1024)
+        w_main.resize(1894, 1024)
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        w_main.setFont(font)
         w_main.setToolTipDuration(-4)
         w_main.setStyleSheet("QMainWindow {\n"
 "    background: #222d35;\n"
@@ -41,75 +46,43 @@ class Ui_w_main(object):
 "QPushButton:pressed {\n"
 "    background-color: #1b5f4f;\n"
 "}\n"
+"\n"
 "QTabBar::tab:!selected:hover {\n"
 "    background: #FFFFFF;\n"
 "}\n"
 "\n"
-"\n"
-"QTabWidget::pane { /* The tab widget frame */\n"
-"    border-top: 2px solid #C2C7CB;\n"
-"    position: absolute;\n"
-"    top: -0.5em;\n"
-"}\n"
-"\n"
 "QTabWidget::tab-bar {\n"
-"    alignment: center;\n"
+"    alignment: auto;\n"
 "}\n"
-"\n"
-"/* Style the tab using the tab sub-control. Note that\n"
-"    it reads QTabBar _not_ QTabWidget */\n"
+"QTabBar {\n"
+"    font: 16pt \"Roboto\";\n"
+"    width: 0;\n"
+"}\n"
 "QTabBar::tab {\n"
-"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                stop: 0 #ffffff, stop: 0.4 #ffffff);\n"
-"    border: 2px solid #C4C4C3;\n"
-"    border-bottom-color: #C2C7CB; /* same as the pane color */\n"
-"    border-top-left-radius: 3px;\n"
-"    border-top-right-radius: 3px;\n"
-"    min-width: 20ex;\n"
-"    padding: 2px;\n"
+"    border: none;\n"
+"    background-color: #239c4b;\n"
+"    padding:15px 32 ;\n"
+"    text-align: center;\n"
+"        \n"
 "}\n"
 "\n"
 "QTabBar::tab:selected, QTabBar::tab:hover {\n"
-"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,\n"
-"                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);\n"
+"    background-color: #1b7f3c;\n"
 "}\n"
 "\n"
 "QTabBar::tab:selected {\n"
 "    border-color: #9B9B9B;\n"
-"    border-bottom-color: #C2C7CB; /* same as pane color */\n"
+"    border-bottom-color: #C2C7CB; \n"
+"}\n"
+"\n"
+"QTableWidget  {\n"
+"    width:auto;\n"
+"    font: 14pt \"Roboto\";\n"
+"    selection-background-color: #1b7f3c;\n"
 "}\n"
 "\n"
 "\n"
-"QTabBar::tear {\n"
-"    image: url(tear_indicator.png);\n"
-"}\n"
 "\n"
-"QTabBar::scroller { /* the width of the scroll buttons */\n"
-"    width: 20px;\n"
-"}\n"
-"\n"
-"QTabBar QToolButton { /* the scroll buttons are tool buttons */\n"
-"    border-image: url(scrollbutton.png) 2;\n"
-"    border-width: 2px;\n"
-"}\n"
-"\n"
-"QTabBar QToolButton::right-arrow { /* the arrow mark in the tool buttons */\n"
-"    image: url(rightarrow.png);\n"
-"}\n"
-"\n"
-"QTabBar QToolButton::left-arrow {\n"
-"    image: url(leftarrow.png);\n"
-"}\n"
-"\n"
-"\n"
-"QTabBar::close-button {\n"
-"    image: url(close.png)\n"
-"    subcontrol-position: left;\n"
-"}\n"
-"QTabBar::close-button:hover {\n"
-"    image: url(close-hover.png)\n"
-"}\n"
 "")
         self.mainwidget = QtWidgets.QWidget(w_main)
         self.mainwidget.setStyleSheet("")
@@ -117,6 +90,12 @@ class Ui_w_main(object):
         self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.mainwidget)
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.tab_all = QtWidgets.QTabWidget(self.mainwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tab_all.sizePolicy().hasHeightForWidth())
+        self.tab_all.setSizePolicy(sizePolicy)
+        self.tab_all.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.tab_all.setObjectName("tab_all")
         self.tab_moove = QtWidgets.QWidget()
         self.tab_moove.setObjectName("tab_moove")
@@ -348,9 +327,11 @@ class Ui_w_main(object):
         self.table_in_moove.setMinimumSize(QtCore.QSize(703, 450))
         self.table_in_moove.setMaximumSize(QtCore.QSize(16777215, 800))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Roboto")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.table_in_moove.setFont(font)
         self.table_in_moove.setRowCount(15)
         self.table_in_moove.setObjectName("table_in_moove")
@@ -369,6 +350,8 @@ class Ui_w_main(object):
         self.table_in_moove.setHorizontalHeaderItem(5, item)
         item = QtWidgets.QTableWidgetItem()
         self.table_in_moove.setHorizontalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.table_in_moove.setItem(0, 0, item)
         self.table_in_moove.horizontalHeader().setDefaultSectionSize(100)
         self.table_in_moove.horizontalHeader().setMinimumSectionSize(47)
         self.table_in_moove.verticalHeader().setVisible(False)
@@ -381,9 +364,11 @@ class Ui_w_main(object):
         self.table_out_moove.setSizePolicy(sizePolicy)
         self.table_out_moove.setMinimumSize(QtCore.QSize(703, 0))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Roboto")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.table_out_moove.setFont(font)
         self.table_out_moove.setRowCount(15)
         self.table_out_moove.setObjectName("table_out_moove")
@@ -2015,9 +2000,11 @@ class Ui_w_main(object):
         self.table_zayav.setMinimumSize(QtCore.QSize(575, 450))
         self.table_zayav.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Roboto")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.table_zayav.setFont(font)
         self.table_zayav.setRowCount(15)
         self.table_zayav.setObjectName("table_zayav")
@@ -2095,9 +2082,11 @@ class Ui_w_main(object):
         self.table_zayav_2.setMinimumSize(QtCore.QSize(575, 450))
         self.table_zayav_2.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Roboto")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.table_zayav_2.setFont(font)
         self.table_zayav_2.setRowCount(15)
         self.table_zayav_2.setObjectName("table_zayav_2")
@@ -2117,7 +2106,7 @@ class Ui_w_main(object):
         self.verticalLayout_10.addWidget(self.tab_all)
         w_main.setCentralWidget(self.mainwidget)
         self.menubar = QtWidgets.QMenuBar(w_main)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1897, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1894, 21))
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
@@ -2132,7 +2121,7 @@ class Ui_w_main(object):
         self.menubar.addAction(self.menu_2.menuAction())
 
         self.retranslateUi(w_main)
-        self.tab_all.setCurrentIndex(3)
+        self.tab_all.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(w_main)
 
     def retranslateUi(self, w_main):
@@ -2185,6 +2174,11 @@ class Ui_w_main(object):
         item.setText(_translate("w_main", "Количество"))
         item = self.table_in_moove.horizontalHeaderItem(6)
         item.setText(_translate("w_main", "Текст"))
+        __sortingEnabled = self.table_in_moove.isSortingEnabled()
+        self.table_in_moove.setSortingEnabled(False)
+        item = self.table_in_moove.item(0, 0)
+        item.setText(_translate("w_main", "test"))
+        self.table_in_moove.setSortingEnabled(__sortingEnabled)
         item = self.table_out_moove.horizontalHeaderItem(0)
         item.setText(_translate("w_main", "№"))
         item = self.table_out_moove.horizontalHeaderItem(1)
