@@ -27,6 +27,14 @@
    <string notr="true">QMainWindow {
     background: #222d35;
 }
+QLabel{
+	background-color:#f8efe7;
+    border: none;
+	font: &quot;Roboto&quot;;
+    font-size: 11pt;
+	padding: 1px;
+}
+
 
 QWidget {
 	background-color: #ffffff;
@@ -36,9 +44,9 @@ QWidget {
 QPushButton {
 	background-color:#239c4b;
     border: none;
-	font: 13pt &quot;Roboto&quot;;
-    font-size: 13pt;
-	 padding: 2px;
+	font: &quot;Roboto&quot;;
+    font-size: 14pt;
+	padding: 2px;
 
 }
 QPushButton:hover {
@@ -49,7 +57,11 @@ QPushButton:hover {
 QPushButton:pressed {
 	background-color: #1b5f4f;
 }
-
+QCheckBox{
+	font: &quot;Roboto&quot;;
+	font-weight: 500;
+	font-size: 12pt;
+}
 QTabBar::tab:!selected:hover {
     background: #FFFFFF;
 }
@@ -83,7 +95,9 @@ QTableWidget  {
 	font: 14pt &quot;Roboto&quot;;
 	selection-background-color: #1b7f3c;
 }
+QTreeWidget {
 
+}
 
 
 </string>
@@ -188,8 +202,9 @@ QTableWidget  {
                 <widget class="QLabel" name="label_value_serch_moove">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -211,8 +226,7 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -236,8 +250,7 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -256,8 +269,9 @@ QTableWidget  {
                 <widget class="QLabel" name="label_nomber_serch_moove">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -295,8 +309,7 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -317,8 +330,7 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -335,6 +347,12 @@ QTableWidget  {
               <layout class="QHBoxLayout" name="lay_date_serch_moove">
                <item>
                 <widget class="QLabel" name="label1_data_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>20</width>
+                   <height>1</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>9</width>
@@ -353,6 +371,12 @@ QTableWidget  {
                    <width>100</width>
                    <height>0</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                 </widget>
                </item>
@@ -374,6 +398,12 @@ QTableWidget  {
                </item>
                <item>
                 <widget class="QLabel" name="label2_data_serch_moove">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>15</width>
@@ -398,6 +428,12 @@ QTableWidget  {
                    <width>100</width>
                    <height>0</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                 </widget>
                </item>
@@ -433,8 +469,7 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -455,8 +490,7 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -495,8 +529,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_moove">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -879,8 +912,9 @@ QTableWidget  {
                 <widget class="QLabel" name="label_value_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -896,8 +930,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -912,8 +945,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -932,8 +964,9 @@ QTableWidget  {
                 <widget class="QLabel" name="label_nomber_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -965,8 +998,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -981,8 +1013,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1085,8 +1116,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1101,8 +1131,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1135,8 +1164,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_pay">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1399,8 +1427,9 @@ QTableWidget  {
                 <widget class="QLabel" name="label_value_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -1416,8 +1445,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1432,8 +1460,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1452,8 +1479,9 @@ QTableWidget  {
                 <widget class="QLabel" name="label_nomber_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -1485,8 +1513,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1501,8 +1528,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1605,8 +1631,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1621,8 +1646,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1655,8 +1679,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_stor">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -1833,8 +1856,9 @@ QTableWidget  {
                <widget class="QLabel" name="label_value_serch_fin">
                 <property name="font">
                  <font>
-                  <family>Andale Mono</family>
+                  <pointsize>11</pointsize>
                   <weight>75</weight>
+                  <italic>false</italic>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1853,8 +1877,7 @@ QTableWidget  {
                <widget class="QPushButton" name="pushbutton_ok_value_serch_fin">
                 <property name="font">
                  <font>
-                  <family>Roboto</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -1869,8 +1892,7 @@ QTableWidget  {
                <widget class="QPushButton" name="pushbutton_cancel_value_serch_fin">
                 <property name="font">
                  <font>
-                  <family>Roboto</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -2197,8 +2219,9 @@ QTableWidget  {
                 <widget class="QLabel" name="label_value_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -2214,8 +2237,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_value_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -2230,8 +2252,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushButton_cancel_value_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -2250,8 +2271,9 @@ QTableWidget  {
                 <widget class="QLabel" name="label_nomber_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -2283,8 +2305,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_nomber_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -2299,8 +2320,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -2403,8 +2423,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_ok_data_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -2419,8 +2438,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_data_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -2453,8 +2471,7 @@ QTableWidget  {
                 <widget class="QPushButton" name="pushbutton_cancel_hard_serch_agent">
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -2833,8 +2850,9 @@ QTableWidget  {
                   <widget class="QLabel" name="label_nomber_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Andale Mono</family>
+                     <pointsize>11</pointsize>
                      <weight>75</weight>
+                     <italic>false</italic>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -2866,8 +2884,7 @@ QTableWidget  {
                   <widget class="QPushButton" name="pushbutton_ok_nomber_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Roboto</family>
-                     <pointsize>13</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>50</weight>
                      <italic>false</italic>
                      <bold>false</bold>
@@ -2882,8 +2899,7 @@ QTableWidget  {
                   <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Roboto</family>
-                     <pointsize>13</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>50</weight>
                      <italic>false</italic>
                      <bold>false</bold>
@@ -2986,8 +3002,7 @@ QTableWidget  {
                   <widget class="QPushButton" name="pushbutton_ok_data_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Roboto</family>
-                     <pointsize>13</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>50</weight>
                      <italic>false</italic>
                      <bold>false</bold>
@@ -3002,8 +3017,7 @@ QTableWidget  {
                   <widget class="QPushButton" name="pushbutton_cancel_data_serch_ord">
                    <property name="font">
                     <font>
-                     <family>Roboto</family>
-                     <pointsize>13</pointsize>
+                     <pointsize>14</pointsize>
                      <weight>50</weight>
                      <italic>false</italic>
                      <bold>false</bold>
@@ -3197,8 +3211,9 @@ QTableWidget  {
                    <widget class="QLabel" name="label_value_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Andale Mono</family>
+                      <pointsize>11</pointsize>
                       <weight>75</weight>
+                      <italic>false</italic>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -3214,8 +3229,7 @@ QTableWidget  {
                    <widget class="QPushButton" name="pushbutton_ok_value_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Roboto</family>
-                      <pointsize>13</pointsize>
+                      <pointsize>14</pointsize>
                       <weight>50</weight>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -3230,8 +3244,7 @@ QTableWidget  {
                    <widget class="QPushButton" name="pushButton_cancel_value_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Roboto</family>
-                      <pointsize>13</pointsize>
+                      <pointsize>14</pointsize>
                       <weight>50</weight>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -3250,8 +3263,9 @@ QTableWidget  {
                    <widget class="QLabel" name="label_nomber_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Andale Mono</family>
+                      <pointsize>11</pointsize>
                       <weight>75</weight>
+                      <italic>false</italic>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -3283,8 +3297,7 @@ QTableWidget  {
                    <widget class="QPushButton" name="pushbutton_ok_nomber_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Roboto</family>
-                      <pointsize>13</pointsize>
+                      <pointsize>14</pointsize>
                       <weight>50</weight>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -3299,8 +3312,7 @@ QTableWidget  {
                    <widget class="QPushButton" name="pushbutton_cancel_nomber_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Roboto</family>
-                      <pointsize>13</pointsize>
+                      <pointsize>14</pointsize>
                       <weight>50</weight>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -3403,8 +3415,7 @@ QTableWidget  {
                    <widget class="QPushButton" name="pushbutton_ok_data_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Roboto</family>
-                      <pointsize>13</pointsize>
+                      <pointsize>14</pointsize>
                       <weight>50</weight>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -3419,8 +3430,7 @@ QTableWidget  {
                    <widget class="QPushButton" name="pushbutton_cancel_data_serch_plan">
                     <property name="font">
                      <font>
-                      <family>Roboto</family>
-                      <pointsize>13</pointsize>
+                      <pointsize>14</pointsize>
                       <weight>50</weight>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -3749,8 +3759,9 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Andale Mono</family>
+                   <pointsize>11</pointsize>
                    <weight>75</weight>
+                   <italic>false</italic>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -3789,8 +3800,7 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -3811,8 +3821,7 @@ QTableWidget  {
                  </property>
                  <property name="font">
                   <font>
-                   <family>Roboto</family>
-                   <pointsize>13</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -3913,8 +3922,7 @@ QTableWidget  {
              <widget class="QPushButton" name="pushbutton_report_menu_hour">
               <property name="font">
                <font>
-                <family>Roboto</family>
-                <pointsize>13</pointsize>
+                <pointsize>14</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
@@ -3929,8 +3937,7 @@ QTableWidget  {
              <widget class="QPushButton" name="pushbutton_worker_menu_hour">
               <property name="font">
                <font>
-                <family>Roboto</family>
-                <pointsize>13</pointsize>
+                <pointsize>14</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
@@ -3945,8 +3952,7 @@ QTableWidget  {
              <widget class="QPushButton" name="pushButton_hollyday_menu_hour">
               <property name="font">
                <font>
-                <family>Roboto</family>
-                <pointsize>13</pointsize>
+                <pointsize>14</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
@@ -3997,8 +4003,7 @@ QTableWidget  {
              <widget class="QPushButton" name="pushbutton_ok_serch_hour">
               <property name="font">
                <font>
-                <family>Roboto</family>
-                <pointsize>13</pointsize>
+                <pointsize>14</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
@@ -4013,8 +4018,7 @@ QTableWidget  {
              <widget class="QPushButton" name="pushbutton_cancel_serch_hour">
               <property name="font">
                <font>
-                <family>Roboto</family>
-                <pointsize>13</pointsize>
+                <pointsize>14</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
@@ -4029,8 +4033,7 @@ QTableWidget  {
              <widget class="QPushButton" name="pushbutton_clear_serch_hour">
               <property name="font">
                <font>
-                <family>Roboto</family>
-                <pointsize>13</pointsize>
+                <pointsize>14</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
@@ -4215,8 +4218,7 @@ QTableWidget  {
                <widget class="QPushButton" name="pushbutton_ok_serch_zayav">
                 <property name="font">
                  <font>
-                  <family>Roboto</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -4231,8 +4233,7 @@ QTableWidget  {
                <widget class="QPushButton" name="pushbutton_cancel_serch_zayav">
                 <property name="font">
                  <font>
-                  <family>Roboto</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -4446,8 +4447,7 @@ QTableWidget  {
                <widget class="QPushButton" name="pushbutton_ok_serch_zayav_2">
                 <property name="font">
                  <font>
-                  <family>Roboto</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -4462,8 +4462,7 @@ QTableWidget  {
                <widget class="QPushButton" name="pushbutton_cancel_serch_zayav_2">
                 <property name="font">
                  <font>
-                  <family>Roboto</family>
-                  <pointsize>13</pointsize>
+                  <pointsize>14</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>

@@ -1,6 +1,14 @@
 QMainWindow {
     background: #222d35;
 }
+QLabel{
+	background-color:#f8efe7;
+    border: none;
+	font: "Roboto";
+    font-size: 11pt;
+	padding: 1px;
+}
+
 
 QWidget {
 	background-color: #ffffff;
@@ -10,9 +18,9 @@ QWidget {
 QPushButton {
 	background-color:#239c4b;
     border: none;
-	font: 13pt "Roboto";
-    font-size: 13pt;
-	 padding: 2px;
+	font: "Roboto";
+    font-size: 14pt;
+	padding: 2px;
 
 }
 QPushButton:hover {
@@ -23,7 +31,11 @@ QPushButton:hover {
 QPushButton:pressed {
 	background-color: #1b5f4f;
 }
-
+QCheckBox{
+	font: "Roboto";
+	font-weight: 500;
+	font-size: 12pt;
+}
 QTabBar::tab:!selected:hover {
     background: #FFFFFF;
 }
@@ -56,4 +68,7 @@ QTableWidget  {
 	width:auto;
 	font: 14pt "Roboto";
 	selection-background-color: #1b7f3c;
+}
+QTreeWidget {
+
 }
