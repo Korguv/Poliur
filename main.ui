@@ -49,7 +49,7 @@ QPushButton {
 }
 QPushButton:hover {
 	background-color: #1b7f3c;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 QPushButton:pressed {
@@ -61,7 +61,8 @@ QCheckBox{
 	font-size: 12pt;
 }
 QTabBar::tab:!selected:hover {
-    background: #FFFFFF;
+   	background-color: #1b7f3c;
+    color: #FFFFFF;
 }
 
 QTabWidget::tab-bar {
@@ -154,7 +155,7 @@ QTreeWidget::item:selected:!active {
        <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -1077,6 +1078,12 @@ QTreeWidget::item:selected:!active {
               <layout class="QHBoxLayout" name="lay_date_serch_pay">
                <item>
                 <widget class="QLabel" name="label1_data_serch_pay">
+                 <property name="minimumSize">
+                  <size>
+                   <width>25</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>9</width>
@@ -1116,6 +1123,12 @@ QTreeWidget::item:selected:!active {
                </item>
                <item>
                 <widget class="QLabel" name="label2_data_serch_pay">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>15</width>
@@ -1592,6 +1605,12 @@ QTreeWidget::item:selected:!active {
               <layout class="QHBoxLayout" name="lay_date_serch_stor">
                <item>
                 <widget class="QLabel" name="label1_data_serch_stor">
+                 <property name="minimumSize">
+                  <size>
+                   <width>25</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>9</width>
@@ -1631,6 +1650,12 @@ QTreeWidget::item:selected:!active {
                </item>
                <item>
                 <widget class="QLabel" name="label2_data_serch_stor">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>15</width>
@@ -1972,6 +1997,12 @@ QTreeWidget::item:selected:!active {
               </item>
               <item>
                <widget class="QLabel" name="label1_data_serch_fin">
+                <property name="minimumSize">
+                 <size>
+                  <width>25</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>9</width>
@@ -2011,6 +2042,12 @@ QTreeWidget::item:selected:!active {
               </item>
               <item>
                <widget class="QLabel" name="label2_data_serch_fin">
+                <property name="minimumSize">
+                 <size>
+                  <width>30</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>15</width>
@@ -2384,6 +2421,12 @@ QTreeWidget::item:selected:!active {
               <layout class="QHBoxLayout" name="lay_date_serch_agent">
                <item>
                 <widget class="QLabel" name="label1_data_serch_agent">
+                 <property name="minimumSize">
+                  <size>
+                   <width>25</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>9</width>
@@ -2423,6 +2466,12 @@ QTreeWidget::item:selected:!active {
                </item>
                <item>
                 <widget class="QLabel" name="label2_data_serch_agent">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>15</width>
@@ -2963,6 +3012,12 @@ QTreeWidget::item:selected:!active {
                 <layout class="QHBoxLayout" name="lay_date_serch_ord">
                  <item>
                   <widget class="QLabel" name="label1_data_serch_ord">
+                   <property name="minimumSize">
+                    <size>
+                     <width>25</width>
+                     <height>0</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
                      <width>9</width>
@@ -3002,6 +3057,12 @@ QTreeWidget::item:selected:!active {
                  </item>
                  <item>
                   <widget class="QLabel" name="label2_data_serch_ord">
+                   <property name="minimumSize">
+                    <size>
+                     <width>30</width>
+                     <height>0</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
                      <width>15</width>
@@ -3376,6 +3437,12 @@ QTreeWidget::item:selected:!active {
                  <layout class="QHBoxLayout" name="lay_date_serch_plan">
                   <item>
                    <widget class="QLabel" name="label1_data_serch_plan">
+                    <property name="minimumSize">
+                     <size>
+                      <width>25</width>
+                      <height>0</height>
+                     </size>
+                    </property>
                     <property name="maximumSize">
                      <size>
                       <width>9</width>
@@ -3415,6 +3482,12 @@ QTreeWidget::item:selected:!active {
                   </item>
                   <item>
                    <widget class="QLabel" name="label2_data_serch_plan">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
                     <property name="maximumSize">
                      <size>
                       <width>15</width>
@@ -3800,9 +3873,15 @@ QTreeWidget::item:selected:!active {
                   <rect>
                    <x>10</x>
                    <y>23</y>
-                   <width>44</width>
+                   <width>55</width>
                    <height>19</height>
                   </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>55</width>
+                   <height>0</height>
+                  </size>
                  </property>
                  <property name="font">
                   <font>
@@ -4179,6 +4258,12 @@ QTreeWidget::item:selected:!active {
               </item>
               <item>
                <widget class="QLabel" name="label1_serch_zayav">
+                <property name="minimumSize">
+                 <size>
+                  <width>25</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>9</width>
@@ -4218,6 +4303,12 @@ QTreeWidget::item:selected:!active {
               </item>
               <item>
                <widget class="QLabel" name="label2_serch_zayav">
+                <property name="minimumSize">
+                 <size>
+                  <width>30</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>15</width>
@@ -4408,6 +4499,12 @@ QTreeWidget::item:selected:!active {
               </item>
               <item>
                <widget class="QLabel" name="label1_serch_zayav_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>25</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>9</width>
@@ -4447,6 +4544,12 @@ QTreeWidget::item:selected:!active {
               </item>
               <item>
                <widget class="QLabel" name="label2_serch_zayav_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>30</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
                   <width>15</width>
