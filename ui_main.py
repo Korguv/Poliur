@@ -31,8 +31,6 @@ class Ui_w_main(object):
 "    font-size: 11pt;\n"
 "    padding: 1px;\n"
 "}\n"
-"\n"
-"\n"
 "QWidget {\n"
 "    background-color: #ffffff;\n"
 "    font-weight: 600;\n"
@@ -48,7 +46,7 @@ class Ui_w_main(object):
 "}\n"
 "QPushButton:hover {\n"
 "    background-color: #1b7f3c;\n"
-"    color: #ffffff;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -60,7 +58,8 @@ class Ui_w_main(object):
 "    font-size: 12pt;\n"
 "}\n"
 "QTabBar::tab:!selected:hover {\n"
-"    background: #FFFFFF;\n"
+"       background-color: #1b7f3c;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "\n"
 "QTabWidget::tab-bar {\n"
@@ -93,8 +92,45 @@ class Ui_w_main(object):
 "    selection-background-color: #1b7f3c;\n"
 "}\n"
 "QTreeWidget {\n"
-"\n"
+"    font:\"Roboto\";\n"
+"    font-weight:500;\n"
 "}\n"
+"QDateEdit\n"
+"{\n"
+"    background-color : white;\n"
+"    padding : 5px;\n"
+"    font:\"Roboto\";\n"
+"    font-weight:500;\n"
+"}\n"
+"\n"
+"QTreeWidget {\n"
+"    show-decoration-selected: 1;\n"
+"}\n"
+"\n"
+"QTreeWidget::item {\n"
+"     border: 1px solid #d9d9d9;\n"
+"    border-top-color: transparent;\n"
+"    border-bottom-color: transparent;\n"
+"}\n"
+"\n"
+"QTreeWidget::item:hover {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e7effd, stop: 1 #cbdaf1);\n"
+"    border: 1px solid #bfcde4;\n"
+"}\n"
+"\n"
+"QTreeWidget::item:selected {\n"
+"    border: 1px solid #567dbc;\n"
+"}\n"
+"\n"
+"QTreeWidget::item:selected:active{\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6ea1f1, stop: 1 #567dbc);\n"
+"}\n"
+"\n"
+"QTreeWidget::item:selected:!active {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);\n"
+"}\n"
+"\n"
+"\n"
 "\n"
 "\n"
 "")
@@ -125,13 +161,15 @@ class Ui_w_main(object):
         self.tree_moove.setSizePolicy(sizePolicy)
         self.tree_moove.setMinimumSize(QtCore.QSize(330, 180))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
         font.setBold(True)
-        font.setWeight(75)
+        font.setItalic(False)
+        font.setWeight(62)
         self.tree_moove.setFont(font)
         self.tree_moove.setObjectName("tree_moove")
         self.tree_moove.headerItem().setText(0, "Классификация")
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_moove)
+        item_1 = QtWidgets.QTreeWidgetItem(item_0)
+        item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_moove)
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_moove)
@@ -230,7 +268,8 @@ class Ui_w_main(object):
         self.dateedit_start_serch_moove.setMinimumSize(QtCore.QSize(100, 0))
         font = QtGui.QFont()
         font.setBold(True)
-        font.setWeight(75)
+        font.setItalic(False)
+        font.setWeight(62)
         self.dateedit_start_serch_moove.setFont(font)
         self.dateedit_start_serch_moove.setObjectName("dateedit_start_serch_moove")
         self.lay_date_serch_moove.addWidget(self.dateedit_start_serch_moove)
@@ -250,7 +289,8 @@ class Ui_w_main(object):
         self.dateedit_finish_serch_moove.setMinimumSize(QtCore.QSize(100, 0))
         font = QtGui.QFont()
         font.setBold(True)
-        font.setWeight(75)
+        font.setItalic(False)
+        font.setWeight(62)
         self.dateedit_finish_serch_moove.setFont(font)
         self.dateedit_finish_serch_moove.setObjectName("dateedit_finish_serch_moove")
         self.lay_date_serch_moove.addWidget(self.dateedit_finish_serch_moove)
@@ -427,9 +467,9 @@ class Ui_w_main(object):
         self.tree_pay.setSizePolicy(sizePolicy)
         self.tree_pay.setMinimumSize(QtCore.QSize(330, 180))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
         font.setBold(True)
-        font.setWeight(75)
+        font.setItalic(False)
+        font.setWeight(62)
         self.tree_pay.setFont(font)
         self.tree_pay.setObjectName("tree_pay")
         self.tree_pay.headerItem().setText(0, "Классификация")
@@ -519,6 +559,7 @@ class Ui_w_main(object):
         self.lay_date_serch_pay = QtWidgets.QHBoxLayout()
         self.lay_date_serch_pay.setObjectName("lay_date_serch_pay")
         self.label1_data_serch_pay = QtWidgets.QLabel(self.box_serch_pay)
+        self.label1_data_serch_pay.setMinimumSize(QtCore.QSize(25, 0))
         self.label1_data_serch_pay.setMaximumSize(QtCore.QSize(9, 16777215))
         self.label1_data_serch_pay.setObjectName("label1_data_serch_pay")
         self.lay_date_serch_pay.addWidget(self.label1_data_serch_pay)
@@ -529,6 +570,7 @@ class Ui_w_main(object):
         spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.lay_date_serch_pay.addItem(spacerItem5)
         self.label2_data_serch_pay = QtWidgets.QLabel(self.box_serch_pay)
+        self.label2_data_serch_pay.setMinimumSize(QtCore.QSize(30, 0))
         self.label2_data_serch_pay.setMaximumSize(QtCore.QSize(15, 16777215))
         self.label2_data_serch_pay.setObjectName("label2_data_serch_pay")
         self.lay_date_serch_pay.addWidget(self.label2_data_serch_pay)
@@ -669,9 +711,9 @@ class Ui_w_main(object):
         self.tree_stor.setSizePolicy(sizePolicy)
         self.tree_stor.setMinimumSize(QtCore.QSize(330, 180))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
         font.setBold(True)
-        font.setWeight(75)
+        font.setItalic(False)
+        font.setWeight(62)
         self.tree_stor.setFont(font)
         self.tree_stor.setObjectName("tree_stor")
         self.tree_stor.headerItem().setText(0, "Классификация")
@@ -761,6 +803,7 @@ class Ui_w_main(object):
         self.lay_date_serch_stor = QtWidgets.QHBoxLayout()
         self.lay_date_serch_stor.setObjectName("lay_date_serch_stor")
         self.label1_data_serch_stor = QtWidgets.QLabel(self.box_serch_stor)
+        self.label1_data_serch_stor.setMinimumSize(QtCore.QSize(25, 0))
         self.label1_data_serch_stor.setMaximumSize(QtCore.QSize(9, 16777215))
         self.label1_data_serch_stor.setObjectName("label1_data_serch_stor")
         self.lay_date_serch_stor.addWidget(self.label1_data_serch_stor)
@@ -771,6 +814,7 @@ class Ui_w_main(object):
         spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.lay_date_serch_stor.addItem(spacerItem9)
         self.label2_data_serch_stor = QtWidgets.QLabel(self.box_serch_stor)
+        self.label2_data_serch_stor.setMinimumSize(QtCore.QSize(30, 0))
         self.label2_data_serch_stor.setMaximumSize(QtCore.QSize(15, 16777215))
         self.label2_data_serch_stor.setObjectName("label2_data_serch_stor")
         self.lay_date_serch_stor.addWidget(self.label2_data_serch_stor)
@@ -931,6 +975,7 @@ class Ui_w_main(object):
         spacerItem13 = QtWidgets.QSpacerItem(15, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.layout_data_serch_fin.addItem(spacerItem13)
         self.label1_data_serch_fin = QtWidgets.QLabel(self.tab_fin)
+        self.label1_data_serch_fin.setMinimumSize(QtCore.QSize(25, 0))
         self.label1_data_serch_fin.setMaximumSize(QtCore.QSize(9, 16777215))
         self.label1_data_serch_fin.setObjectName("label1_data_serch_fin")
         self.layout_data_serch_fin.addWidget(self.label1_data_serch_fin)
@@ -941,6 +986,7 @@ class Ui_w_main(object):
         spacerItem14 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.layout_data_serch_fin.addItem(spacerItem14)
         self.label2_data_serch_fin = QtWidgets.QLabel(self.tab_fin)
+        self.label2_data_serch_fin.setMinimumSize(QtCore.QSize(30, 0))
         self.label2_data_serch_fin.setMaximumSize(QtCore.QSize(15, 16777215))
         self.label2_data_serch_fin.setObjectName("label2_data_serch_fin")
         self.layout_data_serch_fin.addWidget(self.label2_data_serch_fin)
@@ -1022,9 +1068,9 @@ class Ui_w_main(object):
         self.tree_agent.setSizePolicy(sizePolicy)
         self.tree_agent.setMinimumSize(QtCore.QSize(330, 180))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
         font.setBold(True)
-        font.setWeight(75)
+        font.setItalic(False)
+        font.setWeight(62)
         self.tree_agent.setFont(font)
         self.tree_agent.setObjectName("tree_agent")
         self.tree_agent.headerItem().setText(0, "Классификация")
@@ -1114,6 +1160,7 @@ class Ui_w_main(object):
         self.lay_date_serch_agent = QtWidgets.QHBoxLayout()
         self.lay_date_serch_agent.setObjectName("lay_date_serch_agent")
         self.label1_data_serch_agent = QtWidgets.QLabel(self.box_serch_agent)
+        self.label1_data_serch_agent.setMinimumSize(QtCore.QSize(25, 0))
         self.label1_data_serch_agent.setMaximumSize(QtCore.QSize(9, 16777215))
         self.label1_data_serch_agent.setObjectName("label1_data_serch_agent")
         self.lay_date_serch_agent.addWidget(self.label1_data_serch_agent)
@@ -1124,6 +1171,7 @@ class Ui_w_main(object):
         spacerItem18 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.lay_date_serch_agent.addItem(spacerItem18)
         self.label2_data_serch_agent = QtWidgets.QLabel(self.box_serch_agent)
+        self.label2_data_serch_agent.setMinimumSize(QtCore.QSize(30, 0))
         self.label2_data_serch_agent.setMaximumSize(QtCore.QSize(15, 16777215))
         self.label2_data_serch_agent.setObjectName("label2_data_serch_agent")
         self.lay_date_serch_agent.addWidget(self.label2_data_serch_agent)
@@ -1316,9 +1364,9 @@ class Ui_w_main(object):
         self.tree_ord.setSizePolicy(sizePolicy)
         self.tree_ord.setMinimumSize(QtCore.QSize(330, 180))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
         font.setBold(True)
-        font.setWeight(75)
+        font.setItalic(False)
+        font.setWeight(62)
         self.tree_ord.setFont(font)
         self.tree_ord.setObjectName("tree_ord")
         self.tree_ord.headerItem().setText(0, "Классификация")
@@ -1375,6 +1423,7 @@ class Ui_w_main(object):
         self.lay_date_serch_ord = QtWidgets.QHBoxLayout()
         self.lay_date_serch_ord.setObjectName("lay_date_serch_ord")
         self.label1_data_serch_ord = QtWidgets.QLabel(self.box_serch_ord)
+        self.label1_data_serch_ord.setMinimumSize(QtCore.QSize(25, 0))
         self.label1_data_serch_ord.setMaximumSize(QtCore.QSize(9, 16777215))
         self.label1_data_serch_ord.setObjectName("label1_data_serch_ord")
         self.lay_date_serch_ord.addWidget(self.label1_data_serch_ord)
@@ -1385,6 +1434,7 @@ class Ui_w_main(object):
         spacerItem22 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.lay_date_serch_ord.addItem(spacerItem22)
         self.label2_data_serch_ord = QtWidgets.QLabel(self.box_serch_ord)
+        self.label2_data_serch_ord.setMinimumSize(QtCore.QSize(30, 0))
         self.label2_data_serch_ord.setMaximumSize(QtCore.QSize(15, 16777215))
         self.label2_data_serch_ord.setObjectName("label2_data_serch_ord")
         self.lay_date_serch_ord.addWidget(self.label2_data_serch_ord)
@@ -1576,6 +1626,7 @@ class Ui_w_main(object):
         self.lay_date_serch_plan = QtWidgets.QHBoxLayout()
         self.lay_date_serch_plan.setObjectName("lay_date_serch_plan")
         self.label1_data_serch_plan = QtWidgets.QLabel(self.box_serch_plan1)
+        self.label1_data_serch_plan.setMinimumSize(QtCore.QSize(25, 0))
         self.label1_data_serch_plan.setMaximumSize(QtCore.QSize(9, 16777215))
         self.label1_data_serch_plan.setObjectName("label1_data_serch_plan")
         self.lay_date_serch_plan.addWidget(self.label1_data_serch_plan)
@@ -1586,6 +1637,7 @@ class Ui_w_main(object):
         spacerItem25 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.lay_date_serch_plan.addItem(spacerItem25)
         self.label2_data_serch_plan = QtWidgets.QLabel(self.box_serch_plan1)
+        self.label2_data_serch_plan.setMinimumSize(QtCore.QSize(30, 0))
         self.label2_data_serch_plan.setMaximumSize(QtCore.QSize(15, 16777215))
         self.label2_data_serch_plan.setObjectName("label2_data_serch_plan")
         self.lay_date_serch_plan.addWidget(self.label2_data_serch_plan)
@@ -1728,9 +1780,9 @@ class Ui_w_main(object):
         self.treewidget_serch_nom.setSizePolicy(sizePolicy)
         self.treewidget_serch_nom.setMinimumSize(QtCore.QSize(330, 180))
         font = QtGui.QFont()
-        font.setFamily("Andale Mono")
         font.setBold(True)
-        font.setWeight(75)
+        font.setItalic(False)
+        font.setWeight(62)
         self.treewidget_serch_nom.setFont(font)
         self.treewidget_serch_nom.setObjectName("treewidget_serch_nom")
         self.treewidget_serch_nom.headerItem().setText(0, "Классификация")
@@ -1749,7 +1801,8 @@ class Ui_w_main(object):
         self.groupbox_name_serch_nom.setMaximumSize(QtCore.QSize(500, 80))
         self.groupbox_name_serch_nom.setObjectName("groupbox_name_serch_nom")
         self.label1_name_serch_nom = QtWidgets.QLabel(self.groupbox_name_serch_nom)
-        self.label1_name_serch_nom.setGeometry(QtCore.QRect(10, 23, 44, 19))
+        self.label1_name_serch_nom.setGeometry(QtCore.QRect(10, 23, 55, 19))
+        self.label1_name_serch_nom.setMinimumSize(QtCore.QSize(55, 0))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
@@ -1930,6 +1983,7 @@ class Ui_w_main(object):
         spacerItem32 = QtWidgets.QSpacerItem(15, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.layout_serch_zayav.addItem(spacerItem32)
         self.label1_serch_zayav = QtWidgets.QLabel(self.tab_zayav)
+        self.label1_serch_zayav.setMinimumSize(QtCore.QSize(25, 0))
         self.label1_serch_zayav.setMaximumSize(QtCore.QSize(9, 16777215))
         self.label1_serch_zayav.setObjectName("label1_serch_zayav")
         self.layout_serch_zayav.addWidget(self.label1_serch_zayav)
@@ -1940,6 +1994,7 @@ class Ui_w_main(object):
         spacerItem33 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.layout_serch_zayav.addItem(spacerItem33)
         self.label2_serch_zayav = QtWidgets.QLabel(self.tab_zayav)
+        self.label2_serch_zayav.setMinimumSize(QtCore.QSize(30, 0))
         self.label2_serch_zayav.setMaximumSize(QtCore.QSize(15, 16777215))
         self.label2_serch_zayav.setObjectName("label2_serch_zayav")
         self.layout_serch_zayav.addWidget(self.label2_serch_zayav)
@@ -2013,6 +2068,7 @@ class Ui_w_main(object):
         spacerItem36 = QtWidgets.QSpacerItem(15, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.layout_serch_zayav_2.addItem(spacerItem36)
         self.label1_serch_zayav_2 = QtWidgets.QLabel(self.tab_zayav)
+        self.label1_serch_zayav_2.setMinimumSize(QtCore.QSize(25, 0))
         self.label1_serch_zayav_2.setMaximumSize(QtCore.QSize(9, 16777215))
         self.label1_serch_zayav_2.setObjectName("label1_serch_zayav_2")
         self.layout_serch_zayav_2.addWidget(self.label1_serch_zayav_2)
@@ -2023,6 +2079,7 @@ class Ui_w_main(object):
         spacerItem37 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.layout_serch_zayav_2.addItem(spacerItem37)
         self.label2_serch_zayav_2 = QtWidgets.QLabel(self.tab_zayav)
+        self.label2_serch_zayav_2.setMinimumSize(QtCore.QSize(30, 0))
         self.label2_serch_zayav_2.setMaximumSize(QtCore.QSize(15, 16777215))
         self.label2_serch_zayav_2.setObjectName("label2_serch_zayav_2")
         self.layout_serch_zayav_2.addWidget(self.label2_serch_zayav_2)
@@ -2106,7 +2163,7 @@ class Ui_w_main(object):
         self.menubar.addAction(self.menu_2.menuAction())
 
         self.retranslateUi(w_main)
-        self.tab_all.setCurrentIndex(0)
+        self.tab_all.setCurrentIndex(5)
         QtCore.QMetaObject.connectSlotsByName(w_main)
 
     def retranslateUi(self, w_main):
@@ -2117,6 +2174,8 @@ class Ui_w_main(object):
         self.tree_moove.setSortingEnabled(False)
         self.tree_moove.topLevelItem(0).setText(0, _translate("w_main", "lv1"))
         self.tree_moove.topLevelItem(0).child(0).setText(0, _translate("w_main", "lv2"))
+        self.tree_moove.topLevelItem(0).child(1).setText(0, _translate("w_main", "New Item"))
+        self.tree_moove.topLevelItem(0).child(2).setText(0, _translate("w_main", "New Item"))
         self.tree_moove.topLevelItem(1).setText(0, _translate("w_main", "New Item"))
         self.tree_moove.topLevelItem(2).setText(0, _translate("w_main", "New Item"))
         self.tree_moove.setSortingEnabled(__sortingEnabled)
