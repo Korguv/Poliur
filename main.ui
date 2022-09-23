@@ -89,6 +89,14 @@ QTabBar::tab:selected {
     border-bottom-color: #C2C7CB; 
 }
 
+QDateEdit
+{
+	background-color : white;
+	padding : 5px;
+	font:&quot;Roboto&quot;;
+	font-weight:500;
+}
+
 QTableWidget  {
 	width:auto;
 	font: 14pt &quot;Roboto&quot;;
@@ -98,16 +106,14 @@ QTreeWidget {
 	font:&quot;Roboto&quot;;
 	font-weight:500;
 }
-QDateEdit
-{
-	background-color : white;
-	padding : 5px;
-	font:&quot;Roboto&quot;;
-	font-weight:500;
-}
 
 QTreeWidget {
     show-decoration-selected: 1;
+	font: &quot;Roboto&quot;;
+	font-weight:500;
+}
+QTreeWidget QHeaderView::section {
+    font-size: 12pt;
 }
 
 QTreeWidget::item {
@@ -132,8 +138,17 @@ QTreeWidget::item:selected:active{
 QTreeWidget::item:selected:!active {
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);
 }
+QGroupBox {
+  border: 1px solid gray;
+  border-radius: 9px;
+  margin-top: 0.5em;
+}
 
-
+QGroupBox::title {
+  background-color:transparent;
+  padding-top: -24px;
+  padding-left: 8px;
+}
 
 
 </string>
@@ -2250,8 +2265,20 @@ QTreeWidget::item:selected:!active {
               <bold>true</bold>
              </font>
             </property>
+            <property name="headerHidden">
+             <bool>false</bool>
+            </property>
+            <attribute name="headerVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="headerCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
             <attribute name="headerDefaultSectionSize">
              <number>120</number>
+            </attribute>
+            <attribute name="headerHighlightSections">
+             <bool>false</bool>
             </attribute>
             <column>
              <property name="text">
@@ -2294,7 +2321,7 @@ QTreeWidget::item:selected:!active {
              </sizepolicy>
             </property>
             <property name="title">
-             <string>GroupBox</string>
+             <string/>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_5">
              <item>

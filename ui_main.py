@@ -86,6 +86,14 @@ class Ui_w_main(object):
 "    border-bottom-color: #C2C7CB; \n"
 "}\n"
 "\n"
+"QDateEdit\n"
+"{\n"
+"    background-color : white;\n"
+"    padding : 5px;\n"
+"    font:\"Roboto\";\n"
+"    font-weight:500;\n"
+"}\n"
+"\n"
 "QTableWidget  {\n"
 "    width:auto;\n"
 "    font: 14pt \"Roboto\";\n"
@@ -95,16 +103,14 @@ class Ui_w_main(object):
 "    font:\"Roboto\";\n"
 "    font-weight:500;\n"
 "}\n"
-"QDateEdit\n"
-"{\n"
-"    background-color : white;\n"
-"    padding : 5px;\n"
-"    font:\"Roboto\";\n"
-"    font-weight:500;\n"
-"}\n"
 "\n"
 "QTreeWidget {\n"
 "    show-decoration-selected: 1;\n"
+"    font: \"Roboto\";\n"
+"    font-weight:500;\n"
+"}\n"
+"QTreeWidget QHeaderView::section {\n"
+"    font-size: 12pt;\n"
 "}\n"
 "\n"
 "QTreeWidget::item {\n"
@@ -129,8 +135,17 @@ class Ui_w_main(object):
 "QTreeWidget::item:selected:!active {\n"
 "    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);\n"
 "}\n"
+"QGroupBox {\n"
+"  border: 1px solid gray;\n"
+"  border-radius: 9px;\n"
+"  margin-top: 0.5em;\n"
+"}\n"
 "\n"
-"\n"
+"QGroupBox::title {\n"
+"  background-color:transparent;\n"
+"  padding-top: -24px;\n"
+"  padding-left: 8px;\n"
+"}\n"
 "\n"
 "\n"
 "")
@@ -1072,13 +1087,17 @@ class Ui_w_main(object):
         font.setItalic(False)
         font.setWeight(62)
         self.tree_agent.setFont(font)
+        self.tree_agent.setHeaderHidden(False)
         self.tree_agent.setObjectName("tree_agent")
         self.tree_agent.headerItem().setText(0, "Классификация")
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_agent)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_agent)
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_agent)
+        self.tree_agent.header().setVisible(False)
+        self.tree_agent.header().setCascadingSectionResizes(False)
         self.tree_agent.header().setDefaultSectionSize(120)
+        self.tree_agent.header().setHighlightSections(False)
         self.lay_menu_agent.addWidget(self.tree_agent)
         self.box_serch_agent = QtWidgets.QGroupBox(self.tab_agent)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
@@ -1086,6 +1105,7 @@ class Ui_w_main(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.box_serch_agent.sizePolicy().hasHeightForWidth())
         self.box_serch_agent.setSizePolicy(sizePolicy)
+        self.box_serch_agent.setTitle("")
         self.box_serch_agent.setObjectName("box_serch_agent")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.box_serch_agent)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
@@ -2383,7 +2403,6 @@ class Ui_w_main(object):
         self.tree_agent.topLevelItem(1).setText(0, _translate("w_main", "New Item"))
         self.tree_agent.topLevelItem(2).setText(0, _translate("w_main", "New Item"))
         self.tree_agent.setSortingEnabled(__sortingEnabled)
-        self.box_serch_agent.setTitle(_translate("w_main", "GroupBox"))
         self.label_value_serch_agent.setText(_translate("w_main", "Поиск по значению"))
         self.pushbutton_ok_value_serch_agent.setText(_translate("w_main", "Найти"))
         self.pushButton_cancel_value_serch_agent.setText(_translate("w_main", "Сброс"))
