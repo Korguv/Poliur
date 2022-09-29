@@ -1917,9 +1917,9 @@ QGroupBox::title {
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>550</x>
-          <y>110</y>
-          <width>927</width>
+          <x>80</x>
+          <y>10</y>
+          <width>1171</width>
           <height>194</height>
          </rect>
         </property>
@@ -1979,6 +1979,9 @@ QGroupBox::title {
             </property>
            </item>
           </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidget"/>
          </item>
          <item>
           <widget class="QGroupBox" name="box_serch_stor_2">
@@ -2198,8 +2201,8 @@ QGroupBox::title {
        <widget class="QTableWidget" name="table_stor_2">
         <property name="geometry">
          <rect>
-          <x>360</x>
-          <y>310</y>
+          <x>50</x>
+          <y>210</y>
           <width>1852</width>
           <height>707</height>
          </rect>
@@ -2234,6 +2237,16 @@ QGroupBox::title {
           <string>Дополнительная информация</string>
          </property>
         </column>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>1340</x>
+          <y>20</y>
+          <width>256</width>
+          <height>192</height>
+         </rect>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_fin">
