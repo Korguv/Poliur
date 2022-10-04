@@ -1981,7 +1981,18 @@ QGroupBox::title {
           </widget>
          </item>
          <item>
-          <widget class="QTableWidget" name="tableWidget"/>
+          <widget class="QTableWidget" name="tableWidget">
+           <column>
+            <property name="text">
+             <string>New Column</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>New Column</string>
+            </property>
+           </column>
+          </widget>
          </item>
          <item>
           <widget class="QGroupBox" name="box_serch_stor_2">
@@ -2247,6 +2258,16 @@ QGroupBox::title {
           <height>192</height>
          </rect>
         </property>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_fin">
