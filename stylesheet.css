@@ -63,6 +63,14 @@ QTabBar::tab:selected {
     border-bottom-color: #C2C7CB; 
 }
 
+QDateEdit
+{
+	background-color : white;
+	padding : 5px;
+	font:"Roboto";
+	font-weight:500;
+}
+
 QTableWidget  {
 	width:auto;
 	font: 14pt "Roboto";
@@ -72,18 +80,14 @@ QTreeWidget {
 	font:"Roboto";
 	font-weight:500;
 }
-QDateEdit
-{
-	background-color : white;
-	padding : 5px;
-	font:"Roboto";
-	font-weight:500;
-}
 
 QTreeWidget {
     show-decoration-selected: 1;
 	font: "Roboto";
 	font-weight:500;
+}
+QTreeWidget QHeaderView::section {
+    font-size: 12pt;
 }
 
 QTreeWidget::item {
@@ -120,6 +124,73 @@ QGroupBox::title {
   padding-left: 8px;
 }
 
-QTreeWidget QHeaderView::section {
-    font-size: 12pt;
+QHeaderView::section {
+ 	Font-size:14px;
+	Font-family: "Microsoft YaHei";
+	Color: #FFFFFF;
+	Background:#60669B;
+	Border:none;
+	Text-align:left;
+	Min-height: 49px;
+    max-height:49px;
+	Margin-left:0px;
+	Padding-left: 0px;
+}
+
+QTableWidget {
+    Background: #FFFFFF;
+    Font-size: 12px;
+    Font-family:"Microsoft YaHei";
+    Color:#666666;
+}
+QTableWidget::item
+{
+    Border-bottom:1px solid #EEF1F7;
+}
+
+QTableWidget {
+    Background: #FFFFFF;
+    Border:none;
+    Font-size: 12px;
+    Font-family:"Microsoft YaHei";
+    Color:#666666;
+}
+
+QTableWidget::item
+{
+    Border-bottom:1px solid #EEF1F7;
+}
+ 
+QTableWidget::item::selected // Each cell is selected
+{
+    Color:red;
+    Background: #EFF4FF;
+}
+ 
+QScrollBar::handle:vertical
+{
+    Background: rgba(255,255,255,20%);
+    Border: 0px solid grey;
+    Border-radius: 3px;
+    Width: 8px;
+}
+
+QScrollBar::vertical
+{
+ Border-width: 1px;
+ Border-style: solid;
+ Border-color: rgba(255, 255, 255, 10%);
+ Width: 8px;
+ Margin:0px 0px 0px 0px;
+ Border-radius: 3px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+    Background: rgba(255,255,255,10%);
+}
+
+QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
+{
+    Background:transparent;
 }
