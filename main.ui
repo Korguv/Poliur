@@ -238,7 +238,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
        <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">

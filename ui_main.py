@@ -147,8 +147,76 @@ class Ui_w_main(object):
 "  padding-left: 8px;\n"
 "}\n"
 "\n"
+"QHeaderView::section {\n"
+"     Font-size:14px;\n"
+"    Font-family: \"Microsoft YaHei\";\n"
+"    Color: #FFFFFF;\n"
+"    Background:#60669B;\n"
+"    Border:none;\n"
+"    Text-align:left;\n"
+"    Min-height: 49px;\n"
+"    max-height:49px;\n"
+"    Margin-left:0px;\n"
+"    Padding-left: 0px;\n"
+"}\n"
 "\n"
-"")
+"QTableWidget {\n"
+"    Background: #FFFFFF;\n"
+"    Font-size: 12px;\n"
+"    Font-family:\"Microsoft YaHei\";\n"
+"    Color:#666666;\n"
+"}\n"
+"QTableWidget::item\n"
+"{\n"
+"    Border-bottom:1px solid #EEF1F7;\n"
+"}\n"
+"\n"
+"QTableWidget {\n"
+"    Background: #FFFFFF;\n"
+"    Border:none;\n"
+"    Font-size: 12px;\n"
+"    Font-family:\"Microsoft YaHei\";\n"
+"    Color:#666666;\n"
+"}\n"
+"\n"
+"QTableWidget::item\n"
+"{\n"
+"    Border-bottom:1px solid #EEF1F7;\n"
+"}\n"
+" \n"
+"QTableWidget::item::selected // Each cell is selected\n"
+"{\n"
+"    Color:red;\n"
+"    Background: #EFF4FF;\n"
+"}\n"
+" \n"
+"QScrollBar::handle:vertical\n"
+"{\n"
+"    Background: rgba(255,255,255,20%);\n"
+"    Border: 0px solid grey;\n"
+"    Border-radius: 3px;\n"
+"    Width: 8px;\n"
+"}\n"
+"\n"
+"QScrollBar::vertical\n"
+"{\n"
+" Border-width: 1px;\n"
+" Border-style: solid;\n"
+" Border-color: rgba(255, 255, 255, 10%);\n"
+" Width: 8px;\n"
+" Margin:0px 0px 0px 0px;\n"
+" Border-radius: 3px;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical\n"
+"{\n"
+"    Background: rgba(255,255,255,10%);\n"
+"}\n"
+"\n"
+"QScollBar::add-line:vertical, QScrollBar::sub-line:vertical\n"
+"{\n"
+"    Background:transparent;\n"
+"}")
         self.mainwidget = QtWidgets.QWidget(w_main)
         self.mainwidget.setStyleSheet("")
         self.mainwidget.setObjectName("mainwidget")
@@ -401,8 +469,8 @@ class Ui_w_main(object):
         self.table_in_moove.setMinimumSize(QtCore.QSize(703, 450))
         self.table_in_moove.setMaximumSize(QtCore.QSize(16777215, 800))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(14)
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
@@ -438,8 +506,8 @@ class Ui_w_main(object):
         self.table_out_moove.setSizePolicy(sizePolicy)
         self.table_out_moove.setMinimumSize(QtCore.QSize(703, 0))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(14)
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
@@ -987,6 +1055,7 @@ class Ui_w_main(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.box_serch_stor_2.sizePolicy().hasHeightForWidth())
         self.box_serch_stor_2.setSizePolicy(sizePolicy)
+        self.box_serch_stor_2.setTitle("")
         self.box_serch_stor_2.setObjectName("box_serch_stor_2")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.box_serch_stor_2)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -2231,8 +2300,8 @@ class Ui_w_main(object):
         self.table_zayav.setMinimumSize(QtCore.QSize(575, 450))
         self.table_zayav.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(14)
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
@@ -2313,8 +2382,8 @@ class Ui_w_main(object):
         self.table_zayav_2.setMinimumSize(QtCore.QSize(575, 450))
         self.table_zayav_2.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(14)
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
@@ -2352,7 +2421,7 @@ class Ui_w_main(object):
         self.menubar.addAction(self.menu_2.menuAction())
 
         self.retranslateUi(w_main)
-        self.tab_all.setCurrentIndex(3)
+        self.tab_all.setCurrentIndex(7)
         QtCore.QMetaObject.connectSlotsByName(w_main)
 
     def retranslateUi(self, w_main):
@@ -2545,7 +2614,6 @@ class Ui_w_main(object):
         item.setText(_translate("w_main", "NCO"))
         item = self.tableWidget.horizontalHeaderItem(2)
         item.setText(_translate("w_main", "Масса"))
-        self.box_serch_stor_2.setTitle(_translate("w_main", " "))
         self.label_nomber_serch_stor_2.setText(_translate("w_main", "Поиск по партии"))
         self.pushbutton_ok_nomber_serch_stor_2.setText(_translate("w_main", "Найти"))
         self.pushbutton_cancel_nomber_serch_stor_2.setText(_translate("w_main", "Сброс"))
