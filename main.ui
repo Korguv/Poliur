@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>w_main</class>
- <widget class="QMainWindow" name="w_main">
+ <class>main</class>
+ <widget class="QMainWindow" name="main">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -75,7 +75,7 @@ QTabBar {
 QTabBar::tab {
     border: none;
 	background-color: #239c4b;
-    padding:15px 32 ;
+    padding:15px 33.3 ;
     text-align: center;
 		
 }
@@ -152,9 +152,9 @@ QGroupBox::title {
 
 QHeaderView::section {
  	Font-size:14px;
-	Font-family: &quot;Microsoft YaHei&quot;;
+	Font-family: &quot;Robotoi&quot;;
 	Color: #FFFFFF;
-	Background:#60669B;
+	Background:#3c9266;
 	Border:none;
 	Text-align:left;
 	Min-height: 49px;
@@ -166,7 +166,7 @@ QHeaderView::section {
 QTableWidget {
     Background: #FFFFFF;
     Font-size: 12px;
-    Font-family:&quot;Microsoft YaHei&quot;;
+    Font-family:&quot;Robotoi&quot;;
     Color:#666666;
 }
 QTableWidget::item
@@ -178,7 +178,7 @@ QTableWidget {
     Background: #FFFFFF;
     Border:none;
     Font-size: 12px;
-    Font-family:&quot;Microsoft YaHei&quot;;
+    Font-family:&quot;Roboto&quot;;
     Color:#666666;
 }
 
@@ -219,7 +219,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
 QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
 {
     Background:transparent;
-}</string>
+}
+QHeaderView::ResizeToContents</string>
   </property>
   <widget class="QWidget" name="mainwidget">
    <property name="styleSheet">
@@ -238,7 +239,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
        <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
@@ -792,7 +793,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
             </property>
             <property name="font">
              <font>
-              <family>Microsoft YaHei</family>
+              <family>Roboto</family>
               <pointsize>-1</pointsize>
               <weight>50</weight>
               <italic>false</italic>
@@ -861,11 +862,6 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <string>Текст</string>
              </property>
             </column>
-            <item row="0" column="0">
-             <property name="text">
-              <string>test</string>
-             </property>
-            </item>
            </widget>
           </item>
           <item>
@@ -884,7 +880,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
             </property>
             <property name="font">
              <font>
-              <family>Microsoft YaHei</family>
+              <family>Roboto</family>
               <pointsize>-1</pointsize>
               <weight>50</weight>
               <italic>false</italic>
@@ -3685,7 +3681,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
            </sizepolicy>
           </property>
           <property name="title">
-           <string>Анализ</string>
+           <string> </string>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
@@ -4143,37 +4139,50 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
         <item>
          <layout class="QVBoxLayout" name="layout_table_plan">
           <item>
-           <layout class="QHBoxLayout" name="layout_name_table_plan">
-            <item>
-             <widget class="QLabel" name="label_name_table_plan">
-              <property name="text">
-               <string>Перечень</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="hspacer_name_table_plan">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
+           <layout class="QHBoxLayout" name="layout_name_table_plan"/>
           </item>
           <item>
            <widget class="QTableWidget" name="table_info_plan">
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContents</enum>
+            </property>
             <property name="gridStyle">
              <enum>Qt::DashLine</enum>
             </property>
             <property name="sortingEnabled">
              <bool>true</bool>
             </property>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
             <column>
              <property name="text">
               <string>Наименование</string>
@@ -4219,6 +4228,11 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <string>Описание</string>
              </property>
             </column>
+            <item row="0" column="3">
+             <property name="text">
+              <string>fgggfgfgffggfgfgfgfgfgf</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>
@@ -4896,7 +4910,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               </property>
               <property name="font">
                <font>
-                <family>Microsoft YaHei</family>
+                <family>Roboto</family>
                 <pointsize>-1</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>
@@ -5130,7 +5144,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               </property>
               <property name="font">
                <font>
-                <family>Microsoft YaHei</family>
+                <family>Roboto</family>
                 <pointsize>-1</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>

@@ -128,7 +128,7 @@ QHeaderView::section {
  	Font-size:14px;
 	Font-family: "Microsoft YaHei";
 	Color: #FFFFFF;
-	Background:#60669B;
+	Background: #239c4b;
 	Border:none;
 	Text-align:left;
 	Min-height: 49px;
