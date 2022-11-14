@@ -78,7 +78,7 @@ QTabBar {
 QTabBar::tab {
     border: none;
 	background-color: #239c4b;
-    padding:15px 33.3 ;
+    padding:15px 34 ;
     text-align: center;
 		
 }
@@ -248,6 +248,9 @@ QHeaderView::ResizeToContents
       <property name="currentIndex">
        <number>0</number>
       </property>
+      <property name="usesScrollButtons">
+       <bool>false</bool>
+      </property>
       <widget class="QWidget" name="tab_moove">
        <attribute name="title">
         <string>Отгрузка</string>
@@ -279,6 +282,9 @@ QHeaderView::ResizeToContents
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
+            <property name="headerHidden">
+             <bool>false</bool>
+            </property>
             <attribute name="headerVisible">
              <bool>true</bool>
             </attribute>
@@ -287,6 +293,12 @@ QHeaderView::ResizeToContents
             </attribute>
             <attribute name="headerDefaultSectionSize">
              <number>120</number>
+            </attribute>
+            <attribute name="headerHighlightSections">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="headerShowSortIndicator" stdset="0">
+             <bool>false</bool>
             </attribute>
             <attribute name="headerStretchLastSection">
              <bool>true</bool>
