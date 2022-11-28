@@ -282,6 +282,9 @@ QHeaderView::ResizeToContents
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::ExtendedSelection</enum>
+            </property>
             <property name="headerHidden">
              <bool>false</bool>
             </property>
@@ -830,6 +833,21 @@ QHeaderView::ResizeToContents
               <italic>false</italic>
               <bold>false</bold>
              </font>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+            </property>
+            <property name="showGrid">
+             <bool>true</bool>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="cornerButtonEnabled">
+             <bool>true</bool>
             </property>
             <property name="rowCount">
              <number>15</number>
