@@ -196,4 +196,4 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
 {
     Background:transparent;
 }
-QHeaderView::ResizeToContents;
+QHeaderView::ResizeToContents
