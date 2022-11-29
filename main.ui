@@ -226,7 +226,6 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
 {
     Background:transparent;
 }
-QHeaderView::ResizeToContents
 </string>
   </property>
   <widget class="QWidget" name="mainwidget">
