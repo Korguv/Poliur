@@ -42,6 +42,7 @@ class Ui_main(object):
 "    font: \"Roboto\";\n"
 "    font-size: 14pt;\n"
 "    padding: 2px;\n"
+"    color: #FFFFFF;\n"
 "\n"
 "}\n"
 "QPushButton:hover {\n"
@@ -51,6 +52,7 @@ class Ui_main(object):
 "\n"
 "QPushButton:pressed {\n"
 "    background-color: #1b5f4f;\n"
+"     color: #000000;\n"
 "}\n"
 "QCheckBox{\n"
 "    font: \"Roboto\";\n"
@@ -68,11 +70,12 @@ class Ui_main(object):
 "QTabBar {\n"
 "    font: 16pt \"Roboto\";\n"
 "    width: 0;\n"
+"    color: #FFFFFF;\n"
 "}\n"
 "QTabBar::tab {\n"
 "    border: none;\n"
 "    background-color: #239c4b;\n"
-"    padding:15px 33.3 ;\n"
+"    padding:15px 34 ;\n"
 "    text-align: center;\n"
 "        \n"
 "}\n"
@@ -108,9 +111,11 @@ class Ui_main(object):
 "    show-decoration-selected: 1;\n"
 "    font: \"Roboto\";\n"
 "    font-weight:500;\n"
+"    text-align: center;\n"
 "}\n"
 "QTreeWidget QHeaderView::section {\n"
 "    font-size: 12pt;\n"
+"    text-align: center;\n"
 "}\n"
 "\n"
 "QTreeWidget::item {\n"
@@ -149,15 +154,16 @@ class Ui_main(object):
 "\n"
 "QHeaderView::section {\n"
 "     Font-size:14px;\n"
-"    Font-family: \"Robotoi\";\n"
+"    Font-family: \"Roboto\";\n"
 "    Color: #FFFFFF;\n"
-"    Background:#3c9266;\n"
+"    Background:#239c4b;\n"
 "    Border:none;\n"
 "    Text-align:left;\n"
 "    Min-height: 49px;\n"
 "    max-height:49px;\n"
 "    Margin-left:0px;\n"
 "    Padding-left: 0px;\n"
+"    text-align: center;\n"
 "}\n"
 "\n"
 "QTableWidget {\n"
@@ -217,7 +223,7 @@ class Ui_main(object):
 "{\n"
 "    Background:transparent;\n"
 "}\n"
-"QHeaderView::ResizeToContents")
+"")
         self.mainwidget = QtWidgets.QWidget(main)
         self.mainwidget.setStyleSheet("")
         self.mainwidget.setObjectName("mainwidget")
@@ -230,6 +236,7 @@ class Ui_main(object):
         sizePolicy.setHeightForWidth(self.tab_all.sizePolicy().hasHeightForWidth())
         self.tab_all.setSizePolicy(sizePolicy)
         self.tab_all.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.tab_all.setUsesScrollButtons(False)
         self.tab_all.setObjectName("tab_all")
         self.tab_moove = QtWidgets.QWidget()
         self.tab_moove.setObjectName("tab_moove")
@@ -249,6 +256,10 @@ class Ui_main(object):
         font.setItalic(False)
         font.setWeight(62)
         self.tree_moove.setFont(font)
+        self.tree_moove.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.tree_moove.setEditTriggers(QtWidgets.QAbstractItemView.DoubleClicked|QtWidgets.QAbstractItemView.EditKeyPressed|QtWidgets.QAbstractItemView.SelectedClicked)
+        self.tree_moove.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.tree_moove.setHeaderHidden(False)
         self.tree_moove.setObjectName("tree_moove")
         self.tree_moove.headerItem().setText(0, "Классификация")
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_moove)
@@ -257,7 +268,12 @@ class Ui_main(object):
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_moove)
         item_0 = QtWidgets.QTreeWidgetItem(self.tree_moove)
+        self.tree_moove.header().setVisible(True)
+        self.tree_moove.header().setCascadingSectionResizes(False)
         self.tree_moove.header().setDefaultSectionSize(120)
+        self.tree_moove.header().setHighlightSections(False)
+        self.tree_moove.header().setSortIndicatorShown(False)
+        self.tree_moove.header().setStretchLastSection(True)
         self.lay_menu_moove.addWidget(self.tree_moove)
         self.box_serch_moove = QtWidgets.QGroupBox(self.tab_moove)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
@@ -265,6 +281,7 @@ class Ui_main(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.box_serch_moove.sizePolicy().hasHeightForWidth())
         self.box_serch_moove.setSizePolicy(sizePolicy)
+        self.box_serch_moove.setTitle("")
         self.box_serch_moove.setObjectName("box_serch_moove")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.box_serch_moove)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -476,6 +493,10 @@ class Ui_main(object):
         font.setItalic(False)
         font.setWeight(50)
         self.table_in_moove.setFont(font)
+        self.table_in_moove.setEditTriggers(QtWidgets.QAbstractItemView.AnyKeyPressed|QtWidgets.QAbstractItemView.DoubleClicked|QtWidgets.QAbstractItemView.EditKeyPressed|QtWidgets.QAbstractItemView.SelectedClicked)
+        self.table_in_moove.setShowGrid(True)
+        self.table_in_moove.setWordWrap(True)
+        self.table_in_moove.setCornerButtonEnabled(True)
         self.table_in_moove.setRowCount(15)
         self.table_in_moove.setObjectName("table_in_moove")
         self.table_in_moove.setColumnCount(7)
@@ -1764,6 +1785,7 @@ class Ui_main(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.box_serch_plan.sizePolicy().hasHeightForWidth())
         self.box_serch_plan.setSizePolicy(sizePolicy)
+        self.box_serch_plan.setTitle("")
         self.box_serch_plan.setObjectName("box_serch_plan")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.box_serch_plan)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
@@ -2436,7 +2458,7 @@ class Ui_main(object):
     def retranslateUi(self, main):
         _translate = QtCore.QCoreApplication.translate
         main.setWindowTitle(_translate("main", "Главная страница"))
-        self.tree_moove.headerItem().setText(1, _translate("main", "Количество наименований"))
+        self.tree_moove.headerItem().setText(1, _translate("main", "Количество"))
         __sortingEnabled = self.tree_moove.isSortingEnabled()
         self.tree_moove.setSortingEnabled(False)
         self.tree_moove.topLevelItem(0).setText(0, _translate("main", "lv1"))
@@ -2446,7 +2468,6 @@ class Ui_main(object):
         self.tree_moove.topLevelItem(1).setText(0, _translate("main", "New Item"))
         self.tree_moove.topLevelItem(2).setText(0, _translate("main", "New Item"))
         self.tree_moove.setSortingEnabled(__sortingEnabled)
-        self.box_serch_moove.setTitle(_translate("main", "GroupBox"))
         self.label_value_serch_moove.setText(_translate("main", "Поиск по значению"))
         self.pushbutton_ok_value_serch_moove.setText(_translate("main", "Найти"))
         self.pushButton_cancel_value_serch_moove.setText(_translate("main", "Сброс"))
@@ -2471,6 +2492,7 @@ class Ui_main(object):
         self.checkbox_40_hard_serch_moove.setText(_translate("main", "40"))
         self.checkbox_50_hard_serch_moove.setText(_translate("main", "50"))
         self.checkbox_60_hard_serch_moove.setText(_translate("main", "60"))
+        self.table_in_moove.setSortingEnabled(True)
         item = self.table_in_moove.horizontalHeaderItem(0)
         item.setText(_translate("main", "№"))
         item = self.table_in_moove.horizontalHeaderItem(1)
@@ -2798,7 +2820,6 @@ class Ui_main(object):
         item = self.table_value_menu_ord.horizontalHeaderItem(9)
         item.setText(_translate("main", "Описание"))
         self.tab_all.setTabText(self.tab_all.indexOf(self.tab_ord), _translate("main", "Заказы"))
-        self.box_serch_plan.setTitle(_translate("main", " "))
         item = self.table_hardnes_serch_plan.verticalHeaderItem(0)
         item.setText(_translate("main", "1"))
         item = self.table_hardnes_serch_plan.verticalHeaderItem(1)
