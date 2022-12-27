@@ -171,15 +171,15 @@ DESC balance;
 
 
 
-DROP TABLE IF EXISTS tegs_nom;
-CREATE TABLE tegs_nom(
+DROP TABLE IF EXISTS tegs_ag;
+CREATE TABLE tegs_ag(
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-  id_nom INT UNSIGNED NOT NULL,
+  id_ag INT UNSIGNED NOT NULL,
   id_teg INT UNSIGNED NOT NULL,
-  CONSTRAINT tegs_id_nom FOREIGN KEY (id_nom) REFERENCES balance(id) ON DELETE RESTRICT,
+  CONSTRAINT tegs_id_ag FOREIGN KEY (id_ag) REFERENCES agent(id) ON DELETE RESTRICT,
   CONSTRAINT tegs_id_teg FOREIGN KEY (id_teg) REFERENCES teg(id) ON DELETE RESTRICT
 );
-DESC tegs_nom;
+DESC tegs_ag;
 
 
 SHOW TABLES; # показать таблицы
