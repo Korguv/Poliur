@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1894</width>
-    <height>891</height>
+    <height>926</height>
    </rect>
   </property>
   <property name="font">
@@ -245,7 +245,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
        <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -282,16 +282,16 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
              <enum>Qt::LeftToRight</enum>
             </property>
             <property name="editTriggers">
-             <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <property name="selectionMode">
              <enum>QAbstractItemView::ExtendedSelection</enum>
             </property>
             <property name="headerHidden">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <attribute name="headerVisible">
-             <bool>true</bool>
+             <bool>false</bool>
             </attribute>
             <attribute name="headerCascadingSectionResizes">
              <bool>false</bool>
@@ -811,7 +811,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
              </size>
             </property>
             <property name="title">
-             <string> </string>
+             <string/>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_10">
              <item>
@@ -924,7 +924,11 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
                 </layout>
                </item>
                <item>
-                <widget class="QListWidget" name="listWidget"/>
+                <widget class="QListWidget" name="listWidget">
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -965,13 +969,16 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
              </font>
             </property>
             <property name="editTriggers">
-             <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::ExtendedSelection</enum>
             </property>
             <property name="showGrid">
              <bool>true</bool>
             </property>
             <property name="sortingEnabled">
-             <bool>true</bool>
+             <bool>false</bool>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -1065,6 +1072,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <italic>false</italic>
               <bold>false</bold>
              </font>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <property name="rowCount">
              <number>15</number>
@@ -1164,6 +1174,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <italic>false</italic>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <attribute name="headerDefaultSectionSize">
              <number>120</number>
@@ -1709,7 +1722,11 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
                 </layout>
                </item>
                <item>
-                <widget class="QListWidget" name="listWidget_2"/>
+                <widget class="QListWidget" name="listWidget_2">
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -1722,6 +1739,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
          <layout class="QHBoxLayout" name="lay_table_pay">
           <item>
            <widget class="QTableWidget" name="table_in_pay">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <column>
              <property name="text">
               <string>№</string>
@@ -1756,6 +1776,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
           </item>
           <item>
            <widget class="QTableWidget" name="table_out_pay">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <column>
              <property name="text">
               <string>№</string>
@@ -1819,6 +1842,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <italic>false</italic>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <attribute name="headerDefaultSectionSize">
              <number>120</number>
@@ -2364,7 +2390,11 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
                 </layout>
                </item>
                <item>
-                <widget class="QListWidget" name="listWidget_3"/>
+                <widget class="QListWidget" name="listWidget_3">
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -2375,6 +2405,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
         </item>
         <item>
          <widget class="QTableWidget" name="table_stor">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
           <column>
            <property name="text">
             <string>№</string>
@@ -2437,6 +2470,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <bold>true</bold>
              </font>
             </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <attribute name="headerDefaultSectionSize">
              <number>120</number>
             </attribute>
@@ -2485,6 +2521,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <width>302</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <column>
              <property name="text">
@@ -2752,6 +2791,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QTableWidget" name="table_stor_2">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <column>
              <property name="text">
               <string>Дата</string>
@@ -2776,6 +2818,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
           </item>
           <item>
            <widget class="QTableWidget" name="table_stor_3">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <column>
              <property name="text">
               <string>Дата</string>
@@ -3042,6 +3087,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <height>16777215</height>
              </size>
             </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <column>
              <property name="text">
               <string>Дата</string>
@@ -3087,6 +3135,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <width>650</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <column>
              <property name="text">
@@ -3151,6 +3202,9 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               <italic>false</italic>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <property name="headerHidden">
              <bool>true</bool>
@@ -3658,22 +3712,12 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
               </column>
               <column>
                <property name="text">
-                <string>Заказчик</string>
+                <string>Статус</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Поступления</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Сдача</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Сумма</string>
+                <string>Телефон</string>
                </property>
               </column>
               <column>
@@ -4822,7 +4866,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
                     </size>
                    </property>
                    <property name="title">
-                    <string> </string>
+                    <string/>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_31">
                     <item>
