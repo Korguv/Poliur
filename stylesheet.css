@@ -19,6 +19,7 @@ QPushButton {
 	font: "Roboto";
     font-size: 14pt;
 	padding: 2px;
+	color: #FFFFFF;
 
 }
 QPushButton:hover {
@@ -45,11 +46,12 @@ QTabWidget::tab-bar {
 QTabBar {
 	font: 16pt "Roboto";
 	width: 0;
+	color: #FFFFFF;
 }
 QTabBar::tab {
     border: none;
 	background-color: #239c4b;
-    padding:15px 32 ;
+    padding:15px 33.3 ;
     text-align: center;
 		
 }
@@ -126,9 +128,9 @@ QGroupBox::title {
 
 QHeaderView::section {
  	Font-size:14px;
-	Font-family: "Microsoft YaHei";
+	Font-family: "Robotoi";
 	Color: #FFFFFF;
-	Background: #239c4b;
+	Background:#239c4b;
 	Border:none;
 	Text-align:left;
 	Min-height: 49px;
@@ -140,7 +142,7 @@ QHeaderView::section {
 QTableWidget {
     Background: #FFFFFF;
     Font-size: 12px;
-    Font-family:"Microsoft YaHei";
+    Font-family:"Robotoi";
     Color:#666666;
 }
 QTableWidget::item
@@ -152,7 +154,7 @@ QTableWidget {
     Background: #FFFFFF;
     Border:none;
     Font-size: 12px;
-    Font-family:"Microsoft YaHei";
+    Font-family:"Roboto";
     Color:#666666;
 }
 
@@ -194,3 +196,4 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
 {
     Background:transparent;
 }
+QHeaderView::ResizeToContents

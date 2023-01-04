@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\Admin_CPU\Desktop\Сode\1\Poliur\main.ui'
+# Form implementation generated from reading ui file 'main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -223,6 +223,7 @@ class Ui_main(object):
 "{\n"
 "    Background:transparent;\n"
 "}\n"
+"QHeaderView::ResizeToContents\n"
 "")
         self.mainwidget = QtWidgets.QWidget(main)
         self.mainwidget.setStyleSheet("")
@@ -257,7 +258,6 @@ class Ui_main(object):
         font.setWeight(62)
         self.tree_moove.setFont(font)
         self.tree_moove.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.tree_moove.setEditTriggers(QtWidgets.QAbstractItemView.DoubleClicked|QtWidgets.QAbstractItemView.EditKeyPressed|QtWidgets.QAbstractItemView.SelectedClicked)
         self.tree_moove.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.tree_moove.setHeaderHidden(False)
         self.tree_moove.setObjectName("tree_moove")

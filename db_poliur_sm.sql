@@ -132,11 +132,20 @@ DESC hardness;
 
 
 DROP  TABLE IF EXISTS source;
-CREATE TABLE source(  #таблица подразделений имточников записей
+CREATE TABLE source(  #таблица подразделений источников записей
   id SMALLINT PRIMARY KEY AUTO_INCREMENT 
   name VARCHAR(20) NOT NULL 
 );
 DESC source;
+
+
+
+DROP TABLE IF EXISTS teg;
+CREATE TABLE teg(
+  id int UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  name TINYTEXT NOT NULL
+);
+DESC teg;
 
 
 
@@ -148,8 +157,8 @@ CREATE TABLE balance(  #таблица сальдо
   date DATE NOT NULL,  #дата
   quantity MEDIUMINT NOT NULL DEFAULT '0',  #количественное выражение
   sum INT NOT NULL DEFAULT '0',  #денежное выражение
-  id_source SMALLINT NOT NULL, #внешний ключ на источник записи
-  id_hardness SMALLINT,  #внешний ключ к твердости
+  id_source SMALLINT NOT NULL, #ключ источник/автора записи
+  id_hardness SMALLINT,  #ключ твердости
   id_order INT UNSIGNED,  # ключ заказа
   id_plane INT UNSIGNED,  # номер операции с пометкой план для натуры
   text VARCHAR(150),  #коментарии
@@ -160,6 +169,17 @@ CREATE TABLE balance(  #таблица сальдо
 );
 DESC balance;
 
+
+
+DROP TABLE IF EXISTS tegs_ag;
+CREATE TABLE tegs_ag(
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  id_ag INT UNSIGNED NOT NULL,
+  id_teg INT UNSIGNED NOT NULL,
+  CONSTRAINT tegs_id_ag FOREIGN KEY (id_ag) REFERENCES agent(id) ON DELETE RESTRICT,
+  CONSTRAINT tegs_id_teg FOREIGN KEY (id_teg) REFERENCES teg(id) ON DELETE RESTRICT
+);
+DESC tegs_ag;
 
 
 SHOW TABLES; # показать таблицы
