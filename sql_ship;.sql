@@ -2,14 +2,10 @@ DROP TABLE IF EXISTS stat_ship;
 
 CREATE TABLE stat_ship(
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-id_bal заказа
-id_ship
-id_bal_2 со склада
-)
+stat VARCHAR(50) NOT NULL #статус доставки
+);
 
-
-
-
+DESC stat_ship;
 
 
 
@@ -32,3 +28,15 @@ id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,  #первичный ключ
 
 DESC shipment;
 
+
+DROP TABLE IF EXISTS sum_ship;
+
+CREATE TABLE sum_ship(
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+id_bal INT UNSIGNED, # ключ опрерации отпуска
+id_ship INT UNSIGNED, # ключ опрации доставки
+CONSTRAINT sum_id_ship FOREIGN KEY (id_ship) REFERENCES shipment(id) ON DELETE RESTRICT,
+CONSTRAINT sum_id_bal FOREIGN KEY (id_bal) REFERENCES balance(id) ON DELETE RESTRICT
+);
+
+DESC shipment;
