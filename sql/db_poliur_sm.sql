@@ -3,15 +3,16 @@ DROP DATABASE IF EXISTS db_poliur_sm;   # Удаление базыесли он
 CREATE DATABASE db_poliur_sm;   # Создание базы
 SHOW DATABASES; # показать базы находящиеся на сервере
 USE db_poliur_sm; # Переход в базу
-DROP TABLE IF EXISTS test1; # удаление таблицы если она существует
-CREATE TABLE IF NOT EXISTS test1 ( #создаие таблицы с заданными столбцами и параметрами
+
+DROP TABLE IF EXISTS test1; 
+CREATE TABLE IF NOT EXISTS test1 ( # создаие таблицы сзаданными столбцами и параметрами
   id INT UNSIGNED PRIMARY KEY  AUTO_INCREMENT,
   txt VARCHAR(100) DEFAULT 'TEXT' # тип данных VARCHAR (количество знаков 100) и автозаполнением TEXT
 );
 DESC test1; # Использование оператора для описания списка определений столбцов для указанной таблицы.
 SHOW CREATE TABLE test1; # показать содержимое таблицы
 
-
+DROP  TABLE IF EXISTS agent;
 
 CREATE TABLE agent (  # таблица контрагентов
   id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,  #первичный ключ
@@ -26,41 +27,41 @@ DESC agent;
 
 
 
-DROP  TABLE IF EXISTS order_sm;
-CREATE TABLE order_sm ( 
-  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-  date_in DATE NOT NULL, 
-  date_out DATE NOT NULL, 
-  id_agent SMALLINT UNSIGNED NOT NULL, 
-  priority SMALLINT NOT NULL DEFAULT '0', 
-  text VARCHAR(150),
+DROP  TABLE IF EXISTS order_sm;  
+CREATE TABLE order_sm ( # таблица заказов
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, # номер
+  date_in DATE NOT NULL, # дата поступления
+  date_out DATE NOT NULL, # дата сдачи ожидаемая
+  id_agent SMALLINT UNSIGNED NOT NULL, # номер контагента
+  priority SMALLINT NOT NULL DEFAULT '0', # входной приоритет
+  text VARCHAR(150), # текст пометка
+  bonus INT NOT NULL DEFAULT '0', # премия
   FOREIGN KEY (id_agent)  REFERENCES  agent(id) ON DELETE RESTRICT 
 );
 DESC  order_sm;
 
 
 
-DROP  TABLE IF EXISTS workers;
+DROP  TABLE IF EXISTS workers; 
 CREATE TABLE workers (  # таблица сотрудников
   id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,  #первичный ключ
   name VARCHAR(50) NOT NULL,  #ФИО
   status VARCHAR(100) DEFAULT '  ', # должность
-  path VARCHAR(100) DEFAULT  '  ',  
-  doc_name VARCHAR(20) DEFAULT '  ', 
-  foto_name VARCHAR(20) DEFAULT '  ',  
-  tnum VARCHAR(25) DEFAULT '+7(###)###-##-##', 
+  path VARCHAR(100) DEFAULT  '  ',  # путь к папке с документами и фото
+  doc_name VARCHAR(20) DEFAULT '  ', # имя документа
+  foto_name VARCHAR(20) DEFAULT '  ', # имя фото
+  tnum VARCHAR(25) DEFAULT '+7(###)###-##-##', # телефон
   email VARCHAR(30) DEFAULT '  ', # электронная почта
   text VARCHAR(200) DEFAULT '  ',  # дополниетльная информация
-  salary INT NOT NULL DEFAULT '10800', 
-  bonus SMALLINT NOT NULL DEFAULT '0', 
-  date_in DATE, 
-  data_out DATE 
+  salary INT NOT NULL DEFAULT '10800', # оклад 
+  date_in DATE, # дата принятия на работу
+  data_out DATE # дата увольнения
 );
 DESC workers;
 
 
 
-DROP  TABLE IF EXISTS hollyday;
+DROP  TABLE IF EXISTS hollyday; 
 CREATE TABLE hollyday (  #таблица празднки
   id_date DATE PRIMARY KEY, #дата и первичный ключ ключ
   name VARCHAR(100) DEFAULT 'праздник или пренос' #наименование праздника
@@ -69,21 +70,21 @@ DESC hollyday;
 
 
 
-DROP  TABLE IF EXISTS works_hours;
+DROP  TABLE IF EXISTS works_hours; 
 CREATE TABLE work_hours(  #рабочие часы
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, #первичный ключ
   date_work DATE NOT NULL,  #дата
   hours TINYINT NOT NULL DEFAULT '0', #часы поле коофициента
   id_workers SMALLINT UNSIGNED, #ключ работника
-  INDEX id_wo(id_workers), #индексация столбца id_agent
-  CONSTRAINT hou_id_wor FOREIGN KEY (id_workers) REFERENCES workers(id) ON DELETE RESTRICT,
+  INDEX id_wo(id_workers), 
+  CONSTRAINT hou_id_wor FOREIGN KEY (id_workers) REFERENCES workers(id) ON DELETE RESTRICT, 
   CONSTRAINT id_w_h FOREIGN KEY (date_work) REFERENCES hollyday(id_date) ON DELETE RESTRICT 
 );
 DESC work_hours;
 
 
 
-DROP  TABLE IF EXISTS group_sm;
+DROP  TABLE IF EXISTS group_sm; 
 CREATE TABLE group_sm(  #таблица групп
   id SMALLINT  PRIMARY KEY AUTO_INCREMENT, #первичный ключ группы
   name VARCHAR(30) NOT NULL DEFAULT 'Новая группа'  #имя
@@ -92,12 +93,12 @@ DESC group_sm;
 
 
 
-DROP  TABLE IF EXISTS subgroup;
+DROP  TABLE IF EXISTS subgroup; 
 CREATE TABLE subgroup (  #таблица подгрупп
   id SMALLINT  PRIMARY KEY AUTO_INCREMENT, #первичный ключ подгруппы
   name VARCHAR(20) NOT NULL DEFAULT 'Новая подгруппа',  #имя
   id_group SMALLINT NOT NULL DEFAULT '1', #ключ группы
-  INDEX id_gr(id_group), #индексация столбца id_agent
+  INDEX id_gr(id_group), 
   CONSTRAINT sub_id_gro FOREIGN KEY (id_group) REFERENCES group_sm(id) ON DELETE RESTRICT 
 );
 DESC subgroup;
@@ -114,7 +115,7 @@ CREATE TABLE nomenclature (  #таблица номенклатуры
   path VARCHAR(100), #к чертежу/фото
   volume DECIMAL(8,3),  #объём для изделий
   id_form INT UNSIGNED, #номер формы для изделий
-  INDEX id_sub(id_subgroup), #индексация столбца id_agent
+  INDEX id_sub(id_subgroup),
   CONSTRAINT nom_id_sub FOREIGN KEY (id_subgroup) REFERENCES subgroup(id) ON DELETE RESTRICT 
 );
 DESC nomenclature;
@@ -192,7 +193,7 @@ DESC stat_ship;
 
 
 DROP TABLE IF EXISTS shipment;
-CREATE TABLE shipment(
+CREATE TABLE shipment( # таблица доставок
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,  #первичный ключ
   payment BOOL NOT NULL  DEFAULT '0',  #сторона плательщик
   date_in DATE NOT NULL,  #дата отправки

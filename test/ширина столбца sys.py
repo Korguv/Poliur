@@ -9,7 +9,7 @@ class ExampleWindow(QMainWindow):
         self.myarray = [
             [1, 2, 3, 4], 
             [1.1, 2.1, 3.1, 4.1], 
-            [1.2, 2.2, 3.2, 4.2], 
+            [1.24568897565, 2.2, 3.2, 4.2], 
             [1.3, 2.3, 3.3, 4.]
         ]
         self.centralWidget = QWidget()

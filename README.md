@@ -1,2 +1,0 @@
-# Poliur
- database and internetstore
