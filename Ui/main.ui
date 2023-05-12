@@ -245,7 +245,7 @@ QScollBar::add-line:vertical, QScrollBar::sub-line:vertical
        <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>9</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
