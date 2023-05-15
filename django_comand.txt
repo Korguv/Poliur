@@ -1,0 +1,3 @@
+django-admin startproject 'name_project'
+
+python3 django_example\manage.py runserver

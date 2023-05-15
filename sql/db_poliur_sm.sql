@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS db_poliur_sm;   # Удаление базыесли она существует
 
-CREATE DATABASE db_poliur_sm;   # Создание базы
+CREATE DATABASE db_poliur_sm DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;  # Создание базы
 SHOW DATABASES; # показать базы находящиеся на сервере
 USE db_poliur_sm; # Переход в базу
 
@@ -226,3 +226,12 @@ DESC sum_ship;
 SHOW TABLES; # показать таблицы
 SHOW CREATE DATABASE db_poliur_sm; # показать содержимое таблицы
 SHOW WARNINGS; # подробности по ошибкам
+
+CREATE USER 'django'@'localhost' IDENTIFIED BY 'p3qLvCFiJ5wjuBsD4Vrl';
+GRANT ALL PRIVILEGES ON 'db_poliur_sm'.* TO 'django'@'localhost';
+FLUSH PRIVILEGES;
+
+DESCRIBE mysql.user;
+SELECT user FROM mysql.user;
+SELECT User, Host FROM mysql.user;
+SELECT SUBSTRING_INDEX(host, ':', 1) AS host_short, GROUP_CONCAT(DISTINCT user) AS users, COUNT(*) AS threads FROM information_schema.processlist GROUP BY host_short ORDER BY COUNT(*), host_short;
