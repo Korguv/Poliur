@@ -1,3 +1,16 @@
-django-admin startproject 'name_project'
+.\env\Scripts\activatedjango-admin startproject 'name_project'
 
 python3 django_example\manage.py runserver
+
+
+Set-ExecutionPolicy RemoteSigned # в powershell с правами администратора для допуска в виртульные пространства
+
+
+pip install django djangorestframework django-cors-headers
+
+django-admin startproject dj_1
+python manage.py startapp poli_1  
+
+Python manage.py makemigrations
+python manage.py migrate
+python manage.py makemigrations --empty --name students students
