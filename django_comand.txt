@@ -14,3 +14,5 @@ python manage.py startapp poli_1
 Python manage.py makemigrations
 python manage.py migrate
 python manage.py makemigrations --empty --name students students
+iRtB2xgaKkA8oEnYhTDm
+irtb2xgakka8oe
