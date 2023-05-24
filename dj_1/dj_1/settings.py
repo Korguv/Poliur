@@ -81,12 +81,14 @@ WSGI_APPLICATION = 'dj_1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'db_poliur_sm', 
+        #'NAME': str (BASE_DIR / 'db_poliur_sm'),
+        'NAME': str ('db_poliur_sm'), 
         'USER': 'admin', 
         'PASSWORD': '86iYr@mn25*%ass', 
         'HOST': '127.0.0.1', 
         'PORT': '3306', 
         'OPTIONS': { 
+            'read_default_file': str(BASE_DIR / 'my.cnf'),
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
     }
