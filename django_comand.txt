@@ -14,6 +14,8 @@ python manage.py startapp poli_1
 Python manage.py makemigrations
 python manage.py migrate
 python manage.py makemigrations --empty --name students students
+python manage.py inspectdb > models.py
+
 iRtB2xgaKkA8oEnYhTDm
 irtb2xgakka8oe
 
@@ -23,6 +25,26 @@ djangorestframe
 yarn
 axios
 
+https://www.reg.ru/blog/shpargalka-po-python-dlya-django/
+
+
+https://metanit.com/python/django/1.4.php
+https://habr.com/ru/companies/otus/articles/488748/
+https://proglib.io/p/django-s-nulya-chast-1-pishem-mnogopolzovatelskiy-blog-dlya-kluba-lyubiteley-zadach-python-2022-06-06
+https://habr.com/ru/articles/713490/
 https://habr.com/ru/companies/ruvds/articles/438982/
+https://habr.com/ru/companies/ruvds/articles/450312/
+https://habr.com/ru/companies/ruvds/articles/438796/
 https://www.reg.ru/blog/shpargalka-po-python-dlya-django/
 https://webdevblog.ru/kak-prevratit-adminku-django-v-legkovesnuju-panel-instrumentov/
+https://tutorial.djangogirls.org/ru/django_forms/
+https://django.fun/ru/docs/django/4.1/ref/models/fields/#field-choices
+https://django.fun/ru/docs/django/4.1/topics/db/queries/
+https://habr.com/ru/companies/selectel/articles/721022/
+https://webdevblog.ru/kak-prevratit-adminku-django-v-legkovesnuju-panel-instrumentov/
+
+
+https://webformyself.com/sozdaem-oblast-dlya-razbieniya-soderzhimogo-na-zakladki-ispolzuya-css-i-jquery/ HTML закладки
+
+
+https://www.youtube.com/watch?v=hzN2H3FnMio
