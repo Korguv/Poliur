@@ -48,3 +48,21 @@ https://webformyself.com/sozdaem-oblast-dlya-razbieniya-soderzhimogo-na-zakladki
 
 
 https://www.youtube.com/watch?v=hzN2H3FnMio
+
+
+
+
+
+
+
+
+React project start
+
+npm i -g create-react-app
+npm i tar
+create-react-app react-test
+cd reactProjectName
+npm start
+
+https://habr.com/ru/companies/ruvds/articles/428077/
+https://www.toptal.com/developers/gitignore
