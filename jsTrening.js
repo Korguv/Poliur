@@ -124,3 +124,6 @@ switch (a) {
   default:
     alert( "Нет таких значений" );
 }
+
+let testThin = 1;
+!testThin ? print ("win") : print ("loose");

@@ -12,16 +12,16 @@ import Greetings from "./Greetings";
 //   }
 // }
 
-class SimpleForm extends React.Component {
-  state = {
-    firstName: "",
+class SimpleForm extends React.Component {  // объявляем класс основанный на React.Component, чтобы в нём наследовались возможности
+  state = {  // функция содержащяя состояния
+    firstName: "", // пременная с присвоенным значением
     firstNameError: "",
   };
 
-  validateName = name => {
-    const regex = /[A-Za-z]{3,}/;
+  validateName = name => {  //функция валидации имен с входящим аргументом name
+    const regex = /[A-Za-z]{3,}/; // регулярное выражение (символы и количество)
 
-    return !regex.test(name)
+    return !regex.test(name) // обявление о том что функция возвращает результат тернарного оператора с условием, что булевый перевёрнутый возврат метода test(сравнивает name с множеством regex) перевёрнут для точной проерки.
       ? "The name must contain at least three letters. Numbers and special characters are not allowed."
       : "";
   };
