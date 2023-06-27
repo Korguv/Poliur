@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Э!</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script>
+        function digitalClock() {
+         var date = new Date();
+         var hours = date.getHours();
+         var minutes = date.getMinutes();
+         var seconds = date.getSeconds();
+            //* добавление ведущих нулей */
+           if (hours < 10) hours = "0" + hours;
+           if (minutes < 10) minutes = "0" + minutes;
+             document.getElementById("clock").innerHTML = hours + ":" + minutes;
+             setTimeout("digitalClock()", 1000);
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header_row">
+                <a class="logo" href="./index.html"><strong>Logo pace</strong></a>
+                <div id="clock"></div>
+                <script>digitalClock();</script>
+            </div>
+        </div>
+
+    </header>
+    <nav>
+        <div class="container">
+            <div class="nav-row">                         
+                <ul class="nav-list">
+                    <li class="nav-list_item"><a href="./index.html" class="nav-list_link nav-list_link--active">Баланс</a></li>
+                    <li class="nav-list_item"><a href="./projects.html" class="nav-list_link">Склад</a></li>
+                    <li class="nav-list_item"><a href="./contacts.html" class="nav-list_link">Заказы</a></li>
+                    <li class="nav-list_item"><a href="./contacts.html" class="nav-list_link">Контрагенты</a></li>
+                    <li class="nav-list_item"><a href="./contacts.html" class="nav-list_link">Расход</a></li>
+                    <li class="nav-list_item"><a href="./contacts.html" class="nav-list_link">Расход</a></li>
+                    <li class="nav-list_item"><a href="./contacts.html" class="nav-list_link">Расход</a></li>
+                    <li class="nav-list_item"><a href="./contacts.html" class="nav-list_link">Расход</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main></main>
+    <aside></aside>
+    <footer></footer>
+</body>
+</html>
